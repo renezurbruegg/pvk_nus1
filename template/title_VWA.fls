@@ -1,0 +1,8 @@
+PWD /home/rene/Documents/pvk-itet/LaTeX-KOMA-template/template
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT title_VWA.tex
+OUTPUT title_VWA.log
+INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT title_VWA.pdf

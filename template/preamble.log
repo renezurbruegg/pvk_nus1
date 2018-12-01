@@ -1,0 +1,524 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.5.18)  20 MAY 2018 15:59
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**preamble.tex
+(./preamble.tex
+LaTeX2e <2018-04-01> patch level 4
+./preamble.tex:381: Undefined control sequence.
+<argument> fontsize=\myfontsize 
+                                ,paper=\mypapersize ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> ...ize=\myfontsize ,paper=\mypapersize 
+                                                  ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> parskip=\myparskip 
+                              ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> draft=\mydraft 
+                          ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> BCOR=\myBCOR 
+                        ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> \mylaterality 
+                         
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> fontsize=\myfontsize 
+                                ,paper=\mypapersize ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> ...ize=\myfontsize ,paper=\mypapersize 
+                                                  ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> parskip=\myparskip 
+                              ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> draft=\mydraft 
+                          ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> BCOR=\myBCOR 
+                        ,
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./preamble.tex:381: Undefined control sequence.
+<argument> \mylaterality 
+                         
+l.381 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+(c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2018/03/30 v3.25 KOMA-Script document class (article)
+(c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (c:/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
+))) (c:/texlive/2017/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip41
+\scr@dte@tocline@numbox=\box26
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 134.
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:1722: Missing number, treated as zero.
+<to be read again> 
+                   p
+l.1722 \KOMAProcessOptions
+                          \relax
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2083: Missing number, treated as zero.
+<to be read again> 
+                   p
+l.2083 ...ultunits\expandafter\@tempdima\@ptsize p
+                                                  t\relax\@nnil
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   p
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Arithmetic overflow.
+\setlength #1#2->#1 #2\relax 
+                             
+l.2114 }
+        
+I can't evaluate this expression,
+since the result is out of range.
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2114 }
+        
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   .
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls:2114: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.2114 }
+        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+LaTeX 
