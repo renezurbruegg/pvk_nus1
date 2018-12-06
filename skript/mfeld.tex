@@ -18,26 +18,55 @@
 	Auslöser für das magnetische Feld sind \textbf{bewegte Ladungen} welche gemäss der rechten Hand Regel ein Magnetfeld hervorrufen, das diese einschliesst. \\
 	Im Falle von Stabmagneten oder 	Ähnlichem ist es der Spin der Elektronen, welcher das stationäre Magnetfeld auslöst*\\
 
+	\includegraphics{TODO.png}
+
+	\definition{Magnetische Flussdichte \textbf{B}}
+	\beginip
+	Bewegte Ladungsträger welche sich in der Nähe anderer bewegter Ladungsträger befinden, verspüren eine Kraftwirkung welche senkrecht zur Bewegungsrichtung zeigt. \\
+	Analog zum Elektrischen Feld definieren wir ein Magnetisches Feld (= Magnetische Flussdichte) welche diese Kraftwirkung beschreibt. \\
+	Die Mangetische Flussdichte, weisst jedem Punkt im Raum einen Vektor zu. Die Resultierende Kraft auf ein Ladungsträger, welcher sich mit Geschwindigkeit V bewegt,
+	berechnet sich aus dem Kreuzprodukt von Geschwindigkeit und Ladung ($\rightarrow$ \textbf{Lorentzkraft})
+	\iend
+
+
+
+
 	\definition{Rechte Hand Regel}
 	\beginip
-	Das Magnetfeld $B$ um einen stromdurchflossenen Leiter baut sich stets gegen den Uhrzeigersinn auf und ist \textbf{immer} geschlossen. \\
+	Die Magnetische Flussdichte $B$ um einen stromdurchflossenen Leiter baut sich stets gegen den Uhrzeigersinn auf und ist \textbf{immer} geschlossen. \\
 	\begin{center}
 			\ibox{\includegraphics[scale=0.2]{img/rechte-hand-regel.png}}
 	\end{center}
 	\iend
 
-	\definition{Lorentzkraft}
-	\beginip
+	\gl{Gleichung}{Lorentzkraft}
+	\begingl
 	Bewegte Ladungen in einem Magnetfeld verspüren eine Kraft, welche proportional zur Stärke des B-Feldes und der Geschwindigkeit ist. \\
 	Die Kraft steht senkrecht zu den Feld- und Geschwindigkeits-Vektoren.
 
-	\formulaBegin
-	$\vec{F_L} = q \cdot \vec{v} \times \vec{B} = I(\vec{l} \times \vec{B})$
-	\formulaEnd
 
 	\begin{center}
 			\ibox{\includegraphics[scale=0.3]{img/lorentzkraft.png}}
 	\end{center}
+
+	\formulaBegin
+	$\vec{F_m} = q \cdot \vec{v} \times \vec{B} = I(\vec{l} \times \vec{B})$
+	\formulaEnd
+
+	\textbf{Variabeln}: \\
+	$ F_m = $ Magnetische Kraft $ [F_M] = N$ \\
+	$ \vec{v} = $ Geschwindigkeit der Teilchen $ [v] = \frac{m}{s}$ \\
+	$ \vec{B} = $ Magnetische Flussdichte $ [B] = T (Tesla)$ \\
+	$ \vec{l} = $ Länge des Leiters im Magnetfeld $ [l] = m $\\
+
+	Die Summe mit der Coulomb Kraft bezeichnet die \textbf{Lorentzkraft} \\
+
+		\formulaBegin
+		$\vec{F_L} = \vec{F_m} + \vec{F_c} = q \cdot \vec{v} \times \vec{B} = I(\vec{l} \times \vec{B}) + q \cdot \vec{E} $
+		\formulaEnd
+
+		In älteren Physikbüchern wird häufig nur die Magnetische Kraftwirkung als Lorentzkraft bezeichnet.
+
 	\iend
 
 \newpage
@@ -57,17 +86,28 @@
 	\end{center}
 	\iend
 
-	\definition{Durchflutungssatz}
-	\beginip
-	Der Durchflutungssatz besagt, dass das Kurvenintegral des H-Feldes über eine beliebige \textbf{geschlossene} Kurve gerade dem Wert des durch diese Fläche fließendes Stromes entspricht. \\
-	Diesen Wert definieren wir als magnetische Spannung $\Theta$ \\
+	\gl{Gleichung}{Durchflutungssatz}
+	\begingl
+	Der Durchflutungssatz sagt etwas darüber aus, wie das Magnetische Feld entsteht. \\
+	 Es bringt die \textbf{Magnetische Feldstärke H} (Feld) und den \textbf{Strom I} (Quelle) in Verbidung.
+	Die Aussage des Durchflutungssatz ist, dass das Kurvenintegral des H-Feldes über eine beliebige \textbf{geschlossene} Kurve gerade dem Wert des durch diese Fläche fließendes Stromes entspricht. \\
+	Diesen Wert definieren wir als Durchflutung $\Theta$ \\
 	\formulaBegin
-	$\displaystyle \Theta = \oint_{\partial A} \vec{H} \cdot d\vec{s} = \iint_{A} \vec{j} \cdot d\vec{A} $
+	$\displaystyle \Theta = \oint_{s} \vec{H} \cdot d\vec{s} = \iint_{A} \vec{j} \cdot d\vec{A} = I_{eff}$
+	\formulaEnd
+	Dabei ist es wichtig, das nur der \textbf{effektiv durch eine Fläche hindurchfliessende Strom} die Magnetische Durchflutung auslöst. Fliesst in einer Fläche gleich viel Strom hinein wie hinaus, ist die Druchflutung gleich 0.
+	\iend
+
+	\gl{Gleichung}{Vereinfachter Durchflutungssatz}
+	\begingl
+	Für den Fall, dass der Strom N mal durch eine Fläche hindurchfliesst und das H-Feld auf dem gesamten Weg konstant und parallel zum Weg ist, gilt folgende Vereinfachung:
+	\formulaBegin
+	$\displaystyle \Theta = H \cdot l_s = N\cdot I \rightarrow H = \frac{N \cdot I}{l_s}$
 	\formulaEnd
 	\iend
 
-	\important{Beispiel}{\#4}
-	\beginip
+	\bsptask{Beispiel}{\#4}
+	\beginbsp
 	\textbf{Aufgabe} \\
 	Berechnen Sie die magnetische Spannung $\Theta$ und das H-Feld Feld $\vec{H}$ um einen unendlich langen, mit Strom I durchflossenen Leiter. Der Radius des Leiters sei $\rho$. \\
 	\iend
@@ -92,43 +132,91 @@
 	\end{center}
 	\iend
 
-	\important{Magnetische Spannung innerhalb einer Spule}{}
+	\bsptask{Beispiel}{Magnetfeld einer Spule}
 
-	\beginip
-	Analog zu den Berechnungen beim Leiter kann man die magnetische Spannung innerhalb einer Spule berechnen. Unter der Annahme, dass das magnetische Feld ausserhalb des Spule vernachlässigbar ist
-	und die Spule N Windungen hat, erhalten wir für den Fluss durch das Innere einer Spule:
+	\beginbsp
+	Gegeben sei eine Spule mit N Wicklungen und der länge l. Berechnen Sie die Magnetische Feldstärke \vec{H} in Abhängigkeit des Stromes I, Länge l und Wicklungen N.
+	\iend
 
-	\formulaBegin
+	\beginbsp
+	Es gilt für die Durchflutung bezüglich des Grünen Weges:
+
+		\begin{center}
+			\ibox{\includegraphics[scale=0.3]{img/spule_fluss.png}}
+		\end{center}
+
+\begin{center}
+
 	$\displaystyle \Theta_{Spule} = \oint_{\partial A} \vec{H} \cdot d\vec{s} = \iint_{A} \vec{j} \cdot d\vec{A} = N \cdot I \simeq \int_0^b \vec{H} \cdot d\vec{s}$
-	\formulaEnd
+
+	\end{center}
+	Da die Anordnung \textbf{Symmetrisch zur X-Achse} ist, wird das H-Feld auf dem gesamten Weg konstant ist und in X-Richtung zeigen können wir das Integral mit einer Multiplikation ersetzen.
 	\begin{center}
-		\ibox{\includegraphics[scale=0.3]{img/spule_fluss.png}}
+
+	$ \displaystyle \Theta_{Spule} = N \cdot I = H \cdot l_{s}$
+
+	\end{center}
+	Und somit gilt für das H-Feld mit Richtungsvektor:
+	\begin{center}
+
+	$\displaystyle H = \frac{N\cdot I}{l_{s}}  = \frac{N\cdot I}{l}$ \\ \fspace
+ 	$\displaystyle
+		\doubleunderline{   \vec{H}(\vec{r}) =
+		\begin{cases}
+0 & $Aussherhalb der Spule $\\
+\displaystyle \frac{N\cdot I}{l_{s}} \vec{e}_x & $Innerhalb der Spule $\\
+\end{cases}}$
+
 	\end{center}
 	\iend
 
-	Im folgenden gehen wir davon aus, dass die magnetische Spannung ungefähr $ \Theta = \int_0^l \vec{H} d\vec{s}$ entspricht.\\
-	\definition{magnetischer Fluss}
+
+	Aus der letzten Aufgabe folgt, dass das Magnetische Feld einer Spule im inneren Näherungsweise konstant ist. Ausserhalb der Windungen ist die Spule feldfrei. \\
+	Diese Eigenschaften entsprechen gerade denen, eines \textbf{Stabmagneten}
+
+	\definition{Magnetische Spannung}
+	\beginip
+	Als Magnetische Spannung bezeichnen wir das Wegintegral über die Magnetische Feldstärke H.
+	\formulaBegin
+	$\displaystyle V_{M_{AB}} := \int_A^B \vec{H} \cdot d\vec{s}$
+	\formulaEnd
+
+	Die Magnetische Spannung ist einzig eine Hilfsgrösse, um Werte zu berechnen. \\
+	Analog zum elektrischen Feld lässt sich auch hier eine Maschengleichung definieren: \\
+	\begin{center}
+		$\displaystyle \oint_{Masche} \vec{H} \cdot d\vec{s} = \Theta_{Masche}$
+	\end{center}
+		Falls wir nun die Druchflutung $\Theta$ als Quelle einfügen, gilt für ein magnetisches Netzwerk:
+		\begin{center}
+			$\displaystyle \oint_{Masche} \vec{H} \cdot d\vec{s} + \Theta_{Quellen} = 0$
+		\end{center}
+	\iend
+
+	\definition{Magnetischer Fluss}
 	\beginip
 		Als magnetischen Fluss $\Phi$ bezeichnen wir die \texttt{"}Menge B-Feld\texttt{"}, welche durch eine gegebene Fläche fliesst. \\
 		\formulaBegin
-		$\displaystyle \Phi := \iint_A \vec{B} \cdot \vec{n} \cdot da$
+		$\displaystyle \Phi := \iint_A \vec{B}  \cdot d\vec{A} \simeq \pm B \cdot A, \ \ \ [\Phi] = T	\cdot m^2 $
 		\formulaEnd
 	\iend
 
 
-	\definition{magnetischer Widerstand}
+
+
+
+	\definition{Magnetischer Widerstand}
 		\beginip
 			Als magnetischer Widerstand $R_m$ bezeichnen wir das Verhältnis zwischen magnetischer Spannung und magnetischem Fluss \\
 			Er sagt etwas darüber aus, wie gross der magnetische Fluss bei einer gegebenen magnetischen Spannung ist.
 			\formulaBegin
-			$\displaystyle R_m = \frac{\Theta}{\Phi} \underbrace{=}_{magn. Leiter} \frac{l}{\mu \cdot A}$
+			$\displaystyle R_m = \frac{V_M}{\Phi} \underbrace{=}_{magn. Leiter} \frac{l}{\mu \cdot A}$
 			\formulaEnd
 		\iend
 
 		\textbf{Begründung} \\
 		Wir gehen davon aus, dass die magnetische Spannung über einem Leiter mit Länge l anliegt, dessen Querschnittfläche A ist. \\
 		\begin{center}
-			$\displaystyle \frac{\Theta}{\Phi} = \frac{\int_0^l \vec{H} \cdot d\vec{s}}{\iint_a \vec{B} d \vec{A}} = \frac{l \cdot H}{\mu \cdot A \cdot H} = \frac{l}{\mu \cdot A} $
+			$\displaystyle \frac{V_M}{\Phi} = \frac{\int_0^l \vec{H} \cdot d\vec{s}}{\iint_a \vec{B} d \vec{A}} = \frac{l \cdot H}{\mu \cdot A \cdot H} = \frac{l}{\mu \cdot A} $
 
 		\end{center}
 
@@ -170,8 +258,8 @@
 
 		\iend
 \newpage
-		\important{Beispiel}{\#5}
-		\beginip
+		\bsptask{Beispiel}{\#5}
+		\beginbsp
  		\textbf{Aufgabe Hubmagnet} \\
 		Der mittlere Schenkel 2 eines E-Kernes aus Dynamoblech trägt eine Wicklung mit N Windungen. Über
 		die drei Luftspalten mit gleicher Länge $\delta$ wird ein Anker aus Grauguss mit der Kraft FA angezogen
@@ -260,20 +348,39 @@
 
 		\textbf{Parallelschaltung}
 		\formulaBegin
-		$\displaystyle \frac{1}{L_{ges}} = \sum_{i=0}^n \frac{1}{L_i} \Bigg\rvert L_{p_2} = (L_1 || L_2 )$
+		$\displaystyle \frac{1}{L_{ges}} = \sum_{i=0}^n \frac{1}{L_i} \Bigg\rvert L_{ges} = (L_1 || L_2 )$
 		\formulaEnd
 	 \iend
 
 
-	\textbf{Übersicht} \\
-	\\
-	\begin{tabular}{|c|c|c|c|c|}
-	\hline
-		\textbf{Energie} & 	\textbf{Strom und Spannung} & 	\textbf{ DC-Verhalten} & 	\textbf{ High-AC Verhalten*}& 	\textbf{ Admitanz*} \\
-		\hline 	\hline
-		 & & & & \\
-	    $ \displaystyle L =  \frac{N \Phi}{I} $ & $\displaystyle i_L(t) = \frac{1}{L} \int_0^t u_c(t) dt $ & Leerlauf & Kurzschluss & $ \displaystyle j\omega L$  \\
-		  $\displaystyle W =  \frac{1}{2} L I^2 $ & $\displaystyle u_L(t) = L \cdot \frac{d}{d t} (i_c) $ & \includegraphics[scale=0.5]{img/kurzschluss} &   \includegraphics[scale=0.4]{img/leerlauf}  &   \\
-			 & & & & \\
-			\hline
-	\end{tabular}
+\definition{Gegeninduktivität}
+\beginip
+%TODO
+Die Gegeninduktivität beschreibt, wie viel Magnetischer Fluss durch eine \textbf{andere} Leiterschleife durchfliesst, abhängig
+des Stromes in der ersten Schleife.
+
+\includegraphics{gegeninduktivitat.png}
+\iend
+
+\bsptask{Beispiel}{Berechnen einer Gegeninduktivität}
+\beginbsp
+%TODO
+TODO
+\iend
+
+
+
+
+
+%	\textbf{Übersicht} \\
+%	\\
+%	\begin{tabular}{|c|c|c|c|c|}
+%	\hline
+%		\textbf{Energie} & 	\textbf{Strom und Spannung} & 	\textbf{ DC-Verhalten} & 	\textbf{ High-AC Verhalten*}& 	\textbf{ Admitanz*} \\
+%		\hline 	\hline
+%		 & & & & \\
+%	    $ \displaystyle L =  \frac{N \Phi}{I} $ & $\displaystyle i_L(t) = \frac{1}{L} \int_0^t u_c(t) dt $ & Leerlauf & Kurzschluss & $ \displaystyle j\omega L$  \\
+%		  $\displaystyle W =  \frac{1}{2} L I^2 $ & $\displaystyle u_L(t) = L \cdot \frac{d}{d t} (i_c) $ & \includegraphics[scale=0.5]{img/kurzschluss} &   \includegraphics[scale=0.4]{img/leerlauf}  &   \\
+%			 & & & & \\
+%			\hline
+%	\end{tabular}

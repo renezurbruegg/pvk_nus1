@@ -127,7 +127,8 @@
 %% If set to "true": the language of the statutory declaration text is set to
 %% English, otherwise it is in German.
 
-
+\definecolor{bspcolor}{rgb}{0.202,0.5,0.22}
+\definecolor{glcolor}{rgb}{0.717,0.1,0.1}
 %% ========================================================================
 %%%% Document metadata
 %% ========================================================================
@@ -200,21 +201,24 @@
 
 
 			\newcommand{\beginbsp}{
-
      \hfill {\color[rgb]{0.202,0.5,0.22}{\vrule width 2pt }}\hfill
      \begin{minipage}{0.95\textwidth}
+
 				\begin{addmargin}[0.5em]{0cm}
 			}
 
 
 			\newcommand{\beginip}{
-
      \hfill {\color[rgb]{0.117,0.403,0.713}{\vrule width 2pt }}\hfill
      \begin{minipage}{0.95\textwidth}
 				\begin{addmargin}[0.5em]{0cm}
 			}
 
 
+
+\newcommand{\beginvor}{
+\beginip
+}
 						\newcommand{\begingl}{
 
 			     \hfill {\color[rgb]{0.717,0.1,0.1}{\vrule width 2pt }}\hfill
@@ -242,9 +246,35 @@
 
 			      }
 
+
+
+
+			\newcommand{\vorgehen}[2]{
+        %\PencilRightDown \vspace{-1,0cm}
+       \subparagraph{  \hspace{-0.85cm} \textcolor{black}{\Checkmark \ } #1}  \textbf{#2}
+
+      }
+
+			\newcommand{\bsptask}[2]{
+        %\PencilRightDown \vspace{-1,0cm}
+       \subparagraph{  \hspace{-0.85cm} \textcolor{black}{\PencilRightDown \ } \textcolor{bspcolor}{#1}}  \textbf{#2}
+
+      }
+			\newcommand{\bsp}[2]{
+        %\PencilRightDown \vspace{-1,0cm}
+         \subparagraph{\textcolor{bspcolor}{#1}}  \textbf{#2}
+
+      }
+
+
+			\newcommand{\gl}[2]{
+        %\PencilRightDown \vspace{-1,0cm}
+         \subparagraph{\textcolor{glcolor}{#1}}  \textbf{#2}
+
+      }
       \newcommand{\important}[2]{
         %\PencilRightDown \vspace{-1,0cm}
-        \subparagraph{#1}  \textbf{#2}
+         \subparagraph{#1}  \textbf{#2}
 
       }
 			\newcommand{\mybadgood}[2]{%%
@@ -377,6 +407,7 @@ Die neuste Version des Skriptes befindet sich immer auf: \texttt{n.ethz.ch/~zren
 \input{strom}
 \input{netzwerke}
 \input{mfeld}
+\input{zeitabh-mfeld}
 %\input{felder}   %% remove this line to get rid of the style chapter
 %\input{chapter2}
 %% include tex file chapters:

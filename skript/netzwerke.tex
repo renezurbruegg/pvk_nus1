@@ -11,7 +11,7 @@
 % styling and technical implementation adopted 2011 by Karl Voit
 %----------------------------------------------------------------
 
-					\subsection{Netzwerke}
+					\section{Netzwerke}
 					\label{chap:Style}
 
 
@@ -19,7 +19,6 @@
 
 					\beginip
 					Der \textbf{Widerstand} bestimmt, wieviel Strom fließen kann, wenn eine bestimmte Spannung angelegt wird. \\
-					Ist der Wert des Widerstandes unabhängig vom Strom, so bezeichnen wir ihn als ohmschen Widerstand.
 					\begin{center}
 						\includegraphics[scale=0.25]{img/widerstand.png}
 					\end{center}
@@ -40,7 +39,7 @@
 										\begin{center}
 											\vspace{-2mm}
 
-											$\displaystyle \int_{\gamma} \vec{E} \cdot d\vec{s} = \int_{\gamma_0}^{\gamma_1} \vec{E} \cdot d\vec{s} + \int_{\gamma_1}^{\gamma_0} \vec{E} \cdot d\vec{s} = U_{01} + U_{10} = 0$
+											$\displaystyle \oint_{\gamma} \vec{E} \cdot d\vec{s} = \int_{\gamma_0}^{\gamma_1} \vec{E} \cdot d\vec{s} + \int_{\gamma_1}^{\gamma_0} \vec{E} \cdot d\vec{s} = U_{01} + U_{10} = 0$
 										\end{center}
 										Mit dieser Erkenntnis können wir die Maschenregel definieren:
 
@@ -137,6 +136,13 @@
 										\end{center}
 
 
+
+
+										\subsection{Stern Dreieck Umformung}
+										%TODO
+
+
+
 										\definition{Spannungsteiler}
 										\beginip
 										Die Spannungsteilerregel gibt an, wie sich eine Spannung über verschiedene Widerstände aufteilt, wenn diese in \textbf{Serie} geschaltet sind. \\
@@ -227,6 +233,13 @@
 										\newpage
 
 
+\subsection{Vereinfachungen mithilfe Symmetrieüberlegungen}
+%TODO
+----TODO---
+
+
+
+
 										\subsection{Vorgehen um Schaltbilder mit einer Quelle zu vereinfachen}
 										\begin{enumerate}
 											\item Bringe Quelle auf die linke Seite
@@ -234,8 +247,8 @@
 											\item Expandiere nun das Netzwerk Schritt für Schritt, bis die Spannung über dem gesuchten Widerstand berechnet werden kann.
 										\end{enumerate}
 
-										\important{Beispiel}{\#1}
-										\beginip
+										\bsptask{Beispiel}{\#1}
+										\beginbsp
 										1) Berechnen sie $U_x$ in Abhängigkeit des Quellstromes $I$
 										\begin{center}
 											\fix
@@ -257,8 +270,8 @@
 										Um ein erstes Ersatzschaltbild zu erhalten, kann das "Flussverfahren\texttt{"} angewandt werden.
 
 					\newpage
-										\definition{Flussverfahren}
-										\beginip
+										\bsp{Beispiel}{Flussverfahren}
+										\beginbsp
 										Beim Flussverfahren überlegt man sich sämtliche Arten, wie der Strom von einem Ende der Quelle zum anderen fliessen kann, und zeichnet somit ein Ersatzschaltbild. \\ \\
 										\textbf{Beispiel}
 										\begin{center}
@@ -337,8 +350,8 @@
 										 Eine Stromquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass durch dieses Bauteil kein Strom fliessen darf. Dies entspricht gerade einem Leerlauf, da dieser als Widerstand mit Wert $\displaystyle \rightarrow \infty$ modelliert werden kann. \\
 
 
-										 \important{Beispiel}{\#2}
-										 \beginip
+										 \bsptask{Beispiel}{\#2}
+										 \beginbsp
 											\textbf{Aufgabe} Berechnen sie die Spannung $U_x$ und die Leistung $P_x$ im folgenden Netzwerk, wenn alle Widerstände $ R = 100 \Omega$ betragen. \\
 											\begin{center}
 												\fix
@@ -401,7 +414,7 @@
 
 
 
-					           \important{Vorgehen - Analyse von Umfangreichen Netzwerke}{}
+					           \vorgehen{Vorgehen}{Analyse von Umfangreichen Netzwerke}{}
 					           \beginip
 					            \begin{center}
 					              \begin{itemize}
@@ -437,6 +450,7 @@
 
 
 
+										\subsection{Ersatzquelllen}
 
 
 										\definition{Thévenin / Norton Äquivalent}
@@ -452,11 +466,57 @@
 										\iend
 
 
+										\newpage
+										\vorgehen{Vorgehen}{Ersatzquelle für gegebenes Schaltbild mit offenen Klemmen finden}
+										\beginvor
+										\begin{itemize}
+
+										  \item[1.] Betrachte die Schaltung. Sind mehr Stromquellen vorhanden, so ist es häufig einfacher den Kurzschlussstrom zu berechnen. Bei mehr Spannungsquellen die Leerlaufsspannung. \\
+										  Wiederhole folgendes für alle Quellen $i$: \\
+										  \end{itemize}
+										  \beginip
+										  \begin{itemize}
+
+										  \item [2.  ]  Setze alle Strom / Spannungsquellen ausser einer zu 0. (Stromquelle $\rightarrow$ Leerlauf, Spannungsquelle $\rightarrow$ Kurzschluss)
+										  \item[3. ] Versuche die einzelne Quelle auf die linke Seite zu bekommen. (Siehe Skript \texttt{"}Flussverfahren\texttt{"})
+										  \item[4.a)] \textbf{Kurzschlussstrom}
+										  \begin{enumerate}
+										  \item Schliesse die Klemmen kurz und bezeichne den Strom, welcher durch diese Klemmen fliesst als $I_{ks}^{(i)}$.
+										  \item Versuche mittels Stromteilern den gesuchten Strom zu berechnen. Falls eine direkte Verbindung von Stromquelle über den Kurzschluss zur Quelle zurückfürt, ist der Kurzschlussstrom gleich dem Strom der Quelle (=0 bei Spannungsquelle). \\
+										  Ist die Quelle keine Stromquelle, so kann evt. ein serieller Widerstand verwendet werden, um die Quelle umzuformen.
+										  \end{enumerate}
+										  \item[4.b)] \textbf{Leerlaufspannung}
+										  \begin{enumerate}
+										  \item Zeichnen einen Spannungspfeil zwischen den Klemmen und bezeichne die Spannung als $U_{LL}^{(i)}$.
+										  \item Versuche mittels Spannungsteiler die gesuchte Spannung zu berechnen. Falls kein Strom von der Spannungsquelle fliessen kann (Leerlauf unterbricht die komplette Schaltung), so ist die Leerlaufspannung gleich der Spannung der Spannungsquelle (=0 bei Stromquelle). \\
+										  Ist die Quelle keine Spannungsquelle, so kann evt. ein paralleler Widerstand verwendet werden, um die Quelle umzuformen.
+										  \end{enumerate}
+										\end{itemize}
+
+										  \iend
+										\begin{itemize}
+
+										  \item[5] \textbf{Innenwiderstand}
+										  \begin{enumerate}
+										    \item Setze \textbf{alle} Quellen auf 0. Versuche nun die Widerstände solange umzuformen, bis nur noch ein Ersatzwiderstand vorhanden ist. (Ggf. \texttt{"}Flussverfahren\texttt{"} mit offener Klemme anwenden)
+										    \item Bezeichne den Wert des Widerstandes als $R_i$
+										  \end{enumerate}
+										  \item[6.a)] \textbf{Thévenin Äquivalent} Spannungsquelle mit seriellem Innenwiderstand. \\
+										  Werte: $\displaystyle   R= R_i$, $U_q = \sum_i U_{LL}^{(i)} = (\sum_i I_{ks}^{(i)})\cdot R_i$
+
+										  \item[6.b)] \textbf{Norton Äquivalent} Spannungsquelle mit parallelem Innenwiderstand. \\
+										  Werte: $\displaystyle  R= R_i$, $I_q = \sum_i I_{ks}^{(i)}) = \frac{\sum_i U_{LL}^{(i)}}{R_i}$
+
+										  \end{itemize}
+
+										\iend
 
 
 
 
-										\important{Beispiel}{\#3 - Thévenin Äquivalente Schaltung}
+
+
+										\bsptask{Beispiel}{\#3 - Thévenin Äquivalente Schaltung}
 										\beginip
 										\textbf{Aufgabe}
 										\\Geben sie eine Thévenin Äquivalente Schaltung (Innenwiderstand $R_i$, $U_{Th}$) für folgende Klemmen an. Alle Widerstände haben Wert $100\Omega$ \\
