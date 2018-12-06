@@ -135,7 +135,7 @@
 	\bsptask{Beispiel}{Magnetfeld einer Spule}
 
 	\beginbsp
-	Gegeben sei eine Spule mit N Wicklungen und der länge l. Berechnen Sie die Magnetische Feldstärke \vec{H} in Abhängigkeit des Stromes I, Länge l und Wicklungen N.
+	Gegeben sei eine Spule mit N Wicklungen und der länge l. Berechnen Sie die Magnetische Feldstärke $\vec{H}$ in Abhängigkeit des Stromes I, Länge l und Wicklungen N.
 	\iend
 
 	\beginbsp
@@ -144,6 +144,10 @@
 		\begin{center}
 			\ibox{\includegraphics[scale=0.3]{img/spule_fluss.png}}
 		\end{center}
+
+
+
+
 
 \begin{center}
 
@@ -173,6 +177,15 @@
 
 	Aus der letzten Aufgabe folgt, dass das Magnetische Feld einer Spule im inneren Näherungsweise konstant ist. Ausserhalb der Windungen ist die Spule feldfrei. \\
 	Diese Eigenschaften entsprechen gerade denen, eines \textbf{Stabmagneten}
+
+
+\subsubsection{Verhalten von B und H Feld an Randflächen}
+%TODO
+todo
+
+
+
+\subsubsection{Das Reluktanzmodell}
 
 	\definition{Magnetische Spannung}
 	\beginip
@@ -223,7 +236,6 @@
 
 \newpage
 
-\subsubsection{Das Reluktanzmodell}
 		\textbf{magnetische Grössen im Vergleich zu eletrischen} \\
 
 		\def\arraystretch{2}%  1 is the default, change whatever you need
@@ -330,11 +342,66 @@
 	\formulaBegin
 	$ L := \frac{N\cdot \Phi}{I} = \frac{N^2}{R_m} $
 	\formulaEnd
+	Der Faktor $N$ im Nenner kommt daher, dass der Fluss bei einer Spule durch $N$ Windungen hindurchfliesst. Somit ist die effektive Fläche des Flusses N mal grösser, wesshalb er N mal gezählt wird. \\
+
 	Die in einer Induktivität gespeicherte Energie berechnet sich zu
 	\formulaBegin
 	$W =\displaystyle \frac{1}{2}L \cdot I^2$
 	\formulaEnd
 \iend
+
+
+
+\bsptask{Beispiel}{Berechnen einer Gegeninduktivität}
+\beginbsp
+Auf einem Ringkern mit der Querschnittsfläche A und der Permeabilit$\mu_r \rightarrow \infty$ ist
+eine Wicklungen mit N1 angebracht. Der Ringkern
+besitzt einen Luftspalt mit der sehr kleinen Breite $l_g$. Das magnetische Feld kann im
+Luftspalt als homogen angenommen werden.
+
+1) Berechnen sie die Magnetische Flussdichte im Luftspalt. \\
+2) Berechnen sie den magnetischen Fluss $\phi_A$ im Kern.\\
+3) Berechnen sie die Induktivität L
+\begin{center}
+
+\includegraphics[scale=0.25]{img/induktivitaet_bsp_1.PNG}
+
+\end{center}
+
+\iend
+\newpage
+
+\beginip
+\textbf{Lösung}
+\begin{itemize}
+\item 1) Es gilt für die Durchflutung bezüglich dem Kreisring:
+			\begin{center}
+				$\Theta =  \oint_s \vec{H}\cdot d\vec{s} = N_1\cdot i_1(t)$
+			\end{center}
+			Da die Permeabilität des Magneten gegen unendlich strebt und das B-Feld bei senkrechten Materialübergängen konstant ist gilt: \\
+
+			\begin{center}
+			$\displaystyle \oint_s \vec{H} d\vec{s} = \underbrace{\int_{M} \frac{\vec{B}}{\mu_0 \cdot \mu_r} d\vec{s}}_{=0} + \int_{L} \frac{\vec{B}}{\mu_0} d\vec{s} = \int_{L} \frac{\vec{B}}{\mu_0} d\vec{s} $
+		\end{center}
+		Da des B-feld parallel zum Weg ist und über dem ganzen Weg konstant ist gilt:
+		\begin{center}
+				$\displaystyle N_1 \cdot i_1(t) = \displaystyle \oint_s \vec{H} d\vec{s} = \frac{B}{\mu_0} \cdot l_g$ \\
+				$\displaystyle \rightarrow \doubleunderline{\vec{B} = \frac{N_1 \cdot i_1(t) \mu_0}{l_g} (-\vec{e}_x)}$
+		\end{center}
+
+		\item 2) Für den Magnetischen Fluss gilt:
+		\begin{center}
+				$\displaystyle \phi_A = \iint_A \vec{B} \cdot d\vec{A} = B \cdot A =\doubleunderline{\frac{N_1 \cdot i_1(t) \mu_0}{l_g} \cdot A}$
+		\end{center}
+
+		\item 3) Da die Spule $N_1$ Wicklungen aufweist, muss der Fluss $\phi_A$ $N_1$ mal gezählt werden. Es gilt für die Induktivität:
+		\begin{center}
+				$ \displaystyle L:= {\phi}{i} = N_1 \cdot  \frac{N_1 \cdot i_1(t) \mu_0}{l_g} \cdot A \cdot \frac{1}{i_1(t)} =  \doubleunderline{\frac{N_1^2 \cdot \mu_0}{l_g} \cdot A}$
+		\end{center}
+\end{itemize}
+
+\iend
+
 
 
 
@@ -351,6 +418,7 @@
 		$\displaystyle \frac{1}{L_{ges}} = \sum_{i=0}^n \frac{1}{L_i} \Bigg\rvert L_{ges} = (L_1 || L_2 )$
 		\formulaEnd
 	 \iend
+\newpage
 
 
 \definition{Gegeninduktivität}
@@ -358,15 +426,42 @@
 %TODO
 Die Gegeninduktivität beschreibt, wie viel Magnetischer Fluss durch eine \textbf{andere} Leiterschleife durchfliesst, abhängig
 des Stromes in der ersten Schleife.
+\formulaBegin
+$\displaystyle L_{21} = N_2 \cdot \frac{\phi_{21}}{i_1}$
+\formulaEnd
+\begin{center}
 
-\includegraphics{gegeninduktivitat.png}
+	\includegraphics[scale=0.5]{img/gegeninduktivitaet.PNG}
+\end{center}
 \iend
+
 
 \bsptask{Beispiel}{Berechnen einer Gegeninduktivität}
 \beginbsp
-%TODO
-TODO
+Beim Ringkern aus dem vorherigen Beispiel wird nun eine 2 Spule mit $N_2$ Wicklungen hinzugefügt. Berechnen sie die Gegeninduktivität $L_{21}$ bezüglich der Spule mit den $N_2$ Windungen.
+\begin{center}
+
+	\includegraphics[scale=0.5]{img/induktivitaet_bsp_2.png}
+\end{center}
 \iend
+
+\newpage
+
+\beginip
+\textbf{Lösung}
+
+Die Gegeninduktivität beschreibt, wieviel magnetischer Fluss durch die 2. Spule fliesst abhängig des Stromes der ersten Spule:
+\begin{center}
+$\displaystyle L_{21} := \frac{\Phi_{s2}}{i_1}$
+\end{center}
+
+Da der Fluss im Magneten selbst gerade $\Phi_A$ beträgt und dieser durch $N_2$ Leiterschleifen fliesst, gilt:
+\begin{center}
+
+	$\displaystyle  L_{21} := \frac{\Phi_{s2}}{i_1} = \frac{\Phi_A \cdot N_2}{i_1} = \doubleunderline{\frac{N_1\cdot N_2 \cdot \mu_0}{l_g} \cdot A}$
+\end{center}
+\iend
+
 
 
 

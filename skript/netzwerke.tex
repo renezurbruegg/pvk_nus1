@@ -306,6 +306,105 @@
 										\iend
 
 
+
+
+
+
+																				\subsection{Ersatzquelllen}
+
+
+																				\definition{Thévenin / Norton Äquivalent}
+																				\beginip
+																				Jedes Netzwerk mit \textbf{linearen} Bauelementen und 2 Klemmen lässt sich als reale Quelle darstellen. \\
+																				\textbf{Thévenin Äquivalent} Darstellung als reale \textbf{Spannungsquelle} mit Leerlaufspannung, die an den Klemmen auftritt \\
+																				\textbf{Norton Äquivalent} Darstellung als reale \textbf{Stromquelle}  mit Kurzschlussstrom, der an den Klemmen auftritt\\
+																				Der Innenwiderstand entspricht dem von außen gemessenen Widerstand, wenn alle Quellen zu 0 gesetzt werden.
+																				\begin{center}
+																					\fix
+																						\ibox{\includegraphics[scale=0.6]{img/nort_the.png}}
+																				\end{center}
+																				\iend
+
+
+																				\newpage
+																				\vorgehen{Vorgehen}{Ersatzquelle für gegebenes Schaltbild mit offenen Klemmen finden}
+																				\beginvor
+																				\begin{itemize}
+
+																				  \item[1.] Betrachte die Schaltung. Sind mehr Stromquellen vorhanden, so ist es häufig einfacher den Kurzschlussstrom zu berechnen. Bei mehr Spannungsquellen die Leerlaufsspannung. \\
+																				  Wiederhole folgendes für alle Quellen $i$: \\
+																				  \end{itemize}
+																				  \beginip
+																				  \begin{itemize}
+
+																				  \item [2.  ]  Setze alle Strom / Spannungsquellen ausser einer zu 0. (Stromquelle $\rightarrow$ Leerlauf, Spannungsquelle $\rightarrow$ Kurzschluss)
+																				  \item[3. ] Versuche die einzelne Quelle auf die linke Seite zu bekommen. (Siehe Skript \texttt{"}Flussverfahren\texttt{"})
+																				  \item[4.a)] \textbf{Kurzschlussstrom}
+																				  \begin{enumerate}
+																				  \item Schliesse die Klemmen kurz und bezeichne den Strom, welcher durch diese Klemmen fliesst als $I_{ks}^{(i)}$.
+																				  \item Versuche mittels Stromteilern den gesuchten Strom zu berechnen. Falls eine direkte Verbindung von Stromquelle über den Kurzschluss zur Quelle zurückfürt, ist der Kurzschlussstrom gleich dem Strom der Quelle (=0 bei Spannungsquelle). \\
+																				  Ist die Quelle keine Stromquelle, so kann evt. ein serieller Widerstand verwendet werden, um die Quelle umzuformen.
+																				  \end{enumerate}
+																				  \item[4.b)] \textbf{Leerlaufspannung}
+																				  \begin{enumerate}
+																				  \item Zeichnen einen Spannungspfeil zwischen den Klemmen und bezeichne die Spannung als $U_{LL}^{(i)}$.
+																				  \item Versuche mittels Spannungsteiler die gesuchte Spannung zu berechnen. Falls kein Strom von der Spannungsquelle fliessen kann (Leerlauf unterbricht die komplette Schaltung), so ist die Leerlaufspannung gleich der Spannung der Spannungsquelle (=0 bei Stromquelle). \\
+																				  Ist die Quelle keine Spannungsquelle, so kann evt. ein paralleler Widerstand verwendet werden, um die Quelle umzuformen.
+																				  \end{enumerate}
+																				\end{itemize}
+
+																				  \iend
+																				\begin{itemize}
+
+																				  \item[5] \textbf{Innenwiderstand}
+																				  \begin{enumerate}
+																				    \item Setze \textbf{alle} Quellen auf 0. Versuche nun die Widerstände solange umzuformen, bis nur noch ein Ersatzwiderstand vorhanden ist. (Ggf. \texttt{"}Flussverfahren\texttt{"} mit offener Klemme anwenden)
+																				    \item Bezeichne den Wert des Widerstandes als $R_i$
+																				  \end{enumerate}
+																				  \item[6.a)] \textbf{Thévenin Äquivalent} Spannungsquelle mit seriellem Innenwiderstand. \\
+																				  Werte: $\displaystyle   R= R_i$, $U_q = \sum_i U_{LL}^{(i)} = (\sum_i I_{ks}^{(i)})\cdot R_i$
+
+																				  \item[6.b)] \textbf{Norton Äquivalent} Spannungsquelle mit parallelem Innenwiderstand. \\
+																				  Werte: $\displaystyle  R= R_i$, $I_q = \sum_i I_{ks}^{(i)}) = \frac{\sum_i U_{LL}^{(i)}}{R_i}$
+
+																				  \end{itemize}
+
+																				\iend
+
+
+
+
+
+
+																				\bsptask{Beispiel}{\#3 - Thévenin Äquivalente Schaltung}
+																				\beginip
+																				\textbf{Aufgabe}
+																				\\Geben sie eine Thévenin Äquivalente Schaltung (Innenwiderstand $R_i$, $U_{Th}$) für folgende Klemmen an. Alle Widerstände haben Wert $100\Omega$ \\
+
+																				\begin{center}
+																					\fix
+																						\ibox{\includegraphics[scale=0.4]{img/ex3-1.png}}
+																				\end{center}
+																				\iend
+																				\beginip
+																				\textbf{Lösung}
+																				\\
+																				Zuerst berechnen wir die Leerlaufspannung für die Stromquelle: \\
+																				$U_{LL_1} = 120mA \cdot 200 \Omega = 24V$ \\
+																				Danach die Leerlaufspannung für die Spannungsquelle: \\
+																				$ U_{LL_2} = 20V$\\
+																				Die Gesamtspannung und somit die Spannung der Ersatzspannungsquelle beträgt: \\
+																				$\doubleunderline{U_{Th}} = U_{LL_1} + U_{LL_2} = \doubleunderline{44V}$ \\
+
+																				Nun müssen wir noch den Innenwiderstand berechnen. Dazu setzen wir alle Quellen zu 0 und berechnen den von aussen gemessenen Widerstand:\\
+																				\begin{center}
+																					\fix
+																						\ibox{\includegraphics[scale=0.6]{img/ex3-2.png}}
+																				\end{center}
+																									$\doubleunderline{R_i} = 100\Omega + 100\Omega  + 100\Omega  = \doubleunderline{300 \Omega} $
+																				\iend
+
+
 										\subsection{Leistungsanpassung}
 										\definition{Leistung}
 										\beginip
@@ -332,6 +431,62 @@
 										Die Leistung an einem Lastwiderstand in Serie ist gegeben als: \\
 										$ \displaystyle P_L = U_L \cdot I_L = \frac{U_L^2}{R_L} = \frac{( U_0 \frac{R_L}{R_L + R_i})^2}{R_L} = U_o^2 \cdot \frac{R_L}{(R_L + R_i)^2}$ \\
 										$\displaystyle \frac{d}{dR_L} (P_L) = - U_0^2 \cdot \frac{R_L - R_i}{(R + R_L)^3} = 0 \Rightarrow R_L = R_i  \Rightarrow P_L = P_{max}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+																														\newpage
+																														\vorgehen{Vorgehen}{Leistung über einer Last Maximieren}
+																														\beginvor
+\textbf{Falls möglich}
+\begin{itemize}
+  \item [1. ] Entferne Komponenten über denen die Leistung maximiert werden soll und ersetze sie mit offenen Klemmen (Fasse die entfernten Komponenten als einen Lastwiderstand zusammen).
+  \item [2. ] Berechne von den Klemmen den Innenwiderstand.
+  \item [3. ] Innenwiderstand $R_i \rightarrow R_L = R_i$
+  \item [4. ] Falls maximale Leistung gefragt: Berechne Leerlaufspannung oder den Kurzschlussstrom. $\displaystyle P_{max} = \frac{U_{LL}^2} {4 \cdot R_i } $
+\end{itemize}
+
+\textbf{Sonst}
+
+\begin{itemize}
+  \item [1. ] Finde einen Ausdruck für $U_L$ und $I_L$
+	\item [2. ] Berechne $P = U_L \cdot I_L$
+	\item [3. ] Leite $P$ nach dem veränderlichem Widerstand ab und setze zu 0 um ein Maximum zu finden
+\end{itemize}
+
+
+																														\iend
+
+\bsptask{Beispiel}{Leistungsanpassung}
+\beginbsp
+%TODO
+todo
+\iend
+
+
+
+
+
+
+
+
 
 										\subsection{Superpositionsprinzip}
 
@@ -444,102 +599,3 @@
 					              \end{itemize}
 					            \end{center}
 					            \iend
-
-
-
-
-
-
-										\subsection{Ersatzquelllen}
-
-
-										\definition{Thévenin / Norton Äquivalent}
-										\beginip
-										Jedes Netzwerk mit \textbf{linearen} Bauelementen und 2 Klemmen lässt sich als reale Quelle darstellen. \\
-										\textbf{Thévenin Äquivalent} Darstellung als reale \textbf{Spannungsquelle} mit Leerlaufspannung, die an den Klemmen auftritt \\
-										\textbf{Norton Äquivalent} Darstellung als reale \textbf{Stromquelle}  mit Kurzschlussstrom, der an den Klemmen auftritt\\
-										Der Innenwiderstand entspricht dem von außen gemessenen Widerstand, wenn alle Quellen zu 0 gesetzt werden.
-										\begin{center}
-											\fix
-												\ibox{\includegraphics[scale=0.6]{img/nort_the.png}}
-										\end{center}
-										\iend
-
-
-										\newpage
-										\vorgehen{Vorgehen}{Ersatzquelle für gegebenes Schaltbild mit offenen Klemmen finden}
-										\beginvor
-										\begin{itemize}
-
-										  \item[1.] Betrachte die Schaltung. Sind mehr Stromquellen vorhanden, so ist es häufig einfacher den Kurzschlussstrom zu berechnen. Bei mehr Spannungsquellen die Leerlaufsspannung. \\
-										  Wiederhole folgendes für alle Quellen $i$: \\
-										  \end{itemize}
-										  \beginip
-										  \begin{itemize}
-
-										  \item [2.  ]  Setze alle Strom / Spannungsquellen ausser einer zu 0. (Stromquelle $\rightarrow$ Leerlauf, Spannungsquelle $\rightarrow$ Kurzschluss)
-										  \item[3. ] Versuche die einzelne Quelle auf die linke Seite zu bekommen. (Siehe Skript \texttt{"}Flussverfahren\texttt{"})
-										  \item[4.a)] \textbf{Kurzschlussstrom}
-										  \begin{enumerate}
-										  \item Schliesse die Klemmen kurz und bezeichne den Strom, welcher durch diese Klemmen fliesst als $I_{ks}^{(i)}$.
-										  \item Versuche mittels Stromteilern den gesuchten Strom zu berechnen. Falls eine direkte Verbindung von Stromquelle über den Kurzschluss zur Quelle zurückfürt, ist der Kurzschlussstrom gleich dem Strom der Quelle (=0 bei Spannungsquelle). \\
-										  Ist die Quelle keine Stromquelle, so kann evt. ein serieller Widerstand verwendet werden, um die Quelle umzuformen.
-										  \end{enumerate}
-										  \item[4.b)] \textbf{Leerlaufspannung}
-										  \begin{enumerate}
-										  \item Zeichnen einen Spannungspfeil zwischen den Klemmen und bezeichne die Spannung als $U_{LL}^{(i)}$.
-										  \item Versuche mittels Spannungsteiler die gesuchte Spannung zu berechnen. Falls kein Strom von der Spannungsquelle fliessen kann (Leerlauf unterbricht die komplette Schaltung), so ist die Leerlaufspannung gleich der Spannung der Spannungsquelle (=0 bei Stromquelle). \\
-										  Ist die Quelle keine Spannungsquelle, so kann evt. ein paralleler Widerstand verwendet werden, um die Quelle umzuformen.
-										  \end{enumerate}
-										\end{itemize}
-
-										  \iend
-										\begin{itemize}
-
-										  \item[5] \textbf{Innenwiderstand}
-										  \begin{enumerate}
-										    \item Setze \textbf{alle} Quellen auf 0. Versuche nun die Widerstände solange umzuformen, bis nur noch ein Ersatzwiderstand vorhanden ist. (Ggf. \texttt{"}Flussverfahren\texttt{"} mit offener Klemme anwenden)
-										    \item Bezeichne den Wert des Widerstandes als $R_i$
-										  \end{enumerate}
-										  \item[6.a)] \textbf{Thévenin Äquivalent} Spannungsquelle mit seriellem Innenwiderstand. \\
-										  Werte: $\displaystyle   R= R_i$, $U_q = \sum_i U_{LL}^{(i)} = (\sum_i I_{ks}^{(i)})\cdot R_i$
-
-										  \item[6.b)] \textbf{Norton Äquivalent} Spannungsquelle mit parallelem Innenwiderstand. \\
-										  Werte: $\displaystyle  R= R_i$, $I_q = \sum_i I_{ks}^{(i)}) = \frac{\sum_i U_{LL}^{(i)}}{R_i}$
-
-										  \end{itemize}
-
-										\iend
-
-
-
-
-
-
-										\bsptask{Beispiel}{\#3 - Thévenin Äquivalente Schaltung}
-										\beginip
-										\textbf{Aufgabe}
-										\\Geben sie eine Thévenin Äquivalente Schaltung (Innenwiderstand $R_i$, $U_{Th}$) für folgende Klemmen an. Alle Widerstände haben Wert $100\Omega$ \\
-
-										\begin{center}
-											\fix
-												\ibox{\includegraphics[scale=0.4]{img/ex3-1.png}}
-										\end{center}
-										\iend
-										\beginip
-										\textbf{Lösung}
-										\\
-										Zuerst berechnen wir die Leerlaufspannung für die Stromquelle: \\
-										$U_{LL_1} = 120mA \cdot 200 \Omega = 24V$ \\
-										Danach die Leerlaufspannung für die Spannungsquelle: \\
-										$ U_{LL_2} = 20V$\\
-										Die Gesamtspannung und somit die Spannung der Ersatzspannungsquelle beträgt: \\
-										$\doubleunderline{U_{Th}} = U_{LL_1} + U_{LL_2} = \doubleunderline{44V}$ \\
-
-										Nun müssen wir noch den Innenwiderstand berechnen. Dazu setzen wir alle Quellen zu 0 und berechnen den von aussen gemessenen Widerstand:\\
-										\begin{center}
-											\fix
-												\ibox{\includegraphics[scale=0.6]{img/ex3-2.png}}
-										\end{center}
-															$\doubleunderline{R_i} = 100\Omega + 100\Omega  + 100\Omega  = \doubleunderline{300 \Omega} $
-										\iend
