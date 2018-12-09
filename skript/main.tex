@@ -138,7 +138,7 @@
 \newcommand{\myauthorwithexistingtitles}{\myauthor{}, OLDDEGREE}  %% including
                                 %% university degree already held
                                 %% (BSc, MSc, ...)
-\newcommand{\mytitle}{Netzwerk und Schaltungen 1}  %% also used for PDF metadata (hyperref)
+\newcommand{\mytitle}{Netzwerke und Schaltungen 1}  %% also used for PDF metadata (hyperref)
 \newcommand{\mysubtitle}{ }  %% only used with title_Thesis_TU_Graz_-_kazemakase
 \newcommand{\mysubject}{SUBJECT}  %% also used for PDF metadata (hyperref)
 \newcommand{\mykeywords}{KEYWORDS}  %% also used for PDF metadata (hyperref)
@@ -163,8 +163,7 @@
 \newcommand{\mysubmissiontown}{\myhometown} %% town of handing in (or \myhometown)
 
 
-
-
+\newcounter{bspcounter}
 
 
 
@@ -257,7 +256,8 @@
 
 			\newcommand{\bsptask}[2]{
         %\PencilRightDown \vspace{-1,0cm}
-       \subparagraph{  \hspace{-0.85cm} \textcolor{black}{\PencilRightDown \ } \textcolor{bspcolor}{#1}}  \textbf{#2}
+       \subparagraph{  \hspace{-0.85cm} \textcolor{black}{\PencilRightDown \ } \textcolor{bspcolor}{#1 \thebspcounter}}
+			 \stepcounter{bspcounter}  \textbf{#2}
 
       }
 			\newcommand{\bsp}[2]{
@@ -332,7 +332,7 @@ colframe=black!30!black, colback=white]{#1}
 
 \newcommand{\myLaT}{\LaTeX{}@TUG\xspace} %% LaTeX@TUG text "logo"
 
- \newcommand{\myimportant}{%% mark important chapters
+ \newcommand{\myimportant}{%% mark important chaptersfbsp
    \marginpar{\vspace{-1em}\rightpointleft}
 }
  \newcommand{\myinteresting}{\marginpar{\vspace{-2em}\PencilLeftDown}}
@@ -380,8 +380,7 @@ colframe=black!30!black, colback=white]{#1}
  \end{center}
  Dieses Skript entstand als Beiblatt zum Prüfungsvorbereitungskurs \texttt{"}Netzwerk und Schaltungen 1\texttt{"} im Januar 2019.
 Es ist primär als Hilfe für die Studenten gedacht, mit dem Ziel, den Fokus auf die prüfungsrelevanten Themen zu legen.
-Verbreitung über die Grenzen der ETH hinaus ist untersagt. Es wird weder Anspruch auf Vollständigkeit noch auf Korrektheit erhoben.
-Fragen, Anregungen und vor allem Korrekturen sind willkommen und sollten an zrene@student.ethz.ch adressiert werden. \\
+	Fragen, Anregungen und vor allem Korrekturen sind willkommen und sollten an zrene@student.ethz.ch adressiert werden. \\
 Die neuste Version des Skriptes befindet sich immer auf: \texttt{n.ethz.ch/~zrene/nus1-pvk.html}
 \\
 \begin{center}
@@ -402,6 +401,9 @@ Die neuste Version des Skriptes befindet sich immer auf: \texttt{n.ethz.ch/~zren
 \newpage
 %\mainmatter                     %% KOMA: marks main part using arabic page numbers and such; only available in scrbook
 
+
+\input{felder}
+\newpage
 \input{e-feld}
 
 \input{strom}
@@ -412,10 +414,10 @@ Die neuste Version des Skriptes befindet sich immer auf: \texttt{n.ethz.ch/~zren
 %\input{chapter2}
 %% include tex file chapters:
 % \include{introduction}        %% this is a suggestion: you have to create this file on demand
-% \include{problem}             %% this is a suggestion: you have to create this file on demand
+% \include{problem}             %% this is a suggestion: you have to create this file on 	demand
 % \include{solution}            %% this is a suggestion: you have to create this file on demand
 
-% \include{evaluation}          %% this is a suggestion: you have to create this file on demand
+	% \include{evaluation}          %% this is a suggestion: you have to create this file on demand
 %\include{further_ressources}  %% this is a suggestion: you have to create this file on demand
 
 

@@ -67,6 +67,18 @@ todo
 
 \gl{Gleichung}{Kondensator}
 \begingl
-%TODO
-todo
+Der Zusammenhang zwischen Strom und Spannung am Kondensator ist wie folgt gegeben
+\formulaBegin
+$\displaystyle u_c(t) = \frac{1}{C} \int_0^t i_c(t) dt$ \\
+
+$\displaystyle i_c(t) = c \cdot \frac{d}{d t} (u_c)$ \\
+\formulaEnd
 \iend
+
+
+\textbf{Begründung} \\
+Mit dem Wissen, dass Strom definiert ist als die Ladung pro Zeit $ \displaystyle \frac{dQ}{dt} = I$ folgt folgendes: \\
+\begin{center}
+	$\displaystyle \frac{\partial}{\partial t} (C \cdot U) = \frac{\partial}{\partial t} (Q) $ \\
+	$ \displaystyle C  \cdot \frac{dU}{dt} = I \rightarrow U(t) = \frac{1}{C} \cdot \int_0^t I \cdot dt$
+\end{center}
