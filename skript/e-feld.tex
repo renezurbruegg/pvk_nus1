@@ -64,9 +64,141 @@ $\vec{E} = \frac{Q}{A\varepsilon} \cdot \vec{e}_d = \frac{U}{d	} \vec{e}_d$
 
 
 \subsection{(Ladungs)-Dichte}
-In der Physik
-%todo
+In der Physik sind wir häufig nicht nur daran interessiert, wieviele Ladungsträger sich in einem Volumen befinden, sondern wir möchten gerne Informationen darüber haben, wie sie geometrisch Angeordnet sind. (= Verteilen sich alle Ladungsträger auf der Oberfläche, sind alle Mittelpunkt Zentriert etc). \\
+Dazu werden \textbf{Dichtefunktionen} verwendet.
 
+\definition{Linienladungsdichte $\lambda(x)$}
+\beginip
+Eine \textbf{Linienladungsdichte} gibt an, wie sich Ladungen entlang einer Linie anordnen. \\
+Sind die Ladungsträger \textbf{gleichmässig} auf einer Linie verteilt, so ist die Dichte einfach eine Konstante mit Einheit $\frac{C}{m}$. \\
+Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir die Dichte Integrieren: \\
+\formulaBegin
+	$\displaystyle Q_{AB} = \int_A^B \lambda (x) \cdot dx$
+\formulaEnd
+\iend
+
+\bsptask{Beispiel}{Linienladungsdichte}
+\beginbsp
+	Eine Gesamtladung von $Q=10C$ verteilt sich gleichmässig auf einer Gerade der Länge $l = 2m$. \\
+	\begin{itemize}
+		\item 1) Geben Sie die Linienladungsdichte $\lambda(x)$ im Bereich $ 0 < x <l$ an.
+		\item 2) Geben Sie die Gesamtladung im eingeschlossenem Bereich $ 0 < x < l/3$ an.
+	\end{itemize}
+\iend
+\bsp{Lösung}{}
+\beginbsp
+\begin{itemize}
+	\item 1) Da sich die Ladungen gleichmässig verteilen ist die Ladungsdichte unabhängig vom Ort x
+	\begin{center}
+		$\lambda(x) = \lambda = \frac{C}{l} = 5 \frac{C}{m}$
+	\end{center}
+	\item 2) Die eingeschlossene Ladung berechnet sich Grundsätzlich mittel Integration:
+	\begin{center}
+		$\displaystyle Q = \int_0^{l/3} \lambda(x) \cdot dx = \int_0^{l/3} 5 \frac{C}{m} \cdot dx = 5 \frac{C}{m} \cdot \frac{l}{3} = \frac{10}{3} C$
+	\end{center}
+\end{itemize}
+\iend
+
+
+
+
+
+
+
+
+
+\definition{Flächenladungsdichte $\sigma(x,y)$}
+\beginip
+Eine \textbf{Flächenladungsdichte} gibt an, wie sich Ladungen auf einer Fläche anordnen. \\
+Sind die Ladungsträger \textbf{gleichmässig} auf einer Flcähe verteilt, so ist die Dichte einfach eine Konstante mit Einheit $\frac{C}{m^2}$. \\
+Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir die Dichte Integrieren: \\
+\formulaBegin
+	$\displaystyle Q_{A} = \iint_A \sigma (x,y) \cdot dA$
+\formulaEnd
+Ist die Dichte Konstant folgt:
+\formulaBegin
+	$\displaystyle Q_{A} = \sigma \cdot A$
+\formulaEnd
+\iend
+
+
+
+
+
+
+
+\bsptask{Beispiel}{Flächenladungsdichte}
+\beginbsp
+	Eine Gesamtladung von $Q$ verteilt sich gleichmässig auf der Oberfläche einer Kugel mit Radius R. \\
+	Wie Gross ist die Flächenladungsdiche $\sigma$ auf der Kugeloberfläche?
+\iend
+
+
+\bsp{Lösung}{}
+\beginbsp
+	Da sich die Ladungen gleichmässig verteilen, gilt für die Ladungsdichte:
+	\begin{center}
+		$\displaystyle \sigma = \frac{Q}{A} = \frac{Q}{4\pi R^2}$
+	\end{center}
+\iend
+
+
+
+
+
+
+
+
+\definition{Volumenladungsdichte $\rho(x,y,z)$}
+\beginip
+Eine \textbf{Volumenladungsdichte} gibt an, wie sich Ladungen in einem Volumen anordnen. \\
+Sind die Ladungsträger \textbf{gleichmässig} auf dem Volumen verteilt, so ist die Dichte einfach eine Konstante mit Einheit $\frac{C}{m^3}$. \\
+Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir die Dichte Integrieren: \\
+\formulaBegin
+	$\displaystyle Q_{V} = \iiint_V \rho (x,y,z) \cdot dV$
+\formulaEnd
+Ist die Dichte Konstant folgt:
+\formulaBegin
+	$\displaystyle Q_{V} = \rho \cdot V$
+\formulaEnd
+\iend
+
+
+
+
+\bsptask{Beispiel}{Volumenladungsdichte}
+\beginbsp
+Eine Hohlkugel mit Innenradius $R_1$ und Aussenradius $R_2$ sei im Bereich $ R_1 < r < R_2$ gleichmässig mit der Ladung $Q$ gefüllt. \\
+Gesucht ist die Volumenladungsdichte $\rho(r,\theta,\varphi)$ in Kugelkoordinaten, welche die Ladungsdichte im gesamten Raum beschreibt.
+\iend
+
+
+\bsp{Lösung}{}
+\beginbsp
+Da sich die Ladungen nur in einem gewissen Teil des Raumes befinden, müssen wir eine Fallunterscheidung durchfüren:
+\begin{enumerate}
+	\item $\mathbf{r < R_1}$ \\
+	Hier befindet sich keine Ladung, somit ist auch die Volumenladungsdichte gleich 0
+		\item $\mathbf{R_1 \leq r \leq R_2}$ \\
+		Hier ist die Ladung gleichmässig auf dem Volumen $V = 4\cdot \pi (R_2^3 - R_1^3)$ verteilt, somit beträgt die Volumenladungsdichte:
+		\begin{center}
+			$\rho = \frac{Q}{V} = \frac{Q}{4 \cdot \pi (R_2^3 - R_1^3) }$
+		\end{center}
+		\item $\mathbf{r > R_3}$ \\
+		Hier befindet sich keine Ladung, somit ist auch die Volumenladungsdichte gleich 0
+\end{enumerate}
+
+Somit gilt für die Ortsabhängige Volumenladungsdichte:
+\begin{center}
+	$	\rho(r,\theta,\varphi) =
+		\begin{cases}
+			0                                       & r < R_1 \\
+		 \frac{Q}{4 \cdot \pi (R_2^3 - R_1^3)} & R_1 \leq r \leq R_2\\
+				0                                       & r > R_2 \\
+		\end{cases}$
+\end{center}
+
+\iend
 
 
 
@@ -78,7 +210,8 @@ Um gewisse Rechnungen zu vereinfachen, definieren wir ein neues Feld.
 
 \important{Definition}{Die Elektrische Flussdichte}
 \beginip
-Die elektrische Flussdichte $\vec{D}$ beschreibt das Feld, welches existieren würde, falls kein Material vorhanden wäre.
+Die elektrische Flussdichte $\vec{D}$ beschreibt das Feld, welches existieren würde, falls kein Material vorhanden wäre. \\
+Quelle der elektrischen Flussdichte ist elektrische Ladung
 \iend
 
 Da die elektrische Flussdichte  $\vec{D}$ unabhängig vom Material ist und aussschliesslich von den Ladungsträger abhängig ist,
@@ -227,23 +360,57 @@ $ U_{AB} :=  \int_A^B \vec{E} \cdot d\vec{s} $
 \subsection{Vorgehen zur Feldberechnung}
 \vorgehen{Vorgehen}{Feldberechnungen für eine gegebene Anordnung}
 \beginvor
+Zuerst: Besteht die Anordnung aus bekannten Teilobjekten (Kugeln mit verschiedenen Radien etc?) \\
+$\rightarrow$ Wende \textbf{Superposition} an: Berechne das Feld jeder einzelnen Teilanordnung mithilfe des Vorgehens und summiere Resultate auf.
+\\
+\begin{itemize}
 
-\begin{enumerate}
-	\item Überlege, ob ----- Superpositionsprinzip
-
-	\item Versuche die Symmetrie der Anordnung herauszufinden und entscheide dich für ein Koordinatensystem: \\
+	\item [1. ] Versuche die Symmetrie der Anordnung herauszufinden und entscheide dich für ein Koordinatensystem: \\
 	Punktsymmetrisch $\rightarrow$ Kugelkoordinaten \\
 	Achsensymmetrisch $\rightarrow$ Zylinderkoordinaten \\
 	Symmetrisch zu einer Ebene $\rightarrow$ Karthesischekoordinaten\\
 
-	\item Falls Ladungsdichte oder Ladung gegeben, suche Hüllfläche, auf der das Feld Konstant ist.
+	\item [2. a]Falls \textbf{Ladungsdichte oder Ladung} gegeben: \\
+\end{itemize}
+	\beginip
+	\begin{itemize}
 
-	\item Verwende $\displaystyle \oiint_A \vec{D} \cdot d\vec{A} = Q \Rightarrow D = \frac{Q_{eff}}{A_{eff}}$
-
-	\item 
+	\item [2. 1]  Suche Hüllfläche, auf der das Feld Konstant ist
 
 
-\end{enumerate}}
+	\item [2. 2] Verwende $\displaystyle \oiint_A \vec{D} \cdot d\vec{A} = Q \Rightarrow D = \frac{Q_{eff}}{A_{eff}}$ \\
+	Je nach Hüllfläche muss hier eine Fallunterscheidung gemacht werden, da ggf. sich die eingeschlossene Ladung $Q_{eff}$ ändern könnte\\
+	Falls das D-Feld senkrecht durch verschiedene Materialien fliesst, bleibt es überall Konstant.
+
+	\item [2. 3] Aus Skizze, finde heraus, in welche Richtung das D-Feld zeigt und ergänze den Richtungsvektor:
+	\begin{center}
+		$\vec{D} = D \cdot \vec{e}_D$
+	\end{center}
+
+	\item [2. 4] Das resultierende E-Feld in en einzelnen Materialien mit $\varepsilon_{ri}$ ist gegben als:
+	\begin{center}
+			$\displaystyle \vec{E} = \frac{\vec{D}}{\varepsilon_0 \cdot \varepsilon_{ri}}$
+	\end{center}
+\end{itemize}
+\iend
+\begin{itemize}
+	\item [2. b] Falls \textbf{Spannung} zwischen Punkten gegeben ist:\\
+
+	\end{itemize}
+	\beginip
+	\begin{itemize}
+
+	\item [2. 1]  Suche eine Weg vom Punkt A zum Punkt B, auf dem das Feld konstant ist. \\
+
+	\item [2. 2] Verwende $\displaystyle U_{AB} = \int_A^B \vec{E}\cdot d\vec{s}$ \\
+	$\displaystyle \rightarrow E = \frac{U_{AB}}{l_{eff,AB}}$
+
+	\item [2. 3] Aus Skizze, finde heraus, in welche Richtung das E-Feld zeigt und ergänze den Richtungsvektor:
+	\begin{center}
+		$\vec{E} = E \cdot \vec{e}_E$
+	\end{center}
+	\end{itemize}
+	\iend
 \iend
 
 \subsection{Kondensator}
@@ -253,7 +420,7 @@ Die Stärke des elektrischen Feldes ist abhängig der Plattenladung und der Flä
 \beginip
 Ein Kondensator ist ein Bauelement, das in der Lage ist elektrische Ladung und somit Energie in Form von Feldlinien zu speichern. \\
 Die charakteristische Kenngrösse des Kondensators ist die Kapazität \textbf{C}. \\
-Die im Feld eines Kondensators gespeicherte Energie entspricht $\mathtbf{W = \frac{1}{2} C \cdot U^2}$ \\
+Die im Feld eines Kondensators gespeicherte Energie entspricht $\mathbf{W = \frac{1}{2} C \cdot U^2}$ \\
 \iend
 
 

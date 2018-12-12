@@ -308,6 +308,65 @@
 
 
 
+																				\subsection{Superpositionsprinzip}
+
+																				 Das Superpositionsprinzip besagt, dass wir bei einem Netzwerk mit mehreren Quellen einzelne Teillösungen in Abhängigkeit von nur einer Quelle berechnen und aufsummieren können. \\
+																				 Dies gilt jedoch nicht für die Leistung, da diese nicht linear ist! \\
+																				 Um das Superpositionsprinzip anzuwenden, müssen wir alle ausser eine Quelle auf \texttt{"}0\texttt{"} setzen. \\
+																				 Spannungsquellen werden also mit \textbf{Kurzschlüssen} ersetzt und Stromquellen mit \textbf{Leerläufen}. \\
+																				 \begin{center}
+																				 	\fix
+																				 		\ibox{\includegraphics[scale=0.3]{img/superpos-zero.png}}
+																				 \end{center}
+
+
+																				 \textbf{Wieso} \\
+																				 Eine Spannungsquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass über diesem Bauteil keine Spannung abfallen darf. Über einem Kurzschluss wird nie eine Spannung abfallen, da dieser als Widerstand mit Wert 0 modelliert werden kann. \\
+																				 Eine Stromquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass durch dieses Bauteil kein Strom fliessen darf. Dies entspricht gerade einem Leerlauf, da dieser als Widerstand mit Wert $\displaystyle \rightarrow \infty$ modelliert werden kann. \\
+
+
+																				 \bsptask{Beispiel}{\#2}
+																				 \beginbsp
+																					\textbf{Aufgabe} Berechnen sie die Spannung $U_x$ und die Leistung $P_x$ im folgenden Netzwerk, wenn alle Widerstände $ R = 100 \Omega$ betragen. \\
+																					\begin{center}
+																						\fix
+																					\ibox{\includegraphics[scale=0.6 ]{img/ex2-1.png}}
+																					\end{center}
+																					\iend
+
+																					\beginip
+																					\textbf{Lösung}
+																					\\
+																					Zuerst setzen wir die Spannungsquelle zu 0 und erhalten das folgende ESB \\
+																					\begin{center}
+																						\fix
+																					\ibox{\includegraphics[scale=0.5 ]{img/ex2-2.png}}
+																					\end{center}
+
+																					Nun berechnen wir den Strom $I_{x_1}$ durch den Widerstand mithilfe eines Stromteilers: \\
+																					$I_{x_1} = 60mA$ \\
+																					Die Spannung $U_x$ ist entgegen der Stromrichtung eingezeichnet: \\
+																					$U_{x_1} = - R_x \cdot I_x = - 100 \cdot 60mA = -6V $ \\
+																					\\
+																					Nun setzen wir die Stromquelle zu 0: \\
+																					\begin{center}
+																						\fix
+																					\ibox{\includegraphics[scale=0.5 ]{img/ex2-3.png}}
+																					\end{center}
+
+																					Die Spannung $U_{x_2}$ berechnet sich als Spannungsteiler: \\
+																					$U_{x_2} = 20V \cdot \frac{100\Omega}{400\Omega} = 5V$ , $ I_{x_2} = \frac{5V}{100\Omega} = 50mA $\\
+																					\\
+																					Schlussendlich berechnet sich die Spannung als Summe der Teilspannungen:
+																					$U_x = U_{x_1} + U_{x_2} = 5V -6V = -1V $ \\
+																					Und die Leistung: \\
+																					$P_x = \frac{{U_x}^2}{R_x} = 10mW$ \\
+																					Welche \textbf{nicht} der Summe der Teilleistungen entspricht: \\
+																					$P_{sum} = P_1 + P_2 = U_{x_1} \cdot I_{x_1} + U_{x_2} \cdot I_{x_2} = 360mW + 250mW = 610mW$
+
+
+																				 \iend
+
 
 
 																				\subsection{Ersatzquelllen}
@@ -476,8 +535,24 @@
 
 \bsptask{Beispiel}{Leistungsanpassung}
 \beginbsp
-%TODO
-todo
+Berechnen sie für folgendes ESB den Wert für $R_L$ bei dem $R_L$ maximale Leistung aufnimmt.
+\begin{center}
+	\ibox{\includegraphics[scale=0.2]{img/leistungsanp.png}}
+\end{center}
+\iend
+
+\bsp{Lösung}{}
+\beginbsp
+Um die Leistung über $R_L$ zu maximieren, entfernen wir den Widerstand und berechnen den Innenwiderstand bezüglich den Klemmen. \\
+Für die Berechnung des Innenwiderstandes, werden alle Spannungsquellen kurzgeschlossen.
+\begin{center}
+	\ibox{\includegraphics[scale=0.6]{img/leistungsanp_lsg.png}}
+\end{center}
+Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
+\begin{center}
+	$R_i = (R_1 || R_2 + (R_3 || R_4 )) = 2 \Omega$ \\
+	$\doubleunderline{ R_L = R_i = 2 \Omega}$
+\end{center}
 \iend
 
 
@@ -488,64 +563,6 @@ todo
 
 
 
-										\subsection{Superpositionsprinzip}
-
-										 Das Superpositionsprinzip besagt, dass wir bei einem Netzwerk mit mehreren Quellen einzelne Teillösungen in Abhängigkeit von nur einer Quelle berechnen und aufsummieren können. \\
-										 Dies gilt jedoch nicht für die Leistung, da diese nicht linear ist! \\
-										 Um das Superpositionsprinzip anzuwenden, müssen wir alle ausser eine Quelle auf \texttt{"}0\texttt{"} setzen. \\
-										 Spannungsquellen werden also mit \textbf{Kurzschlüssen} ersetzt und Stromquellen mit \textbf{Leerläufen}. \\
-										 \begin{center}
-										 	\fix
-										 		\ibox{\includegraphics[scale=0.3]{img/superpos-zero.png}}
-										 \end{center}
-
-
-										 \textbf{Wieso} \\
-										 Eine Spannungsquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass über diesem Bauteil keine Spannung abfallen darf. Über einem Kurzschluss wird nie eine Spannung abfallen, da dieser als Widerstand mit Wert 0 modelliert werden kann. \\
-										 Eine Stromquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass durch dieses Bauteil kein Strom fliessen darf. Dies entspricht gerade einem Leerlauf, da dieser als Widerstand mit Wert $\displaystyle \rightarrow \infty$ modelliert werden kann. \\
-
-
-										 \bsptask{Beispiel}{\#2}
-										 \beginbsp
-											\textbf{Aufgabe} Berechnen sie die Spannung $U_x$ und die Leistung $P_x$ im folgenden Netzwerk, wenn alle Widerstände $ R = 100 \Omega$ betragen. \\
-											\begin{center}
-												\fix
-											\ibox{\includegraphics[scale=0.6 ]{img/ex2-1.png}}
-											\end{center}
-											\iend
-
-											\beginip
-											\textbf{Lösung}
-											\\
-											Zuerst setzen wir die Spannungsquelle zu 0 und erhalten das folgende ESB \\
-											\begin{center}
-												\fix
-											\ibox{\includegraphics[scale=0.5 ]{img/ex2-2.png}}
-											\end{center}
-
-											Nun berechnen wir den Strom $I_{x_1}$ durch den Widerstand mithilfe eines Stromteilers: \\
-											$I_{x_1} = 60mA$ \\
-											Die Spannung $U_x$ ist entgegen der Stromrichtung eingezeichnet: \\
-											$U_{x_1} = - R_x \cdot I_x = - 100 \cdot 60mA = -6V $ \\
-											\\
-											Nun setzen wir die Stromquelle zu 0: \\
-											\begin{center}
-												\fix
-											\ibox{\includegraphics[scale=0.5 ]{img/ex2-3.png}}
-											\end{center}
-
-											Die Spannung $U_{x_2}$ berechnet sich als Spannungsteiler: \\
-											$U_{x_2} = 20V \cdot \frac{100\Omega}{400\Omega} = 5V$ , $ I_{x_2} = \frac{5V}{100\Omega} = 50mA $\\
-											\\
-											Schlussendlich berechnet sich die Spannung als Summe der Teilspannungen:
-											$U_x = U_{x_1} + U_{x_2} = 5V -6V = -1V $ \\
-											Und die Leistung: \\
-											$P_x = \frac{{U_x}^2}{R_x} = 10mW$ \\
-											Welche \textbf{nicht} der Summe der Teilleistungen entspricht: \\
-											$P_{sum} = P_1 + P_2 = U_{x_1} \cdot I_{x_1} + U_{x_2} \cdot I_{x_2} = 360mW + 250mW = 610mW$
-
-
-										 \iend
 
 										 \newpage
 
@@ -581,8 +598,7 @@ todo
 					                $
 					 \left[ {\begin{array}{cccc}
 					    1 & 1 & -1 & 0 \\
-					    0 & 0 & 1 & -1 \\
-					\end{array} } \right] \left[ {\begin{array}{c} I_1 & I_2 & I_3 & I_4 \\ \end{array} } \right] =   \left[ {\begin{array}{c}  0 & 2A\\ \end{array} } \right] $ \\
+					    0 & 0 & 1 & -1 \\					\end{array} } \right] \left[ {\begin{array}{c} I_1 & I_2 & I_3 & I_4 \\ \end{array} } \right] =   \left[ {\begin{array}{c}  0 & 2A\\ \end{array} } \right] $ \\
 
 					                \item Finde z - (k-1) Unabhängige Maschengleichungen. (Mittels Vollständiger Baum / Auftrennen der Maschen)
 					                \item Ersetze die Spannungen der Maschengleichung mit Strom mal Widerstand und ergänze das Gleichungssystem.
