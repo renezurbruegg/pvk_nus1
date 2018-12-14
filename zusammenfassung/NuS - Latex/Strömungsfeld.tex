@@ -1,0 +1,151 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+
+
+\makeatletter
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\makeatother
+
+
+\usepackage{mathptmx}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage[german]{babel} %choose your language
+\usepackage[portrait, margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amscd, amsmath, amssymb, blindtext, empheq, enumitem, multicol, parskip}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{esint}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{trfsigns}
+
+% make document compact
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\parindent 0pt
+\pagestyle{empty}
+\setlength{\unitlength}{1cm}
+\setlist{leftmargin = *}
+% Set the color of your style
+% Avaiable are: Apricot, Aquamarine, Bittersweet, Black, Blue, blue, BlueGreen, BlueViolet, BrickRed, Brown, BurntOrange, CadetBlue, CarnationPink, Cerulean, CornflowerBlue, Cyan, Dandelion, DarkOrchid, Emerald, ForestGreen, Fuchsia, Goldenrod, Gray, Green, GreenYellow, JungleGreen, Lavender, ... (more at: http://en.wikibooks.org/wiki/LaTeX/Colors)
+\def\StyleColor{Yellow}
+
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\divg}{div}
+
+
+% define some colors
+\usepackage{color}
+\definecolor{section}{RGB}{221,95,50}
+\definecolor{subsection}{RGB}{221,95,50}
+\definecolor{subsubsection}{RGB}{225,157,41}
+\definecolor{titletext}{RGB}{0,0,0}
+\definecolor{formula}{RGB}{220,230,255}
+
+% section color box
+\setkomafont{section}{\mysection}
+\newcommand{\mysection}[1]{%
+    \Large\sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{section}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            \leftskip2pt %Space left
+            \rightskip\leftskip %Space right
+            {\color{titletext} #1}
+            \vspace*{1pt}%Space after
+        \end{minipage}%
+    }}
+%subsection color box
+\setkomafont{subsection}{\mysubsection}
+\newcommand{\mysubsection}[1]{%
+    \normalsize \sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{subsection}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            \leftskip2pt %Space left
+            \rightskip\leftskip %Space right
+            {\color{titletext} #1}
+            \vspace*{1pt}%Space after
+        \end{minipage}%
+    }}
+    
+%subsection color box
+\setkomafont{subsubsection}{\mysubsubsection}
+\newcommand{\mysubsubsection}[1]{%
+    \normalsize \sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{subsubsection}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            \leftskip2pt %Space left
+            \rightskip\leftskip %Space right
+            {\color{titletext} #1}
+            \vspace*{1pt}%Space after
+        \end{minipage}%
+    }}    
+%subsection color box
+\title{Elektrisches, stationäres Strömungsfeld}
+\author{www.n.ethz.ch/$\sim$zrene/nus1/nus1.html}
+\date{}
+
+\newcommand{\dis}[1]{\hspace{#1cm}}
+    
+% equation box        
+\newcommand{\eqbox}[1]{\fcolorbox{section}{formula}{\hspace{0.5em}$\displaystyle#1$\hspace{0.5em}}}
+
+%macro for vectors 
+%\newcommand{\vect}[1]{\vec{#1}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+%\renewcommand{\familydefault}{cmss}
+\DeclareSymbolFont{letters}{OML}{ztmcm}{m}{it}
+\DeclareSymbolFontAlphabet{\mathnormal}{letters}
+%\everymath{\displaystyle}  %bigger equations
+\begin{document}
+%\setcounter{secnumdepth}{0} %no enumeration of sections
+		\maketitle
+		\setcounter{section}{3}
+				\subsection{Strom}
+				
+				$\displaystyle{I=\frac{dQ}{dt}=\iint_A{\vec{J}\cdot}d\vec{A},}$ \dis{0.2} $[I]=A,$ \dis{0.2} $\displaystyle{J=\frac{dI}{dA},}$ \dis{0.2} $\displaystyle{[J]=\frac{A}{m^2}}$\\
+				Stat. Strömungsfeld, wenn $I$ konst.: $\varoiint_{A}{\vec{J}\cdot}d\vec{A} = 0$ \\
+				\begin{itemize}
+					\item \textbf{Spezifische Leitfähigkeit:}\\
+					Driftgeschw. $\vec{v}_{Drift}=-\mu_e\vec{E}$ wobei $\mu_e=$ "Beweglichkeit"\\
+					$\vec{J}=\vec{V}_{Drift}\rho=\vec{v}nq=\underbrace{-\rho\mu_e}_\kappa\vec{E},$ \dis{0.2} $\kappa=$spez.Leitf.,
+					$[\kappa]=\frac{A}{Vm}=\frac{1}{\Omega m}$
+					\item \textbf{Spezifischer Widerstand:} $\rho_R=\frac{1}{\kappa},$ $[\rho_R]=\Omega m=\frac{Vm}{A}$
+					\item \textbf{Temperaturabhängigkeit:}\\
+					$\rho_R(T)=\rho_{R,20^\circ C}\left(1+\alpha(T-20^\circ C)\right)$
+					\item \textbf{Ohmsches Gesetzt:} \eqbox{U=R\cdot I}, $[R]=\frac{V}{A}=\Omega$\\
+					$\vec{J}=\kappa\vec{E},$\dis{0.2} $R=\frac{U}{I}=\frac{l}{\kappa A}=\frac{\rho_R l}{A}=\frac{\int_S{\vec{E}\cdot}d\vec{s}}{\kappa\iint_A{\vec{E}\cdot}d\vec{A}}$
+					\item \textbf{Leitwert:} \eqbox{G=\frac{1}{R}} $[G]=S$ (Siemens)
+				\end{itemize}
+				
+				\subsection{Sprungstellen bei Materialübergängen }
+				\begin{itemize}
+					\item \textit{Normalkomponenten.} \eqbox{J_{n1}=J_{n2}},\eqbox{\kappa_1E_{n1}=\kappa_2E_{n2}}\\
+					Die Normalkomponente der Stromdichte ist stetig.
+					\item \textit{Tangentialkomp.:} \eqbox{E_{t1}=E_{t2}},\eqbox{\frac{J_{t1}}{J_{t2}}=\frac{\kappa_1}{\kappa_2}}\\
+					Die Tangentialkomponente des E-Feldes ist stetig.
+				\end{itemize}
+				\subsection{Energie und Leistung (1-102)}
+				$\displaystyle{W_e=\int_{0}^{t}{P(\tau)}d\tau}$ und $P(t)=\frac{dW_e}{dt}$\\$P=UI=I^2R=U^2/R$\\
+				\textbf{Verlustleistungsdichte:} $p_V=\frac{dP}{dV}=\vec{E}\cdot\vec{J}$\\
+				$P=\iiint_V{p_V}dV=\iiint_V{\vec{E}\cdot\vec{J}}dV$
+			
+\setcounter{secnumdepth}{2}
+\end{document}

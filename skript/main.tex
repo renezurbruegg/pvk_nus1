@@ -300,7 +300,7 @@ colframe=black!30!black, colback=white]{#1}
 %% ========================================================================
 \input{template/mycommands}
 
-%% ========================================================================
+%% ======================	==================================================
 %%%% Typographic settings
 %% ========================================================================
 \input{template/typographic_settings}
@@ -326,10 +326,11 @@ colframe=black!30!black, colback=white]{#1}
 %% ========================================================================
 
 %% ... it's OK to put here your own newcommand/newenvironment-definitions ...
+\usepackage{float}
+\usepackage{subfigure}
 
 
-
-
+\usepackage{multicol}
 \newcommand{\myLaT}{\LaTeX{}@TUG\xspace} %% LaTeX@TUG text "logo"
 
  \newcommand{\myimportant}{%% mark important chaptersfbsp
@@ -411,6 +412,7 @@ Die neuste Version des Skriptes befindet sich immer auf: \texttt{n.ethz.ch/~zren
 \input{mfeld}
 \input{zeitabh-mfeld}
 
+\input{ubertrager	}
 %\section{Anhang}
 %\input{mulo-katalog}
 

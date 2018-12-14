@@ -1,0 +1,392 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+
+
+\makeatletter
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\makeatother
+
+
+\usepackage{mathptmx}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage[german]{babel} %choose your language
+\usepackage[portrait, margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amscd, amsmath, amssymb, blindtext, empheq, enumitem, multicol, parskip}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{esint}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{trfsigns}
+
+% make document compact
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\parindent 0pt
+\pagestyle{empty}
+\setlength{\unitlength}{1cm}
+\setlist{leftmargin = *}
+% Set the color of your style
+% Avaiable are: Apricot, Aquamarine, Bittersweet, Black, Blue, blue, BlueGreen, BlueViolet, BrickRed, Brown, BurntOrange, CadetBlue, CarnationPink, Cerulean, CornflowerBlue, Cyan, Dandelion, DarkOrchid, Emerald, ForestGreen, Fuchsia, Goldenrod, Gray, Green, GreenYellow, JungleGreen, Lavender, ... (more at: http://en.wikibooks.org/wiki/LaTeX/Colors)
+\def\StyleColor{Yellow}
+
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\divg}{div}
+
+
+% define some colors
+\usepackage{color}
+\definecolor{section}{RGB}{221,95,50}
+\definecolor{subsection}{RGB}{221,95,50}
+\definecolor{subsubsection}{RGB}{225,157,41}
+\definecolor{titletext}{RGB}{0,0,0}
+\definecolor{formula}{RGB}{220,230,255}
+
+% section color box
+\setkomafont{section}{\mysection}
+\newcommand{\mysection}[1]{%
+    \Large\sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{section}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            \leftskip2pt %Space left
+            \rightskip\leftskip %Space right
+            {\color{titletext} #1}
+            \vspace*{1pt}%Space after
+        \end{minipage}%
+    }}
+%subsection color box
+\setkomafont{subsection}{\mysubsection}
+\newcommand{\mysubsection}[1]{%
+    \normalsize \sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{subsection}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            \leftskip2pt %Space left
+            \rightskip\leftskip %Space right
+            {\color{titletext} #1}
+            \vspace*{1pt}%Space after
+        \end{minipage}%
+    }}
+    
+%subsection color box
+\setkomafont{subsubsection}{\mysubsubsection}
+\newcommand{\mysubsubsection}[1]{%
+    \normalsize \sf\bf%
+    \setlength{\fboxsep}{0cm}%already boxed
+    \colorbox{subsubsection}{%
+        \begin{minipage}{\linewidth}%
+            \vspace*{2pt}%Space before
+            \leftskip2pt %Space left
+            \rightskip\leftskip %Space right
+            {\color{titletext} #1}
+            \vspace*{1pt}%Space after
+        \end{minipage}%
+    }}    
+%subsection color box
+\title{Zusammenfassung NuS I}
+\author{René Zurbrügg}
+\date{}
+
+\newcommand{\dis}[1]{\hspace{#1cm}}
+    
+% equation box        
+\newcommand{\eqbox}[1]{\fcolorbox{section}{formula}{\hspace{0.5em}$\displaystyle#1$\hspace{0.5em}}}
+
+%macro for vectors 
+%\newcommand{\vect}[1]{\vec{#1}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+%\renewcommand{\familydefault}{cmss}
+\DeclareSymbolFont{letters}{OML}{ztmcm}{m}{it}
+\DeclareSymbolFontAlphabet{\mathnormal}{letters}
+%\everymath{\displaystyle}  %bigger equations
+\begin{document}
+%\setcounter{secnumdepth}{0} %no enumeration of sections
+		\maketitle
+		
+		\begin{multicols*}{2}
+
+\section{Allgemeines}
+				\subsection{Einheiten}
+				\vspace{-0.1cm}
+				\begin{center}
+				\begin{tabular}{|c|c|c|}
+				\hline
+				\textbf{} & \textbf{Einheit} & \textbf{Bedeutung} \\
+				\hline
+				$\vec{B}$ & $Vs/m^2$ & Magnetische Flussdichte \\
+				\hline
+				$B_r$ & $Vs/m^2$ & Remanenz \\
+				\hline
+				$C$ & $As/V=F$ & Kapazität \\
+				\hline
+				$\vec{D}$ & $As/m^2$ & Elektr. Flussdichte, el. Erregung \\
+				\hline
+				$\vec{E}$ & $V/m$ & Elektrische Feldstärke \\
+				\hline
+				G & $1/\Omega=A/V$ & Elektr. Leitwert \\
+				\hline
+				$\vec{H}$ & $A/m$ & Magn. Feldstärke \\
+				\hline 
+				$H_c$ & $A/m$ & Koerzitivfeldstärke \\
+				\hline
+				$I$ & $A$ & Gleichstrom \\
+				\hline
+			    $I_K$ & $A$ & Kurzschlussstrom \\
+				\hline
+				$i$ & $A$ & Zeitabhängiger Strom \\
+				\hline
+				$\vec{J}$ & $A/m^2$ & (räuml. vert.) Stromdichte \\
+				\hline
+				$\vec{J}$ & $Vs/m^2$ & Magn. Polarisation \\
+				\hline
+				$\vec{J}$ & $Vsm$ & Magn. Dipolmoment \\
+				\hline
+				$k$ & & Koppelfaktor \\
+				\hline
+				$L$ & $Vs/A$ & Induktivität \\
+				\hline
+				$\vec{M}$ & $A/m$ & Magnetisierung \\
+				\hline
+				$\vec{m}$ & $Am^2$ & Magnetisches Moment \\
+				\hline
+				$N$ & & Windungszahl \\
+				\hline
+				$P$ & $VA=W$ & Leistung \\
+				\hline
+				$p_V$ & $W/m^3$ & Verlustleistungsdichte \\
+				\hline
+				$\vec{P}$ & $As/m^2$ & Dielektr. Polarisation \\
+				\hline
+				$\vec{p}$ & $Asm$ & Elektr. Dipolmoment \\
+				\hline
+				$Q$ & $As=C$ & Ladung, Punktladung \\
+				\hline
+				$R$ & $V/A=\Omega$ & Ohmscher Widerstand \\
+				\hline
+				$R_m$ & $A/Vs$ & Magn. Widerstand \\
+				\hline
+				$U$ & $V$ & Gleichspannung \\
+				\hline
+				$u$ & $V$ & Zeitlich veränderliche Spannung \\
+				\hline
+				ü & & Übersetzungsverhältnis \\
+				\hline
+				$V_m$ & $A$ & Magnetische Spannung \\
+				\hline
+				$W$ & $VAs=J$ & Energie \\
+				\hline
+				$w$ & $WAs/m^3$ & Energiedichte \\
+				\hline
+				$\Phi$ & $Vs$ & Magnetischer Fluss \\
+				\hline
+				$\Lambda_m$ & $Vs/A$ & Magnetischer Leitwert \\
+				\hline
+				$\Theta$ & $A$ & Durchflutung \\
+				\hline
+				$\Psi$ & $As$ & Elektr. Fluss \\
+				\hline
+				\end{tabular}
+				\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+				\begin{tabular}{|c|c|c|}
+				\hline
+				\textbf{} & \textbf{Einheit} & \textbf{Bedeutung} \\	
+				\hline
+				$\alpha$ & $1/K$ & Temperaturkoeffizient \\
+				\hline
+				$\chi$ & & Dielekt. \& magn. Suszeptibilität \\
+				\hline
+				$\varepsilon$ & $As/Vm$ & Dielektrizitätskonstante \\
+				\hline
+				$\varepsilon_r$ & & Dielektrizitätszahl \\
+				\hline			
+				$\varphi$ &  & Phasenwinkel \\
+				\hline
+				$\varphi_e$ & $V$ & Elektrostatisches Potential \\
+				\hline
+				$\eta$ & & Wirkungsgrad \\
+				\hline
+				$\kappa$ & $A/Vm$ & Spezifische Leitfähigkeit \\
+				\hline
+				$\lambda$ & $As/m$ & Linienladungsdichte \\
+				\hline
+				$\mu$ & $Vs/Am$ & Permeabilität \\
+				\hline
+				$\mu_e$ & $m^2/Vs$ & Beweglichkeit der Ladungsträger \\
+				\hline
+				$\rho$ & $As/m^3$ & Raumladungsdichte \\
+				\hline
+				$\rho_R$ & $Vm/A$ & Spezifischer Widerstand \\
+				\hline
+				$\sigma$ & $As/m^2$ & Flächenladung \\
+				\hline
+				$\sigma$ & & Streugrad \\
+				\hline
+				$\omega$ & $1/s\cdot 2\pi$ & Kreisfrequenz \\
+				\hline
+				
+				\end{tabular}
+				
+				 
+				
+				\end{center}
+				\begin{center}
+				\subsection{SI-Präfixe}
+				\vspace{-0.1cm}
+				\begin{tabular}{|c|c|c|}
+				\hline
+				\textbf{} & \textbf{Name} & \textbf{Wert} \\
+				\hline
+				$T$ & $Tera$ & $10^{12}$ \\
+				\hline
+				$G$ & $Giga$ & $10^{9}$ \\
+				\hline
+				$M$ & $Mega$ & $10^{6}$ \\
+				\hline
+				$k$ & $Kilo$ & $10^{3}$ \\
+				\hline
+				$h$ & $Hekto$ & $10^{2}$ \\
+				\hline
+				$da$ & $Deka$ & $10^{1}$ \\
+				\hline
+				$d$ & $Dezi$ & $10^{-1}$ \\
+				\hline
+				$c$ & $Zenti$ & $10^{-2}$ \\
+				\hline
+				$m$ & $Mili$ & $10^{-3}$ \\
+				\hline
+				$\mu$ & $Mikro$ & $10^{-6}$ \\
+				\hline
+				$n$ & $nano$ & $10^{-9}$ \\
+				\hline
+				$p$ & $Piko$ & $10^{-12}$ \\
+				\hline
+				\end{tabular}			
+	 	\end{center}
+												
+				\subsection{Konstanten}				
+\begin{center}				
+				\begin{tabular}{llll}
+				
+					\textbf{Elementarladung} &$e  $&$ +1.602\cdot 10^{-19}$&$As$\\
+					\textbf{Dielektrizitätskonst.}& $\varepsilon_0  $&$ 8.854\cdot 10^{-12}$&$\frac{As}{Vm}$\\
+					\textbf{Magn. Permeabilität}& $\mu_0  $&$ 4\pi\cdot 10^{-7}$&$\frac{Vs}{Am}$\\
+					\textbf{Ruhemasse Elektron}& $m_{0,e}  $&$ 9.1094\cdot 10^{-31}$&$kg$\\
+					\textbf{Ruhemasse Proton} &$m_{0,p}  $&$ 1.6726\cdot 10^{-27}$&$kg$\\
+					\textbf{Lichtgeschwindigkeit} &$c_{Vak.}  $&$ 2.99792\cdot 10^8$&$\frac{m}{s}$\\
+				\end{tabular}
+				\begin{small}
+				\vfill
+		
+				\end{small}
+
+				\end{center}	
+						\section{Elektrostatik}
+				
+				
+				\singlespacing 				
+				\subsection{Ladungsdichten}
+				\begin{itemize}
+					\item \textit{Linienladungsdichte:} $\lambda=\frac{dQ}{dl}=\left[\frac{As}{m}\right], Q=\int_l\lambda dl$ \\
+					$\rightarrow Q = \lambda \cdot l $, falls $\lambda$ konstant. 
+					\item \textit{Flächenladungsdichte:} $\sigma=\frac{dQ}{dA}=\left[\frac{As}{m^2}\right], Q=\iint_A\sigma dA$ \\
+					$\rightarrow Q = \sigma \cdot A$, falls $\sigma$ konstant.
+					\item \textit{Raumladungsdichte:} $\rho=\frac{dQ}{dV}=\left[\frac{As}{m^3}\right],Q=\iiint_V\rho dV$  \\
+					$\rightarrow Q = \rho \cdot V$, falls $\rho$ konstant.
+				\end{itemize}
+				
+				\subsection{Grundgrössen}
+				\begin{itemize}
+					\item \textbf{E-Feld einer Punktladung:} $\vec{E}=\frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2} \quad [\frac{V}{m}]$
+					\item \textbf{Kraft mehre. zweier Ladungen:} $\vec{F}=\frac{Q_1Q_2}{4\pi\varepsilon_0r^2}\vec{e_r} \quad [N]$
+					\item \textbf{E-Feld Punktldgn:}
+					$\vec{E}(\vec{r_p})=\frac{1}{4\pi\varepsilon_0}\cdot\sum_k\frac{Q_k}{|\vec{r_p}-\vec{r_k}|^2}\frac{\vec{r_p}-\vec{r_k}}{|\vec{r_p}-\vec{r_k}|}$
+					\item \textbf{E-Feld $\infty$-langer Leiter:} $E=\frac{1}{2\pi\varepsilon_0}\frac{\lambda}{r_\bot}$
+					\item \textbf{Spannung, Innen-/Aussenleiter:} $\vec{E}(\rho)=\frac{Q}{2\pi\varepsilon l}\frac{1}{\rho}\vec{e_{\rho}}$\\
+					$\displaystyle{U=\int_{r_1}^{r_2}{\vec{E}(\rho)}d\vec{\rho}=\int_{r_1}^{r_2}{\frac{Q}{2\pi\cdot\varepsilon\cdot l}\frac{1}{\rho}}d\rho}=\frac{Q}{2\pi\cdot\varepsilon\cdot l}\ln{\left| \frac{r_2}{r_1} \right|}$\\
+					
+					 \item \textbf{Elektr. Flussdichte }$\vec{D}(\vec{r})=\varepsilon_0\cdot\varepsilon_r\cdot\vec{E}(\vec{r})=\varepsilon\cdot\vec{E}(\vec{r})\quad [\frac{As}{m^2}]$
+				\end{itemize}
+
+				\subsubsection{Arbeit \& Potential }
+				$W_{P_1\rightarrow P_2}=-\int_{P_1}^{P_2}{\vec{F}\cdot}d\vec{s}$ \dis{0.5} weg-unabhängig\\
+				$W_{e}=-Q\int_{P_1}^{P_2}{\vec{E}\cdot}d\vec{s}=Q\left(\varphi(P_2)-\varphi(P_1)\right)=-U_{12}Q$\\
+				$\rightarrow [W]=Ws=J, [P]=\frac{J}{s}=W$\\ \\
+				\textbf{Potential:}\\
+				Oftmals $P_{ref}=\infty$\\
+				$\varphi(P_1)=\frac{W(P_{ref}\rightarrow P_1)}{Q_1}=-\int_{P_{ref}}^{P_1}{\vec{E}\cdot}d\vec{s} \quad [V]$ \\
+				Punktladung: $\varphi_{\infty}(r) = \frac{Q}{4\pi\varepsilon r}$
+			
+				\subsubsection{Spannung}
+				$U_{12}=\varphi(P_1)-\varphi(P_2)=\int_{P_1}^{P_2}{\vec{E}\cdot}d\vec{s}=\frac{W_{12}}{Q}$ \\
+				Falls E Konst und Weg Parallel: \\
+				$U_{AB} = \pm |\vec{E}| \cdot |AB|$
+				\subsection{Das Gauss'sche Gesetz }
+				\begin{center}
+				\eqbox{\oint_A{\vec{D}(\vec{r})}d\vec{A} = \oint_A{\vec{e_r}D(r) }\vec{e_r}dA=Q  \rightarrow }
+				\end{center}
+	Falls D und A senkrecht:
+	\begin{center}
+	\eqbox{|Q| = |\vec{D}(r)|\cdot A }
+	\end{center}
+				
+				E-Feldlinien von idealen Leitern, stehen senkrecht auf der Oberfläche.				
+					
+
+
+				
+				\vfill
+				\subsection{Kondensator }
+				\begin{center}
+				\eqbox{C=\frac{Q}{U}=\frac{\varoiint_A{\vec{D}\cdot}d\vec{A}}{\int_s{\vec{E}\cdot}d\vec{s}}=\frac{\varoiint_A{\sigma}dA}{\int_s{\vec{E}\cdot}d\vec{s}} \quad [F]=[\frac{As}{V}]}\\
+				\end{center}
+				Einfache Kondensatorentladung: $U=U_0e^{\frac{-t}{RC}}$
+				\begin{itemize}
+					\item \textbf{Plattenkondensator:}\\
+					$E=\frac{D}{\varepsilon}=\frac{\sigma}{\varepsilon}=\frac{Q}{\varepsilon A},$ \dis{0.2} $U=Ed\rightarrow C=\frac{Q}{U}=\frac{\varepsilon A}{d}$\\ \\
+					Das Feld einer Platte ist $E/2$
+					\item \textbf{Kugel(schalen)kondensator: }\\
+					\mbox{$U_{ab}=\int \limits_{r_i}^{r_a} \vec{E}\cdot d \vec{s} = \frac{Q}{4\pi\varepsilon}\int\limits_{r_i}^{r_a}{\frac{1}{r^2}}dr=\frac{Q}{4\pi\varepsilon}\frac{r_a-r_i}{r_ar_i}=\frac{Q}{C}\rightarrow C=4\pi\varepsilon\frac{r_ir_a}{r_a-r_i}$}
+					\item \textbf{Vielschichtenkondensator aus n Platten:}\\
+					$C_{ges}=(2n-1)C$
+					\item \textbf{Zylinderkondensator}\\
+					$C = \frac{Q}{\int \limits_{R1}^{R2} \frac{Q}{2\pi l \varepsilon r d \vec{r}}} = \frac{2 \pi \varepsilon l}{\ln{ \frac{R_{2}}{R_{1}}}}$ \\
+					Für unendlich dünne Platten: $D=\sigma/2$
+					
+					\item \textbf{Parallelschaltung von Kondensatoren} \\
+					$C_{ges} = \sum_i{C_i} \underbrace{=}_{2 Kond.} C_1 + C_2$
+					\item \textbf{Serienschaltung von Kondensatoren} \\
+					$C_{ges} = (\sum_i{\frac{1}{C_i}})^{-1} \underbrace{=}_{2 Kond.} \frac{C_1\cdot C_2}{C_1 + C_2}$
+				\end{itemize}
+				\subsection{Energie im E-Feld }
+				\begin{center}
+				\eqbox{W_e=\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}QU=\frac{1}{2}CU^2=\iiint_V{\frac{1}{2}\vec{E}\cdot\vec{D}}dV}
+				\end{center}
+
+			
+			
+	\end{multicols*}
+\setcounter{secnumdepth}{2}
+\end{document}

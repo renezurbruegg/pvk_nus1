@@ -139,7 +139,19 @@
 
 
 										\subsection{Stern Dreieck Umformung}
-										%TODO
+										\begin{center}
+											%todo fix
+		\includegraphics[scale=0.3]{img/Stern-Dreieck-Transformation.png}
+\end{center}
+	\begin{multicols*}{2}
+		$\underline{R}_{AB}=\frac{\underline{R}_{A}\underline{R}_{B}+\underline{R}_{B}\underline{R}_{C}+\underline{R}_{A}\underline{R}_{C}}{\underline{R}_{C}}$\\
+		$\underline{R}_{AC}=\frac{\underline{R}_{A}\underline{R}_{B}+\underline{R}_{B}\underline{R}_{C}+\underline{R}_{A}\underline{R}_{C}}{\underline{R}_{B}}$\\
+		$\underline{R}_{BC}=\frac{\underline{R}_{A}\underline{R}_{B}+\underline{R}_{B}\underline{R}_{C}+\underline{R}_{A}\underline{R}_{C}}{\underline{R}_{A}}$\\
+		$\underline{R}_A=\frac{\underline{R}_{AC}\underline{R}_{AB}}{\underline{R}_{AC}+\underline{R}_{AB}+\underline{R}_{BC}}$\\
+		$\underline{R}_B=\frac{\underline{R}_{AB}\underline{R}_{BC}}{\underline{R}_{AC}+\underline{R}_{AB}+\underline{R}_{BC}}$\\
+		$\underline{R}_C=\frac{\underline{R}_{AC}\underline{R}_{BC}}{\underline{R}_{AC}+\underline{R}_{AB}+\underline{R}_{BC}}$
+	\end{multicols*}
+
 
 
 
@@ -233,9 +245,39 @@
 										\newpage
 
 
-\subsection{Vereinfachungen mithilfe Symmetrieüberlegungen}
-%TODO
-----TODO---
+										\subsection{Vereinfachungen mithilfe Symmetrieüberlegungen}
+
+										Besitzt ein Netzwerk verschiedene Punkte mit dem selben Potential, so können diese Punkte beliebig verbunden werden.
+										Da die Potentialdifferenz immer 0 sein wird, wird niemals Strom zwischen diesen Punkten fliessen.
+
+										\bsptask{Beispiel}{Vereinfachung eines Netzwerkes mit Symmetrie}
+										\beginbsp
+											Fassen sie alle Widerstände zu einem zusammen unter verwendung der Symmetrieeigenschaften
+											\begin{center}
+												\ibox{ \includegraphics[scale=1.3]{img/sym.png}}
+											\end{center}
+										\iend
+
+										\bsp{Lösung}{}
+										\beginbsp
+										Da das Widerstandsnetzwerk symmetrisch bezüglich $R_2$ ist, muss am Punkt 2 und am Punkt 4 das gleiche Potential existieren. \\
+										Dies bedeutet, dass über dem Widerstand $R_2$ niemals eine Spannug abfallen und somit auch nie Strom fliessen wird. \\
+										\textbf{Lösung 1}: \\
+										Wir verbinden die Punkte 2 und 4 mit einem Kurzschluss und erhalten
+										\begin{center}
+											\ibox{ \includegraphics[scale=1]{img/sym-l1.png}}
+											$\doubleunderline{R_{ges}} = (R_1 || R_1) + (R_3 || R_3) = \doubleunderline{\frac{1}{2}(R_1 + R_3)}$
+										\end{center}
+
+										\textbf{Lösung 2}: \\
+										Wir verbinden die Punkte 2 und 4 mit einem Leerlauf und erhalte
+										\begin{center}
+												\ibox{ \includegraphics[scale=1]{img/sym-l2.png}}
+											$\doubleunderline{R_{ges}} = \big( (R_1 + R_3) || (R_1 + R_3) \big) = \doubleunderline{\frac{1}{2}(R_1 + R_3)}$
+										\end{center}
+
+
+										\iend
 
 
 

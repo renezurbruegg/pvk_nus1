@@ -16,10 +16,11 @@
 
 	Analog zum elektrischen Feld definieren wir ein magnetisches Feld, dessen Feldlinien Kräfte auf eine bewegte Ladung auswirken. \\
 	Auslöser für das magnetische Feld sind \textbf{bewegte Ladungen} welche gemäss der rechten Hand Regel ein Magnetfeld hervorrufen, das diese einschliesst. \\
-	Im Falle von Stabmagneten oder 	Ähnlichem ist es der Spin der Elektronen, welcher das stationäre Magnetfeld auslöst*\\
+\begin{center}
 
-	\includegraphics{TODO.png}
+\ibox{\includegraphics[scale=0.3]{img/hfeld.png}}
 
+	\end{center}
 	\definition{Magnetische Flussdichte \textbf{B}}
 	\beginip
 	Bewegte Ladungsträger welche sich in der Nähe anderer bewegter Ladungsträger befinden, verspüren eine Kraftwirkung welche senkrecht zur Bewegungsrichtung zeigt. \\
@@ -75,7 +76,6 @@
 	Legen wir ein magnetisches Feld an eine Materie an, so richten sich die eingeschlossenen Teile entgegen dem angelegten Feld aus und \texttt{"} schwächen \texttt{"} dieses. \\
 	Das \texttt{"} abgeschwächte \texttt{"} Feld bezeichnen wir als H-Feld und entspricht dem Feld, welches real auf Ladungen wirkt. \\
 	 Der \texttt{"}Abschwächungsfaktor\texttt{"} $\mu = \mu_0 \cdot \mu_r$ wird als Permeabilität bezeichnet. \\
-	 Das H-Feld verändert sich bei Materialübergängen, das \textbf{B-Feld} bleibt \textbf{konstant}.
 
 	\formulaBegin
 	$\displaystyle \vec{H} = \frac{\vec{B}}{\mu}$
@@ -180,8 +180,29 @@
 
 
 \subsubsection{Verhalten von B und H Feld an Randflächen}
-%TODO
-todo
+\fix \fix
+\textbf{B-Feld} \\
+Fliesst ein B-Feld durch einen Materialübergang, so verändert sich die \textbf{Tangentialkomponente}. Die \textbf{Normalkomponente} bleibt gleich.
+\begin{center}
+	\ibox{\includegraphics[scale=0.3]{img/brand}}
+\end{center}
+%todo add mu and alpha to image
+\formulaBegin
+$ \displaystyle B_{n1} = B_{n2}$ \\ $\displaystyle B_{t2} = B_{t1} \frac{\mu_2}{\mu_1} $
+\formulaEnd
+
+\textbf{H-Feld} \\
+Fliesst ein H-Feld durch einen Materialübergang, so verändert sich die \textbf{Normalkomponente}. Die \textbf{Tangentialkomponente} bleibt gleich.
+
+\begin{center}
+	\ibox{\includegraphics[scale=0.3]{img/hrand}}
+\end{center}
+
+%todo add mu and alpha to image
+\formulaBegin
+$ \displaystyle H_{n1} = H_{n2}$ \\ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} $
+\formulaEnd
+
 
 
 
@@ -423,7 +444,6 @@ Luftspalt als homogen angenommen werden.
 
 \definition{Gegeninduktivität}
 \beginip
-%TODO
 Die Gegeninduktivität beschreibt, wie viel Magnetischer Fluss durch eine \textbf{andere} Leiterschleife durchfliesst, abhängig
 des Stromes in der ersten Schleife.
 \formulaBegin
@@ -431,7 +451,7 @@ $\displaystyle L_{21} = N_2 \cdot \frac{\phi_{21}}{i_1}$
 \formulaEnd
 \begin{center}
 
-	\includegraphics[scale=0.5]{img/gegeninduktivitaet.PNG}
+	\includegraphics[scale=0.3]{img/gegenind}
 \end{center}
 \iend
 
