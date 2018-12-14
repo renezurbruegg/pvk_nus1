@@ -1,38 +1,38 @@
-%----------------------------------------------------------------
-%
-%  File    :  thesis-style.tex
-%
-%  Author  :  Keith Andrews, IICM, TU Graz, Austria
-%
-%  Created :  27 May 93
-%
-%  Changed :  19 Feb 2004
-%
-% styling and technical implementation adopted 2011 by Karl Voit
-%----------------------------------------------------------------
+
+
+
+
+
 \newpage
+
 \section{Zeitlich veränderliches Magnetfeld}
+
 \subsection{Induktion}
 
-%TODO
-einführung
+Bis jetzt haben wir elektrische und magnetische Grössen angeschaut, die sich Zeitlich nicht ändern. \\
+Sind beide Grössen konstant, so beeinflussen sie sich nicht. \\
+Sobald sich jedoch der Magnetische Fluss $\phi$  \textbf{zeitlich ändert}, besteht einen Zusammenhang zwischen Magnetfeld und elektrischem Feld. \\
+Wie magnetischer Fluss und Elektrisches Feld zusammenhängen beschreibt das \textbf{Induktionsgesetz}
+
 
 \gl{Gleichung}{Induktionsgesetz}
 \begingl
 \formulaBegin
-  $\displaystyle \oint_s \vec{E}\cdot d\vec{s} = -\frac{d}{dt} \big ( \iint_{A_s} \vec{B} \cdot d\vec{A} \big )$
+  $\displaystyle \oint_s \vec{E}\cdot d\vec{s} = -\frac{d}{dt}\Phi(t) =  -\frac{d}{dt} \big ( \iint_{A_s} \vec{B} \cdot d\vec{A} \big )$
 \formulaEnd
 \textbf{Variablen} \\
 $B = $ Magnetische Flussdichte $[B] = T$\\
-$A_s = $ Vom Weg S aufgespannte Fläche $[A_s] = m^2$ \\
+$A_s = $ Vom Weg S aufgespannte Fläche. $[A_s] = m^2$ \\
 
-Falls B Feld Konstant auf Fläche und senkrecht:
+Falls B Feld konstant auf Fläche und senkrecht: \\
 
 \formulaBegin
   $\displaystyle  \oint_s \vec{E}\cdot d\vec{s} = -\frac{d}{dt} \big ( B_{eff} \cdot A_s \big ) $
 \formulaEnd
 \iend
-
+\begin{center}
+  \includegraphics[scale=0.6]{img/beweg-ind}
+\end{center}
 \definition{Bewegungsinduktion}
 \beginip
 %TODO
