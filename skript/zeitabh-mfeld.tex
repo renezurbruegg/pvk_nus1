@@ -30,17 +30,39 @@ Falls B Feld konstant auf Fläche und senkrecht: \\
   $\displaystyle  \oint_s \vec{E}\cdot d\vec{s} = -\frac{d}{dt} \big ( B_{eff} \cdot A_s \big ) $
 \formulaEnd
 \iend
+
+Bewegen wir einen Leiter mit Lädungstrager in einem Magnetfeld, so wirkt eine magnetische Kraft auf die Ladungsträger im Leiter. \\
+Die Ladungsträger werden sich desshalb in Richtung der Kraftwirkung bewegen. Diese Bewegung bezeichnen wir als \textbf{induzierter Strom}. \\
+
 \begin{center}
   \includegraphics[scale=0.4]{img/beweg-ind} \\
   \textbf{Induzierte Spannung} \\
     \includegraphics[scale=0.4]{img/beweg-ind-graph}
 \end{center}
-\definition{Bewegungsinduktion}
-\beginip
-Bewegen wir einen Leiter mit Lädungstrager in einem Magnetfeld, so wirkt eine magnetische Kraft auf die Ladungsträger im Leiter. \\
-Die Ladungsträger werden sich desshalb in Richtung der Kraftwirkung bewegen. Diese Bewegung bezeichnen wir als \textbf{induzierter Strom}. \\
+
+
+
+\begingl{Gleichung}Bewegungsinduktion}
+\gl
+Bewegen wir einen Leiter mit einer Geschwindigkeit in ein Magnetfeld , so wird ein elektrisches Feld induziert.
+
+\formulaBegin
+$ \displaystyle d\vec{E}_i = \vec{v} \times \vec{B}  \cdot dl$
+\formulaEnd
+
+\textbf{Variabeln}: \\
+$ d\vec{E}_i = Induzierstes E-Feld auf dem kleinen Wegstück dl$ \\
+$ \vec{v} = Geschwindigkeit des Leiterstückes dl $ \\
+$ \vec{B} = B-Feld$ \\
+
+Um das Gesamte E-Feld zu berechnen, muss $d\vec{E}_i$ über die wirksame Leiterlänge im Magnetfeld $l_{eff}$ integriert werden: \\
+\formulaBegin
+$\vec{E}_{i} = \int_l_{eff}  d\vec{E}_i = \int_l_{eff} \vec{v} \times \vec{B}  \cdot dl \underbrace{\simeq}_{B \perp V}
+\formulaEnd
 
 \iend
+
+
 
 \bsptask{Beispiel}{Bewegungsinduktion}
 \beginbsp
