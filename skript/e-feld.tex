@@ -8,7 +8,7 @@ Um diese Kraftwirkung zu beschreiben, wurde der Begriff des \textbf{Elektrischen
 
 \definition{Elektrisches Feld}
 \beginip
-Das Elektrische Feld, beschreibt die Kraftwirkung auf geladene Teilchen im Raum. \\
+Das elektrische Feld, beschreibt die Kraftwirkung auf geladene Teilchen im Raum. \\
 Es ordnet jedem Punkt im Raum einen Vektor $\vec{E}$ zu, der in die Richtung der Kraftwirkung zeigt.
 Für die Kraftwirkung auf ein Teilchen mit der Ladung Q und dem Ortsvektor $\vec{r}$ gilt: \\
 \formulaBegin
@@ -16,13 +16,13 @@ $\vec{F} = Q \cdot \vec{E}(\vec{r})$
 \formulaEnd
 \iend
 
-
+\vspace
 \textbf{Einige wichtige Felder}
 \bsp{Beispiel}{E-Feld einer Punktladung}
 \beginbsp
-Das Elektrische Feld einer Punk	tladung Q ist gegeben als:
+Das elektrische Feld einer Punktladung Q ist gegeben als:
 \formulaBegin
-$\vec{E} = \frac{1}{4 \pi \epsilon} \cdot \frac{Q}{r^2}\cdot \vec{e}_r$
+$\displaystyle \vec{E} = \frac{1}{4 \pi \epsilon} \cdot \frac{Q}{r^2}\cdot \vec{e}_r$
 \formulaEnd
 \begin{center}
 	\ibox{\includegraphics[scale=0.2]{img/e-feld-pkt.png}}
@@ -34,11 +34,11 @@ $\vec{E} = \frac{1}{4 \pi \epsilon} \cdot \frac{Q}{r^2}\cdot \vec{e}_r$
 
 \bsp{Beispiel}{E-Feld einer Platte}
 \beginbsp
-Das Elektrische Feld einer Platte mit Ladung Q ist gegeben als:
+Das elektrische Feld einer Platte mit Ladung Q ist gegeben als:
 \formulaBegin
-$\vec{E} = \begin{cases}
+$\displaystyle \vec{E} = \begin{cases}
 \frac{Q}{2\cdot A \varepsilon} \cdot \vec{e}_n & , y > y_0 \\
-\frac{-Q}{2\cdot A \varepsilon} \cdot \vec{e}_n & , y <= y_0 \\
+\frac{-Q}{2\cdot A \varepsilon} \cdot \vec{e}_n & , y \leq y_0 \\
 
 \end{cases}
 $
@@ -52,9 +52,9 @@ $
 
 \bsp{Beispiel}{E-Feld eines Kondensators}
 \beginbsp
-Das Elektrische Feld in einem Kondensator mit Der Ladung Q oder Spannung U ist gegeben als:
+Das elektrische Feld in einem Kondensator mit der Ladung Q oder Spannung U ist gegeben als:
 \formulaBegin
-$\vec{E} = \frac{Q}{A\varepsilon} \cdot \vec{e}_d = \frac{U}{d	} \vec{e}_d$
+$\displaystyle \vec{E} = \frac{Q}{A\varepsilon} \cdot \vec{e}_d = \frac{U}{d	} \vec{e}_d$
 \formulaEnd
 \begin{center}
 	\ibox{\includegraphics[scale=0.2]{img/e-feld-kond.png}}
@@ -64,7 +64,7 @@ $\vec{E} = \frac{Q}{A\varepsilon} \cdot \vec{e}_d = \frac{U}{d	} \vec{e}_d$
 
 
 \subsection{(Ladungs)-Dichte}
-In der Physik sind wir häufig nicht nur daran interessiert, wieviele Ladungsträger sich in einem Volumen befinden, sondern wir möchten gerne Informationen darüber haben, wie sie geometrisch Angeordnet sind. (= Verteilen sich alle Ladungsträger auf der Oberfläche, sind alle Mittelpunkt Zentriert etc). \\
+In der Physik sind wir häufig nicht nur daran interessiert, wieviele Ladungsträger sich in einem Volumen befinden, sondern wir möchten gerne Informationen darüber haben, wie sie geometrisch angeordnet sind. (= Verteilen sich alle Ladungsträger auf der Oberfläche, sind alle im Mittelpunkt zentriert etc). \\
 Dazu werden \textbf{Dichtefunktionen} verwendet.
 
 \definition{Linienladungsdichte $\lambda(x)$}
@@ -85,14 +85,16 @@ Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir d
 		\item 2) Geben Sie die Gesamtladung im eingeschlossenem Bereich $ 0 < x < l/3$ an.
 	\end{itemize}
 \iend
+
+\newpage
 \bsp{Lösung}{}
 \beginbsp
 \begin{itemize}
-	\item 1) Da sich die Ladungen gleichmässig verteilen ist die Ladungsdichte unabhängig vom Ort x
+	\item 1) Da sich die Ladungen gleichmässig verteilen, ist die Ladungsdichte unabhängig vom Ort x
 	\begin{center}
 		$\lambda(x) = \lambda = \frac{C}{l} = 5 \frac{C}{m}$
 	\end{center}
-	\item 2) Die eingeschlossene Ladung berechnet sich Grundsätzlich mittel Integration:
+	\item 2) Die eingeschlossene Ladung berechnet sich Grundsätzlich mittels integration:
 	\begin{center}
 		$\displaystyle Q = \int_0^{l/3} \lambda(x) \cdot dx = \int_0^{l/3} 5 \frac{C}{m} \cdot dx = 5 \frac{C}{m} \cdot \frac{l}{3} = \frac{10}{3} C$
 	\end{center}
@@ -110,12 +112,12 @@ Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir d
 \definition{Flächenladungsdichte $\sigma(x,y)$}
 \beginip
 Eine \textbf{Flächenladungsdichte} gibt an, wie sich Ladungen auf einer Fläche anordnen. \\
-Sind die Ladungsträger \textbf{gleichmässig} auf einer Flcähe verteilt, so ist die Dichte einfach eine Konstante mit Einheit $\frac{C}{m^2}$. \\
-Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir die Dichte Integrieren: \\
+Sind die Ladungsträger \textbf{gleichmässig} auf der Fläche verteilt, so ist die Dichte einfach eine Konstante mit Einheit $\frac{C}{m^2}$. \\
+Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir die Dichte integrieren: \\
 \formulaBegin
 	$\displaystyle Q_{A} = \iint_A \sigma (x,y) \cdot dA$
 \formulaEnd
-Ist die Dichte Konstant folgt:
+Ist die Dichte konstant folgt:
 \formulaBegin
 	$\displaystyle Q_{A} = \sigma \cdot A$
 \formulaEnd
@@ -147,17 +149,17 @@ Ist die Dichte Konstant folgt:
 
 
 
-
+\newpage
 
 \definition{Volumenladungsdichte $\rho(x,y,z)$}
 \beginip
 Eine \textbf{Volumenladungsdichte} gibt an, wie sich Ladungen in einem Volumen anordnen. \\
-Sind die Ladungsträger \textbf{gleichmässig} auf dem Volumen verteilt, so ist die Dichte einfach eine Konstante mit Einheit $\frac{C}{m^3}$. \\
+Sind die Ladungsträger \textbf{gleichmässig} im Volumen verteilt, so ist die Dichte einfach eine Konstante mit Einheit $\frac{C}{m^3}$. \\
 Möchten wir die Gesamtladung auf Basis einer Dichte berechnen, so müssen wir die Dichte Integrieren: \\
 \formulaBegin
 	$\displaystyle Q_{V} = \iiint_V \rho (x,y,z) \cdot dV$
 \formulaEnd
-Ist die Dichte Konstant folgt:
+Ist die Dichte konstant folgt:
 \formulaBegin
 	$\displaystyle Q_{V} = \rho \cdot V$
 \formulaEnd
@@ -168,7 +170,7 @@ Ist die Dichte Konstant folgt:
 
 \bsptask{Beispiel}{Volumenladungsdichte}
 \beginbsp
-Eine Hohlkugel mit Innenradius $R_1$ und Aussenradius $R_2$ sei im Bereich $ R_1 < r < R_2$ gleichmässig mit der Ladung $Q$ gefüllt. \\
+Eine Hohlkugel mit Innenradius $R_1$ und Aussenradius $R_2$ sei im Bereich $ R_1 \leq r \leq R_2$ gleichmässig mit der Ladung $Q$ gefüllt. \\
 Gesucht ist die Volumenladungsdichte $\rho(r,\theta,\varphi)$ in Kugelkoordinaten, welche die Ladungsdichte im gesamten Raum beschreibt.
 \iend
 
@@ -182,15 +184,15 @@ Da sich die Ladungen nur in einem gewissen Teil des Raumes befinden, müssen wir
 		\item $\mathbf{R_1 \leq r \leq R_2}$ \\
 		Hier ist die Ladung gleichmässig auf dem Volumen $V = 4\cdot \pi (R_2^3 - R_1^3)$ verteilt, somit beträgt die Volumenladungsdichte:
 		\begin{center}
-			$\rho = \frac{Q}{V} = \frac{Q}{4 \cdot \pi (R_2^3 - R_1^3) }$
+			$\displaystyle \rho = \frac{Q}{V} = \frac{Q}{4 \cdot \pi (R_2^3 - R_1^3) }$
 		\end{center}
 		\item $\mathbf{r > R_3}$ \\
 		Hier befindet sich keine Ladung, somit ist auch die Volumenladungsdichte gleich 0
 \end{enumerate}
 
-Somit gilt für die Ortsabhängige Volumenladungsdichte:
+Somit gilt für die ortsabhängige Volumenladungsdichte:
 \begin{center}
-	$	\rho(r,\theta,\varphi) =
+	$\displaystyle	\rho(r,\theta,\varphi) =
 		\begin{cases}
 			0                                       & r < R_1 \\
 		 \frac{Q}{4 \cdot \pi (R_2^3 - R_1^3)} & R_1 \leq r \leq R_2\\
@@ -201,32 +203,29 @@ Somit gilt für die Ortsabhängige Volumenladungsdichte:
 \iend
 
 
+\newpage
 
 \subsection{Elektrische Flussdichte}
-Quelle des Elektrischen Feldes sind geladene Teilchen. Jedoch hängt das Elektrische Feld davon ab, in was für einem Material wir uns befinden. \\
-Das Elektrische Feld in einem Metall ist zum Beispiel kleiener, als das Elektrische Feld im Vakuum. \\
-Grund dafür ist die \textbf{elektrische Influenz}, welche das Ursprüngliche Feld abschwächt) \\
+Quelle des elektrischen Feldes sind geladene Teilchen. Jedoch hängt das elektrische Feld davon ab, in was für einem Material wir uns befinden. \\
+Das elektrische Feld in einem Metall ist zum Beispiel kleiner, als das elektrische Feld im Vakuum. \\
+Grund dafür ist die \textbf{elektrische Influenz}, welche das Ursprüngliche Feld abschwächt \\
 Um gewisse Rechnungen zu vereinfachen, definieren wir ein neues Feld.
 
-\important{Definition}{Die Elektrische Flussdichte}
+\important{Definition}{Die elektrische Flussdichte}
 \beginip
 Die elektrische Flussdichte $\vec{D}$ beschreibt das Feld, welches existieren würde, falls kein Material vorhanden wäre. \\
-Quelle der elektrischen Flussdichte ist elektrische Ladung
+Quelle der elektrischen Flussdichte ist die elektrische Ladung Q.
 \iend
 
 Da die elektrische Flussdichte  $\vec{D}$ unabhängig vom Material ist und aussschliesslich von den Ladungsträger abhängig ist,
 gibt es eine Formel, die die beiden Grössen in Verbindung bringt:
 
-
-
-
-\newpage
 \gl{Gleichung}{Quellgleichung des elektrischen Flusses}
 
 \begingl
 \begin{center}
 	\formulaBegin
-	$\Psi := \oiint \vec{D}\cdot d\vec{A} = Q_{eff}$
+	$\Psi := \oiint \vec{D}\cdot d\vec{A} = \iint_V \rho dV = Q_{eff}$
 	\formulaEnd
 
 	Falls Feld senkrecht auf Fläche und Konstant \\
@@ -251,22 +250,26 @@ Eine Kugel sei mit der Ladung $20 C$ gefüllt. Die Kugel habe den Radius $R = 2c
 Berechne das $\vec{D}$-Feld der Kugel.
 \iend
 
+
+\newpage
+
+
 \important{Lösung}{}
 \beginbsp
 Um das D-Feld der Kugel anzugeben, müssen wir zuerst ein passendes Koordinatesystem wählen. \\
-Da wir mit einer Kugel rechnen, muss das Feld Punktsymmetrisch sein und einzig der Abstand zum Kugelmittelpunkt bestimmt wie gross das D-Feld ist. \\
+Da wir mit einer Kugel rechnen, muss das Feld Punktsymmetrisch sein und einzig der Abstand zum Kugelmittelpunkt bestimmt, wie gross das D-Feld ist. \\
 Aufgrund dieser Überlegung, werden wir \textbf{Kugelkoordinaten} verwenden. (Hätten wir etwas, das Symmetrisch zur Z-Achse ist, so würden wir Zylinderkoord. verwenden etc.). \\
 Um die Gleichung für den Elektrischen Fluss anwenden zu können, müssen wir eine Hüllfläche finden,   \textbf{auf der das D-Feld Konstant ist}. \\
-Da die Anordnung eine Kugel ist, verwenden wir als Hüllfläche eine Kugel mit radius r. \\
+Da die Anordnung eine Kugel ist, verwenden wir als Hüllfläche eine Kugel mit Radius r. \\
 Nun können wir die Quellgleichung verwenden:
 \begin{center}
 	$ \oiint_A \vec{D}\cdot d\vec{A} = Q_{eff} \rightarrow D \cdot  4\pi r^2  = Q_{eff} $
 \end{center}
 Der Betrag des D-Feldes entspricht also gerade der von der Hullfläche eingeschlossenen Ladung geteilt durch die Fläche. \\
 Für den Fall, dass wir die Hüllfläche grösser als die Kugel wählen, schliessen wir alle Ladungen ein: \\
-$\mathbf{r > R}$ \\
+$\mathbf{r \beq R}$ \\
 \begin{center}
-	$Q_eff = 20C$ \\
+	$Q_{eff} = 20C$ \\
 	$D = \frac{20C}{4\pi r^2}$ \\
 	$\vec{D} = D \cdot \vec{e}_r$
 \end{center}
@@ -281,11 +284,11 @@ $\mathbf{r < R}$ \\
 Somit gilt für das D-Feld einer Kugel mit Ladungen auf der Oberfläche: \\
 \begin{center}
 
-	$
+	$ \displaystyle
 	\vec{D}(r) =
 	\begin{cases}
 		0                                       & r < R \\
-		\frac{20 C}{4 \pi r^2} \cdot  \vec{e}_r & r > R \\
+		\frac{20 C}{4 \pi r^2} \cdot  \vec{e}_r & r \beq R \\
 	\end{cases}$
 
 \end{center}
@@ -293,10 +296,11 @@ Somit gilt für das D-Feld einer Kugel mit Ladungen auf der Oberfläche: \\
 
 
 
+\newpage
 
 Da die elektrische Flussdichte nur von den Ladungsträgern abhängig ist, lässt sie sich realtiv einfach berechnen und bildet meist den Grundstein für
 das Berechnen von E-Feldern usw. \\
-\texttt{"}Fliesst\texttt{"}eine elektrische Flussdichte durch ein Material mit Ladungsträgern, so wird diese abgeschwächt, da sich im inneren des Materiales ein
+\texttt{"}Fliesst\texttt{"} eine elektrische Flussdichte durch ein Material mit Ladungsträgern, so wird diese abgeschwächt, da sich im inneren des Materiales ein
 elektrisches Feld entgegen dem von Aussen angelegtem Feld ausbildet. \\
 \begin{center}
 	\ibox{
@@ -312,21 +316,23 @@ elektrisches Feld entgegen dem von Aussen angelegtem Feld ausbildet. \\
 \end{center}
 \textbf{Variabeln}: \\
 $D = $ Elektrische Flussdichte $ [D] = \frac{As}{m^2}$ \\
-$ E = $ Elektrisches Felder $[E] = \frac{V}{m}$ \\
+$ E = $ Elektrisches Feld $[E] = \frac{V}{m}$ \\
 $ \varepsilon_0 = $ Dielektrizitätskonstante $ [\varepsilon_0] = \frac{C}{V\cdot m}$ \\
 $ \varepsilon_r = $ rel. Permitivität. Unterschiedlich im Material $ [\varepsilon_r] = [ ]$ \\
 
 \iend
 
 
+\newpage
+
 
 \definition{Verhalten von Feldgrössen bei Materialübergängen}
 \beginip
-Trifft eine Elektrische Flussdichte durch eine geladene Fläche, so verändert sich die Normalkomponente des D-Feldes. \\
+Trifft eine Eelektrische Flussdichte durch eine geladene Fläche, so verändert sich die Normalkomponente des D-Feldes. \\
 Die Tangentialkomponente des Feldes bleibt jedoch konstant. \\
  \begin{center}
 	 \ibox{
-	 \includegraphics[scale=1.5]{img/dfield.png}}	
+	 \includegraphics[scale=1.5]{img/dfield.png}}
 \end{center}
 \formulaBegin
 $\vec{D}_1 = \vec{D}_{1t} + \vec{D}_{1n} \Rightarrow \vec{D}_2 = \vec{D}_{1t} + (1 + \sigma) \cdot \vec{D}_{1n}$
@@ -350,7 +356,7 @@ $ U_{AB} :=  \int_A^B \vec{E} \cdot d\vec{s} $
 	\item	Da die Beziehung $\vec{F} =  q \cdot \vec{E} $ gilt und die Arbeit als $ W_{AB} = \int_A^B \vec{F} \cdot d\vec{s}$ definiert ist, können wir die Spannung zwischen zwei Punkten als \textbf{Maß der benötigten Arbeit} um ein Ladungsträger von A nach B zu bringen betrachten.  \\
 	\item Die Spannung ist unabhängig des Weges.  $U_{AC} = U_{AB} + U_{BC}$
 	      \\ $\Rightarrow$ Start- und Endwert sind ausreichend. \\
-	\item Die Spannung über einen Weg zurück zum Anfangsort entspricht 0V: $U_{AB} + U_{BA} = 0$ \\
+	\item Die Spannung über einen Weg zurück zum Anfangsort entspricht \textbf{0V}: $U_{AB} + U_{BA} = 0$ \\
 	\item Ist die Spannung auf dem gesamten Weg konstant und parallel zum Weg, vereinfacht sich das Integral zu einer Multiplikation: \\
 	      \begin{center}
 	      	$ U_{AB} = \int_{A}^{B} \vec{E}\cdot d\vec{s} = l_{AB} \cdot E$
@@ -405,7 +411,7 @@ $\rightarrow$ Wende \textbf{Superposition} an: Berechne das Feld jeder einzelnen
 	\item [2. 1]  Suche eine Weg vom Punkt A zum Punkt B, auf dem das Feld konstant ist. \\
 
 	\item [2. 2] Verwende $\displaystyle U_{AB} = \int_A^B \vec{E}\cdot d\vec{s}$ \\
-	$\displaystyle \rightarrow E = \frac{U_{AB}}{l_{eff,AB}}$
+	$\displaystyle \rightarrow E = \frac{U_{AB}}{l_{AB}}$
 
 	\item [2. 3] Aus Skizze, finde heraus, in welche Richtung das E-Feld zeigt und ergänze den Richtungsvektor:
 	\begin{center}
@@ -415,9 +421,16 @@ $\rightarrow$ Wende \textbf{Superposition} an: Berechne das Feld jeder einzelnen
 	\iend
 \iend
 
+
+\newpage
 \subsection{Kondensator}
+
 Bringen wir 2 Platten mit verschiedenen Ladungsträger nah zu einander, so bildet sich ein elektrisches Feld zwischen den Platten. \\
-Die Stärke des elektrischen Feldes ist abhängig der Plattenladung und der Flächen der Platten. \\
+Die Stärke des elektrischen Feldes ist abhängig der Plattenladung und der Flächen der Platten.
+
+\fix
+\fix
+\fix
 \definition{Kondensator}
 \beginip
 Ein Kondensator ist ein Bauelement, das in der Lage ist elektrische Ladung und somit Energie in Form von Feldlinien zu speichern. \\
@@ -427,13 +440,17 @@ Die im Feld eines Kondensators gespeicherte Energie entspricht $\mathbf{W = \fra
 
 
 
+\fix
+\fix
+\fix
 \definition{Kapazität}
 \beginip
-Die elektrische Kapazität C beschreibt die Fähigkeit eines Bauelementes, Ladung $Q$ bei einer gewissen Spannung $U$ zu speichern.
+Die elektrische Kapazität C beschreibt die Fähigkeit eines Bauelementes, Ladung $Q$ bei einer gewissen Spannung $U$ zu speichern. \\
+Als Proportionalitätsgrösse gibt sie an, wie gross die Spannung über einem Bauelement bei einer Ladung Q ist.
 \formulaBegin
 $C =\displaystyle \frac{Q}{U}$
 \formulaEnd
-In Abhängigkeit der Felder, lässt sich die Kaazität folgendermassen beschreiben:
+In Abhängigkeit der Felder, lässt sich die Kapazität folgendermassen beschreiben:
 \formulaBegin
 $ C = \displaystyle \frac{\oiint_A \vec{D} \cdot d \vec{A} }{ \int_s \vec{E} \cdot d\vec{s}}$
 \formulaEnd
@@ -446,7 +463,7 @@ $ C= \displaystyle \frac{D \cdot A_{eff} } {\int_A^B E \cdot ds} $
 
 \gl{Gleichung}{Kapazität eines Plattenkondensators}
 \begingl
-Bei einem Plattenkondensator mit Flächen A und Abstand d, der mit einem Dielektrikum mit Konstante $\varepsilon$ gefüllt ist, gilt: \\
+Bei einem Plattenkondensator mit Fläche A und Abstand d, der mit einem Dielektrikum mit Konstante $\varepsilon$ gefüllt ist, gilt: \\
 \formulaBegin
 $ \displaystyle C = \varepsilon \cdot \frac{A}{ d}$
 \formulaEnd
@@ -501,7 +518,6 @@ $\displaystyle C_{ges} = \sum_{i=0}^n C_i $
 \formulaEnd
 \iend
 
-\newpage
 \definition{Ladungserhaltung in der Serienschaltung}
 \beginip
 Werden Kapazitäten in Serie geschaltet, besitzen alle dieselbe Ladung Q.
@@ -514,7 +530,9 @@ Werden Kapazitäten in Serie geschaltet, besitzen alle dieselbe Ladung Q.
 \textbf{Begründung} \\
 Damit sich auf dem ersten Kondensator die Ladung $Q_1$ ansammeln kann, muss diese Ladung unterhalb des Kondensators angesammelt werden. Angenommen, beide Kondensatoren waren zu Beginn ungeladen,
 so muss die Ladung, welche sich auf der unteren Platte des ersten Kondensators befindet, dieselbe Ladungsmenge auf der oberen Platte des unteren Kondensators hervorrufen. \\
-
+\fix
+\fix
+\fix
 \definition{Maschenregel bei Parallelschaltung}
 \beginip
 Die Maschenregel für Spannung gilt auch bei Kondensatoren
