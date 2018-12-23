@@ -12,7 +12,7 @@
 Bis jetzt haben wir elektrische und magnetische Grössen angeschaut, die sich Zeitlich nicht ändern. \\
 Sind beide Grössen konstant, so beeinflussen sie sich nicht. \\
 Sobald sich jedoch der Magnetische Fluss $\phi$  \textbf{zeitlich ändert}, besteht einen Zusammenhang zwischen Magnetfeld und elektrischem Feld. \\
-Wie magnetischer Fluss und Elektrisches Feld zusammenhängen beschreibt das \textbf{Induktionsgesetz}
+Wie magnetischer Fluss und elektrisches Feld zusammenhängen beschreibt das \textbf{Induktionsgesetz}
 
 
 \gl{Gleichung}{Induktionsgesetz}
@@ -31,6 +31,9 @@ Falls B Feld konstant auf Fläche und senkrecht: \\
 \formulaEnd
 \iend
 
+
+\newpage
+
 Bewegen wir einen Leiter mit Lädungstrager in einem Magnetfeld, so wirkt eine magnetische Kraft auf die Ladungsträger im Leiter. \\
 Die Ladungsträger werden sich desshalb in Richtung der Kraftwirkung bewegen. Diese Bewegung bezeichnen wir als \textbf{induzierter Strom}. \\
 
@@ -39,11 +42,16 @@ Die Ladungsträger werden sich desshalb in Richtung der Kraftwirkung bewegen. Di
   \textbf{Induzierte Spannung} \\
     \includegraphics[scale=0.4]{img/beweg-ind-graph}
 \end{center}
+%todo
+\definition{Lenzsche Regel}
+\beginip
+%TODO
+\iend
 
 
 
-\begingl{Gleichung}Bewegungsinduktion}
-\gl
+\gl{Gleichung}{Bewegungsinduktion}
+\begingl
 Bewegen wir einen Leiter mit einer Geschwindigkeit in ein Magnetfeld , so wird ein elektrisches Feld induziert.
 
 \formulaBegin
@@ -51,13 +59,13 @@ $ \displaystyle d\vec{E}_i = \vec{v} \times \vec{B}  \cdot dl$
 \formulaEnd
 
 \textbf{Variabeln}: \\
-$ d\vec{E}_i = Induzierstes E-Feld auf dem kleinen Wegstück dl$ \\
-$ \vec{v} = Geschwindigkeit des Leiterstückes dl $ \\
-$ \vec{B} = B-Feld$ \\
+$ d\vec{E}_i =$ Induzierstes E-Feld auf dem kleinen Wegstück $dl$ \\
+$ \vec{v} = $Geschwindigkeit des Leiterstückes $ dl $ \\
+$ \vec{B} = $B-Feld \\
 
-Um das Gesamte E-Feld zu berechnen, muss $d\vec{E}_i$ über die wirksame Leiterlänge im Magnetfeld $l_{eff}$ integriert werden: \\
+Um die induizierte Spannung zu berechnen, muss $d\vec{E}_i$ über die wirksame Leiterlänge im Magnetfeld $l$ integriert werden: \\
 \formulaBegin
-$\vec{E}_{i} = \int_l_{eff}  d\vec{E}_i = \int_l_{eff} \vec{v} \times \vec{B}  \cdot dl \underbrace{\simeq}_{B \perp V}
+$\displaystyle U_{i} = \int_l  d\vec{E}_i = \int_l \vec{v} \times \vec{B}  \cdot d\vec{l} \underbrace{\simeq}_{B \perp V} B \cdot V \cdot l_{eff}$
 \formulaEnd
 
 \iend
@@ -66,45 +74,165 @@ $\vec{E}_{i} = \int_l_{eff}  d\vec{E}_i = \int_l_{eff} \vec{v} \times \vec{B}  \
 
 \bsptask{Beispiel}{Bewegungsinduktion}
 \beginbsp
-%todo
-TODO
+  Wie gross ist die im Leiter induzierte Spannung u in Abhängigkeit der Zeit t, wenn der Leiter im Zeitpunkt t=0 entsprechend dem Bild in das Magnetfeld eintaucht?
+\begin{center}
+  \ibox{\includegraphics[scale=0.3]{img/a-bewegind}}
+\end{center}
 \iend
-
-\definition{Selbstinduktion}
-\beginip
-%TODO
-todo
-\iend
+\newpage
 
 
-\definition{Gegentinduktion}
-\beginip
-%TODO
-todo
+
+
+\bsp{Lösung}{}
+\beginbsp
+
+
+\textbf{Lösung 1} Bewegungsinduktion \\
+Mithilfe des Umlaufintegrales $\displaystyle \oint_s \vec{E} d\vec{s}$ erhalten wir folgenden Zusammenhang für das induzierte E-Feld und die gemessene Spannung:
+\begin{center}
+  $ \displaystyle u = \int_l \vec{E}_i \cdot d\vec{l} = \int_l \vec{v} \times \vec{B} \cdot d \vec{l}$
+\end{center}
+Da Geschwindigkeit und B-Feld immer senkrecht stehen, vereinfacht sich das Kreuzprodukt zu einer Multiplikation. \\
+Da Leiterlänge und E-Feld parallel sind, vereinfacht sich das Integral zu einer Multiplikation
+\begin{center}
+  $\displaystyle u = B \cdot V \cdot l_{eff}$
+\end{center}
+Wobei $l_{eff}$ die \textbf{effektive Leiterlänge} $=$ die Leiterlänge im Magnetfeld beschreibt. \\
+Diese Leiterlänge, ist Zeitlich abhängig. Aus dem Strahlensatz folgt
+\begin{center}
+  $\frac{l_{eff}(t)}{v \cdot t} = \frac{a}{h}$ \\
+  $\rightarrow l_{eff} (t) =  \frac{a}{h} \cdot vt$
+\end{center}
+Somit gilt für die induzierte Spannung
+\begin{center}
+
+    $\displaystyle  \doubleunderline{ u} = B \cdot V \cdot l_{eff}(t) = B \cdot v \cdot  \frac{a}{h} \cdot vt =  \doubleunderline{ B \cdot v^2 \frac{a}{h} \cdot t}$
+\end{center}
+
+\textbf{Lösung 2} Induktionsgesetz \\
+Wir verwenden das Induktionsgesetz
+\begin{center}
+  $\displaystyle \oint_s \vec{E} \cdot d\vec{s} = - \frac{d}{dt} \big( \phi (t)\big)$
+\end{center}
+Da Feld und Fläche senkrecht stehen gilt für den Fluss $\phi$
+\begin{center}
+  $\phi(t) = A_{eff}(t) \cdot B(t)$
+\end{center}
+Die Fläche welche vom Leiter umschlossen und vom Magnetfeld durchflossen wird breechnet sich zu
+\begin{center}
+  $A_{eff} (t) = \frac{1}{2} \big ( vt \cdot \frac{a}{h} \cdot vt \big) = \frac{1}{2} v^2t^2 \frac{a}{h}$
+\end{center}
+Somit gilt für den Fluss
+\begin{center}
+  $ \phi(t) =  B \cdot A_{eff}(t) = B \cdot \frac{1}{2} v^2t^2 \frac{a}{h}$
+\end{center}
+Und für das \textbf{rechtshändige Umlaufintegral} (Daumen zeigt in richtung Fluss, Finger richtung des geschlossenen Weges)
+\begin{center}
+  $ -u = - \frac{d}{dt} \big( \phi(t) \big) = - B v^2 t \frac{a}{h}$ \\
+  $ \displaystyle \rightarrow \doubleunderline{ u = B v^2  \frac{a}{h} t }$
+\end{center}
 \iend
+
+\newpage
+
+
+
+Gemäss dem Induktionsgesetz, löst ein sich \textbf{zeitlich ändernder} Fluss eine Spannung aus. \\
+Fliesst nun ein Strom durch eine Leiterschleife, so wird sich als Reaktion auf den Stromfluss ein Magnetisches Feld innerhalb dieser Leiterschleife aufbauen.  \\
+Verändert sich also der Strom, welcher die Schleife durchfliesst zeitlich, so ändert sich auch das magnetische Feld zeitlich, was zu einer Spannung an den Klemmen der Leiterschleife führt.
+
+\gl{Gleichung}{Selbstinduktion}
+\begingl
+\begin{center}
+
+\ibox{\includegraphics[scale=0.3]{img/selbstind}}
+\fspace
+
+\end{center}
+
+
+\formulaBegin
+$u(t) = L \cdot \frac{d}{dt}\big( i(t) \big) $
+\formulaEnd
+\textbf{Variabeln} \\
+$L =$ Selbstinduktivität der Schleife $ [L] = H$ \\
+$i(t) =$ Strom durch die Leiterschleife$ [i(t)] = A$ \\
+$u(t) = $ Spannung an der Leiterschleife $[u(t)] = V$
+\iend
+
+\bsptask{Beispiel}{Selbstinduktion}
+\beginbsp
+Durch eine Spule mit Selbstinduktivität $L = 1 H$ fliesst der Strom $i(t)$ (Siehe Bild). \\
+Zeichnen sie graphisch die induzierte Spannung $u(t)$
+\begin{center}
+  \includegraphics[scale=0.5]{img/selbstind-a1}
+\end{center}
+
+\iend
+
+
+\newpage
+
+
+\bsp{Lösung}{}
+\beginbsp
+Wir teilen den Strom in 3 Teilbereiche auf: \\
+\textbf{1.} $t < 2$
+\begin{center}
+
+    $ i_1(t) = t \rightarrow u_1(t) = L \cdot \frac{d}{dt} t = 1V $
+\end{center}
+  \textbf{2.} $ 4 > t > 2$
+  \begin{center}
+
+      $ i_2(t) = 2A \rightarrow u_2(t) = L \cdot \frac{d}{dt} 2 A = 0V$
+  \end{center}
+
+    \textbf{3.} $t > 4$
+    \begin{center}
+
+        $ i_3(t) = -2 \cdot (t-4) + 2A \rightarrow u_3(t) = L \cdot \frac{d}{dt} \big( -2 \cdot (t-4) + 2A \big) = -2 V$
+    \end{center}
+\begin{center}
+  \includegraphics[scale=0.5]{img/selbstind-a1-lsg}
+\end{center}
+\iend
+
+
+
+\newpage
 
 
 \subsection{Charakteristische Gleichungen von Kapazität und Induktivität}
 \gl{Gleichung}{Induktivität}
 \begingl
-%TODO
-todo
+Der Zusammenhang zwischen Strom und Spannung an der Induktivität ist wie folgt gegeben
+\formulaBegin
+$\displaystyle u_L(t) = L \cdot \frac{d}{dt}\big( i(t) \big)$
+
+$\displaystyle  i_L(t) = i_l(0) + \frac{1}{L} \cdot \int_0^t u_L{\tau} d\tau$
+
+\formulaEnd
+%TODO IMAGE
 \iend
+
 
 \gl{Gleichung}{Kondensator}
 \begingl
 Der Zusammenhang zwischen Strom und Spannung am Kondensator ist wie folgt gegeben
 \formulaBegin
-$\displaystyle u_c(t) = \frac{1}{C} \int_0^t i_c(t) dt$ \\
+$\displaystyle u_c(t) = u_c(0) + \frac{1}{C} \int_0^t i_c(\tau) d\tau$ \\
 
-$\displaystyle i_c(t) = c \cdot \frac{d}{d t} (u_c)$ \\
+$\displaystyle i_c(t) = c \cdot \frac{d}{d t} \big(u_c(t) \big)$ \\
 \formulaEnd
+%TODO IMAGE
 \iend
 
 
 \textbf{Begründung} \\
-Mit dem Wissen, dass Strom definiert ist als die Ladung pro Zeit $ \displaystyle \frac{dQ}{dt} = I$ folgt folgendes: \\
+Mit dem Wissen, dass Strom definiert ist als die Ladung pro Zeit $ \displaystyle \frac{dQ}{dt} = i$ folgt folgendes: \\
 \begin{center}
-	$\displaystyle \frac{\partial}{\partial t} (C \cdot U) = \frac{\partial}{\partial t} (Q) $ \\
-	$ \displaystyle C  \cdot \frac{dU}{dt} = I \rightarrow U(t) = \frac{1}{C} \cdot \int_0^t I \cdot dt$
+	$\displaystyle \frac{\partial}{\partial t} (C \cdot u) = \frac{\partial}{\partial t} (Q) $ \\
+	$ \displaystyle C  \cdot \frac{du}{dt} = i \rightarrow u(t) = \frac{1}{C} \cdot \int_0^t i \cdot dt$
 \end{center}

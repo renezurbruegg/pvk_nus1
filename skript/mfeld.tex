@@ -24,7 +24,7 @@
 	\definition{Magnetische Flussdichte \textbf{B}}
 	\beginip
 	Bewegte Ladungsträger welche sich in der Nähe anderer bewegter Ladungsträger befinden, verspüren eine Kraftwirkung welche senkrecht zur Bewegungsrichtung zeigt. \\
-	Analog zum Elektrischen Feld definieren wir ein Magnetisches Feld (= Magnetische Flussdichte) welche diese Kraftwirkung beschreibt. \\
+	Analog zum Elektrischen Feld definieren wir ein magnetisches Feld (= magnetische Flussdichte) welche diese Kraftwirkung beschreibt. \\
 	Die Mangetische Flussdichte, weisst jedem Punkt im Raum einen Vektor zu. Die Resultierende Kraft auf ein Ladungsträger, welcher sich mit Geschwindigkeit V bewegt,
 	berechnet sich aus dem Kreuzprodukt von Geschwindigkeit und Ladung ($\rightarrow$ \textbf{Lorentzkraft})
 	\iend
@@ -34,12 +34,13 @@
 
 	\definition{Rechte Hand Regel}
 	\beginip
-	Die Magnetische Flussdichte $B$ um einen stromdurchflossenen Leiter baut sich stets gegen den Uhrzeigersinn auf und ist \textbf{immer} geschlossen. \\
+	Die magnetische Flussdichte $B$ um einen stromdurchflossenen Leiter baut sich stets gegen den Uhrzeigersinn auf und ist \textbf{immer geschlossen}. \\
 	\begin{center}
 			\ibox{\includegraphics[scale=0.2]{img/rechte-hand-regel.png}}
 	\end{center}
 	\iend
 
+ \newpage
 	\gl{Gleichung}{Lorentzkraft}
 	\begingl
 	Bewegte Ladungen in einem Magnetfeld verspüren eine Kraft, welche proportional zur Stärke des B-Feldes und der Geschwindigkeit ist. \\
@@ -66,15 +67,15 @@
 		$\vec{F_L} = \vec{F_m} + \vec{F_c} = q \cdot \vec{v} \times \vec{B} = I(\vec{l} \times \vec{B}) + q \cdot \vec{E} $
 		\formulaEnd
 
-		In älteren Physikbüchern wird häufig nur die Magnetische Kraftwirkung als Lorentzkraft bezeichnet.
+		In älteren Physikbüchern wird häufig nur die magnetische Kraftwirkung als Lorentzkraft bezeichnet.
 
 	\iend
 
 \newpage
 	\definition{H-Feld}
 	\beginip
-	Legen wir ein magnetisches Feld an eine Materie an, so richten sich die eingeschlossenen Teile entgegen dem angelegten Feld aus und \texttt{"} schwächen \texttt{"} dieses. \\
-	Das \texttt{"} abgeschwächte \texttt{"} Feld bezeichnen wir als H-Feld und entspricht dem Feld, welches real auf Ladungen wirkt. \\
+	Legen wir ein magnetisches Feld an eine Materie an, so richten sich die eingeschlossenen Teile entgegen dem angelegten Feld aus und \texttt{"}schwächen\texttt{"} dieses. \\
+	Das \texttt{"}abgeschwächte\texttt{"} Feld bezeichnen wir als magnetische Feldstärke (H-Feld) und entspricht dem Feld, welches real auf Ladungen wirkt. \\
 	 Der \texttt{"}Abschwächungsfaktor\texttt{"} $\mu = \mu_0 \cdot \mu_r$ wird als Permeabilität bezeichnet. \\
 
 	\formulaBegin
@@ -88,14 +89,14 @@
 
 	\gl{Gleichung}{Durchflutungssatz}
 	\begingl
-	Der Durchflutungssatz sagt etwas darüber aus, wie das Magnetische Feld entsteht. \\
-	 Es bringt die \textbf{Magnetische Feldstärke H} (Feld) und den \textbf{Strom I} (Quelle) in Verbidung.
-	Die Aussage des Durchflutungssatz ist, dass das Kurvenintegral des H-Feldes über eine beliebige \textbf{geschlossene} Kurve gerade dem Wert des durch diese Fläche fließendes Stromes entspricht. \\
+	Der Durchflutungssatz sagt etwas darüber aus, wie das magnetische Feld entsteht. \\
+	 Es bringt die \textbf{Magnetische Feldstärke H} (Feld) und den \textbf{Strom I} (Quelle) in Verbindung.
+	Die Aussage des Durchflutungssatz ist, dass das Wegintegral des H-Feldes über eine beliebige \textbf{geschlossene} Kurve gerade dem Wert des durch diese Fläche fließendes Stromes entspricht. \\
 	Diesen Wert definieren wir als Durchflutung $\Theta$ \\
 	\formulaBegin
 	$\displaystyle \Theta = \oint_{s} \vec{H} \cdot d\vec{s} = \iint_{A} \vec{j} \cdot d\vec{A} = I_{eff}$
 	\formulaEnd
-	Dabei ist es wichtig, das nur der \textbf{effektiv durch eine Fläche hindurchfliessende Strom} die Magnetische Durchflutung auslöst. Fliesst in einer Fläche gleich viel Strom hinein wie hinaus, ist die Druchflutung gleich 0.
+	Dabei ist es wichtig, das nur der \textbf{effektiv durch eine Fläche hindurchfliessende Strom} die Magnetische Durchflutung auslöst. Fliesst in einer Fläche gleich viel Strom hinein wie hinaus, ist die Durchflutung gleich 0.
 	\iend
 
 	\gl{Gleichung}{Vereinfachter Durchflutungssatz}
@@ -106,15 +107,13 @@
 	\formulaEnd
 	\iend
 
-	\bsptask{Beispiel}{\#4}
+	\bsptask{Beispiel}{}
 	\beginbsp
 	\textbf{Aufgabe} \\
-	Berechnen Sie die magnetische Spannung $\Theta$ und das H-Feld Feld $\vec{H}$ um einen unendlich langen, mit Strom I durchflossenen Leiter. Der Radius des Leiters sei $\rho$. \\
+	Berechnen Sie die Durchflutung $\Theta$ und das H-Feld $\vec{H}$ um einen unendlich langen, mit Strom I durchflossenen Leiter. Der Radius des Leiters sei $\rho$. \\
 	\iend
-
-	\beginip
-	\textbf{Lösung} \\
-
+	\bsp{Lösung}{}
+	\beginbsp
 	Wir wählen als Kurve einen Kreis mit Radius R um unseren Leiter. \\
 	Da wir von einem perfekten Leiter ausgehen, treffen wir die Annahme, dass das Magnetfeld achsensymmetrisch und somit konstant entlang des Kreises ist. \\
 	\\
@@ -133,9 +132,9 @@
 	\iend
 
 	\bsptask{Beispiel}{Magnetfeld einer Spule}
-
+%TODO Fix
 	\beginbsp
-	Gegeben sei eine Spule mit N Wicklungen und der länge l. Berechnen Sie die Magnetische Feldstärke $\vec{H}$ in Abhängigkeit des Stromes I, Länge l und Wicklungen N.
+	Gegeben sei eine Spule mit N Wicklungen und der länge l. Berechnen Sie die magnetische Feldstärke $\vec{H}$ in Abhängigkeit des Stromes I, Länge l und Wicklungen N.
 	\iend
 
 	\beginbsp
@@ -175,7 +174,7 @@
 	\iend
 
 
-	Aus der letzten Aufgabe folgt, dass das Magnetische Feld einer Spule im inneren Näherungsweise konstant ist. Ausserhalb der Windungen ist die Spule feldfrei. \\
+	Aus der letzten Aufgabe folgt, dass das magnetische Feld einer Spule im inneren Näherungsweise konstant ist. Ausserhalb der Windungen ist die Spule feldfrei. \\
 	Diese Eigenschaften entsprechen gerade denen, eines \textbf{Stabmagneten}
 
 
@@ -215,17 +214,17 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 
 	\definition{Magnetische Spannung}
 	\beginip
-	Als Magnetische Spannung bezeichnen wir das Wegintegral über die Magnetische Feldstärke H.
+	Als magnetische Spannung bezeichnen wir das Wegintegral über die magnetische Feldstärke H.
 	\formulaBegin
 	$\displaystyle V_{M_{AB}} := \int_A^B \vec{H} \cdot d\vec{s}$
 	\formulaEnd
 
-	Die Magnetische Spannung ist einzig eine Hilfsgrösse, um Werte zu berechnen. \\
-	Analog zum elektrischen Feld lässt sich auch hier eine Maschengleichung definieren: \\
+	Die magnetische Spannung ist einzig eine Hilfsgrösse, um Werte zu berechnen. \\
+	Analog zum elektrischen Feld, lässt sich auch hier eine Maschengleichung definieren: \\
 	\begin{center}
 		$\displaystyle \oint_{Masche} \vec{H} \cdot d\vec{s} = \Theta_{Masche}$
 	\end{center}
-		Falls wir nun die Druchflutung $\Theta$ als Quelle einfügen, gilt für ein magnetisches Netzwerk:
+		Falls wir nun die Durchflutung $\Theta$ als Quelle einfügen, gilt für ein magnetisches Netzwerk:
 		\begin{center}
 			$\displaystyle \oint_{Masche} \vec{H} \cdot d\vec{s} + \Theta_{Quellen} = 0$
 		\end{center}
@@ -279,7 +278,7 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 			Strom / Fluss & $\displaystyle I = \iint_A \vec{j}\cdot d\vec{A} = \kappa \iint_A \vec{E} \cdot d\vec{A}$ & $\texttt{[}A\texttt{]}$  & $ \iint_A \vec{B} \cdot d \vec{A} = \mu \iint_A \vec{H} \cdot d\vec{A}$ &  $\texttt{[}Wb\texttt{]}$ \\
 			\hline
 			Ohmsches Gesetz & $U = R \cdot I $ &  & $\Theta = R_m \cdot \Phi $ &  \\
-			Maschenregel & $ U_0 = \sum_{Masche} U_m $ &  & $ \Theta(= NI) = \sum_{Masche} \Theta_m $ & \\
+			Maschenregel & $ U_0 = \sum_{Masche} U_m $ &  & $ \Theta(= NI) = \sum_{Masche} V_m $ & \\
 			Knotenregel & $ \sum_{Knoten} I_k = 0 $ &  & $ \sum_{Knoten} \Phi_k = 0 $ &  \\
 
 		\end{tabular}
@@ -290,13 +289,13 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 		\textbf{Vorgehen} \\
 		\begin{itemize}
 			\item Spulen werden mit Spannungsquellen ersetzt $V_m = N\cdot I$
-			\item Magnetkerne/Luftspälte etc. werden mithilfe der Länge und Querschnittsfläche als Widerstände modelliert. $R_m = \mu \frac{l}{A}$
+			\item Magnetkerne/Luftspälte etc. werden mithilfe der Länge und Querschnittsfläche als Widerstände modelliert. $R_m =  \frac{l}{\mu \cdot A}$
 			\item Für magnetische Widerstände gelten die gleichen Regeln wie bei elektrischen (Seriellschaltung / Paralellschaltung).
 		\end{itemize}
 
 		\iend
 \newpage
-		\bsptask{Beispiel}{\#5}
+		\bsptask{Beispiel}{}
 		\beginbsp
  		\textbf{Aufgabe Hubmagnet} \\
 		Der mittlere Schenkel 2 eines E-Kernes aus Dynamoblech trägt eine Wicklung mit N Windungen. Über
@@ -315,7 +314,7 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 
 \newpage
 		\important{Lösung}{}
-				\beginip
+				\beginbsp
 		Zuerst zeichnen wir ein Reluktanzmodell des Magneten. \\
 		Wobei $R_L$ die Luftspälte, ${R_D}_i$ die Beine des Magneten und ${R_G}_i$ sowie $R_{BC}$ und $R_{CD}$ das Gusseinsenstück modellieren.
 	\begin{center}
@@ -366,7 +365,7 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 \beginip
 	Die Induktivität L beschreibt, wieviel magnetischer Fluss $\Phi$ sich bei einem Strom I im Inneren eines Bauteiles aufbaut.
 	\formulaBegin
-	$ L := \frac{N\cdot \Phi}{I} = \frac{N^2}{R_m} $
+	$ \displaystyle L := \frac{N\cdot \Phi}{I} = \frac{N^2}{R_m} $
 	\formulaEnd
 	Der Faktor $N$ im Nenner kommt daher, dass der Fluss bei einer Spule durch $N$ Windungen hindurchfliesst. Somit ist die effektive Fläche des Flusses N mal grösser, wesshalb er N mal gezählt wird. \\
 
@@ -381,11 +380,11 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 \bsptask{Beispiel}{Berechnen einer Gegeninduktivität}
 \beginbsp
 Auf einem Ringkern mit der Querschnittsfläche A und der Permeabilität $\mu_r \rightarrow \infty$ ist
-eine Wicklungen mit N1 angebracht. Der Ringkern
+eine Wicklungen mit $N_1$ Windungen angebracht. Der Ringkern
 besitzt einen Luftspalt mit der sehr kleinen Breite $l_g$. Das magnetische Feld kann im
 Luftspalt als homogen angenommen werden.
 
-1) Berechnen sie die Magnetische Flussdichte im Luftspalt. \\
+1) Berechnen sie die magnetische Flussdichte im Luftspalt. \\
 2) Berechnen sie den magnetischen Fluss $\phi_A$ im Kern.\\
 3) Berechnen sie die Induktivität L
 \begin{center}
@@ -397,8 +396,9 @@ Luftspalt als homogen angenommen werden.
 \iend
 \newpage
 
-\beginip
-\textbf{Lösung}
+\bsp{Lösung}{}
+
+\beginbsp
 \begin{itemize}
 \item 1) Es gilt für die Durchflutung bezüglich dem Kreisring:
 			\begin{center}
@@ -415,7 +415,7 @@ Luftspalt als homogen angenommen werden.
 				$\displaystyle \rightarrow \doubleunderline{\vec{B} = \frac{N_1 \cdot i_1(t) \mu_0}{l_g} (-\vec{e}_x)}$
 		\end{center}
 
-		\item 2) Für den Magnetischen Fluss gilt:
+		\item 2) Für den magnetischen Fluss gilt:
 		\begin{center}
 				$\displaystyle \phi_A = \iint_A \vec{B} \cdot d\vec{A} = B \cdot A =\doubleunderline{\frac{N_1 \cdot i_1(t) \mu_0}{l_g} \cdot A}$
 		\end{center}
@@ -449,7 +449,7 @@ Luftspalt als homogen angenommen werden.
 
 \definition{Gegeninduktivität}
 \beginip
-Die Gegeninduktivität beschreibt, wie viel Magnetischer Fluss durch eine \textbf{andere} Leiterschleife durchfliesst, abhängig
+Die Gegeninduktivität beschreibt, wie viel magnetischer Fluss durch eine \textbf{andere} Leiterschleife durchfliesst, abhängig
 des Stromes in der ersten Schleife.
 \formulaBegin
 $\displaystyle L_{21} = N_2 \cdot \frac{\phi_{21}}{i_1}$
@@ -472,18 +472,19 @@ Beim Ringkern aus dem vorherigen Beispiel wird nun eine 2 Spule mit $N_2$ Wicklu
 
 \newpage
 
-\beginip
-\textbf{Lösung}
+
+\bsp{Lösung}{}
+\beginbsp
 
 Die Gegeninduktivität beschreibt, wieviel magnetischer Fluss durch die 2. Spule fliesst abhängig des Stromes der ersten Spule:
 \begin{center}
-$\displaystyle L_{21} := \frac{\Phi_{s2}}{i_1}$
+$\displaystyle L_{21} := \frac{\Phi_{21}}{i_1}$
 \end{center}
 
 Da der Fluss im Magneten selbst gerade $\Phi_A$ beträgt und dieser durch $N_2$ Leiterschleifen fliesst, gilt:
 \begin{center}
 
-	$\displaystyle  L_{21} := \frac{\Phi_{s2}}{i_1} = \frac{\Phi_A \cdot N_2}{i_1} = \doubleunderline{\frac{N_1\cdot N_2 \cdot \mu_0}{l_g} \cdot A}$
+	$\displaystyle  L_{21} := \frac{\Phi_{21}}{i_1} = \frac{\Phi_A \cdot N_2}{i_1} = \doubleunderline{\frac{N_1\cdot N_2 \cdot \mu_0}{l_g} \cdot A}$
 \end{center}
 \iend
 

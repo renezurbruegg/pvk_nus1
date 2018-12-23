@@ -155,8 +155,8 @@
 
 
 
-										\definition{Spannungsteiler}
-										\beginip
+										\gl{Gleichung}{Spannungsteiler}
+										\begingl
 										Die Spannungsteilerregel gibt an, wie sich eine Spannung über verschiedene Widerstände aufteilt, wenn diese in \textbf{Serie} geschaltet sind. \\
 											\formulaBegin
 											$\displaystyle U_{R_x} = U_{ges} \cdot \frac{R_X}{\sum R_i} $
@@ -173,8 +173,8 @@
 											Nun müssen wir nur noch den Strom mit dem gesuchten Widerstand multiplizieren um die Spannung zu erhalten: $\displaystyle U_{R_X} = R_X \cdot I = R_X \frac{U_{ges}}{\sum R_i} $
 
 					\fix
-										\definition{Stromteiler}
-										\beginip
+										\gl{Gleichung}{Stromteiler}
+										\begingl
 											Die Stromteilerregel gibt uns an, wie sich die Ströme in einem Knoten aufteilen, wenn die Widerstände \textbf{parallel} geschaltet sind.
 											\fspace
 											\formulaBegin
@@ -280,7 +280,7 @@
 										\iend
 
 
-
+\newpage
 
 										\subsection{Vorgehen um Schaltbilder mit einer Quelle zu vereinfachen}
 										\begin{enumerate}
@@ -289,7 +289,7 @@
 											\item Expandiere nun das Netzwerk Schritt für Schritt, bis die Spannung über dem gesuchten Widerstand berechnet werden kann.
 										\end{enumerate}
 
-										\bsptask{Beispiel}{\#1}
+										\bsptask{Beispiel}{}
 										\beginbsp
 										1) Berechnen sie $U_x$ in Abhängigkeit des Quellstromes $I$
 										\begin{center}
@@ -297,7 +297,9 @@
 										 \ibox{\includegraphics[scale=0.55]{img/aufg1-aufg.png}}
 										\end{center}
 										\fix
-										 \textbf{Lösung}
+										\iend
+										\bsp{Lösung}{}
+										\beginbsp
 									 \begin{enumerate}
 					  				 \item Gemäss Regel 2 können wir $R_1$ und die Stromquelle vertauschen.
 										 \item Die Widerstände $R_4 , R_5$ und $ R_x $ können zu $ R_S = R_3 + R_4 + R_5 $ zusammengefasst werden.
@@ -366,8 +368,10 @@
 																				 Eine Spannungsquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass über diesem Bauteil keine Spannung abfallen darf. Über einem Kurzschluss wird nie eine Spannung abfallen, da dieser als Widerstand mit Wert 0 modelliert werden kann. \\
 																				 Eine Stromquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass durch dieses Bauteil kein Strom fliessen darf. Dies entspricht gerade einem Leerlauf, da dieser als Widerstand mit Wert $\displaystyle \rightarrow \infty$ modelliert werden kann. \\
 
+\newpage
 
-																				 \bsptask{Beispiel}{\#2}
+
+																				 \bsptask{Beispiel}{}
 																				 \beginbsp
 																					\textbf{Aufgabe} Berechnen sie die Spannung $U_x$ und die Leistung $P_x$ im folgenden Netzwerk, wenn alle Widerstände $ R = 100 \Omega$ betragen. \\
 																					\begin{center}
@@ -375,10 +379,9 @@
 																					\ibox{\includegraphics[scale=0.6 ]{img/ex2-1.png}}
 																					\end{center}
 																					\iend
-
-																					\beginip
-																					\textbf{Lösung}
-																					\\
+																					\newpage
+																					\bsp{Lösung}{}
+																					\beginbsp
 																					Zuerst setzen wir die Spannungsquelle zu 0 und erhalten das folgende ESB \\
 																					\begin{center}
 																						\fix
@@ -409,7 +412,7 @@
 
 																				 \iend
 
-
+																				 \newpage
 
 																				\subsection{Ersatzquelllen}
 
@@ -476,9 +479,9 @@
 
 
 
-
-																				\bsptask{Beispiel}{\#3 - Thévenin Äquivalente Schaltung}
-																				\beginip
+																				\newpage
+																				\bsptask{Beispiel}{Thévenin Äquivalente Schaltung}
+																				\beginbsp
 																				\textbf{Aufgabe}
 																				\\Geben sie eine Thévenin Äquivalente Schaltung (Innenwiderstand $R_i$, $U_{Th}$) für folgende Klemmen an. Alle Widerstände haben Wert $100\Omega$ \\
 
@@ -487,10 +490,8 @@
 																						\ibox{\includegraphics[scale=0.4]{img/ex3-1.png}}
 																				\end{center}
 																				\iend
-																				\beginip
-																				\textbf{Lösung}
-																				\\
-																				Zuerst berechnen wir die Leerlaufspannung für die Stromquelle: \\
+																				\bsp{Lösung}{}
+																				\beginbsp																				Zuerst berechnen wir die Leerlaufspannung für die Stromquelle: \\
 																				$U_{LL_1} = 120mA \cdot 200 \Omega = 24V$ \\
 																				Danach die Leerlaufspannung für die Spannungsquelle: \\
 																				$ U_{LL_2} = 20V$\\
@@ -526,8 +527,6 @@
 											\ibox{\includegraphics[scale=0.5]{img/leistungsanpassung.png}}
 										\end{center}
 										\iend
-
-					\newpage
 										\textbf{Begründung} \\
 										Die Leistung an einem Lastwiderstand in Serie ist gegeben als: \\
 										$ \displaystyle P_L = U_L \cdot I_L = \frac{U_L^2}{R_L} = \frac{( U_0 \frac{R_L}{R_L + R_i})^2}{R_L} = U_o^2 \cdot \frac{R_L}{(R_L + R_i)^2}$ \\
@@ -553,7 +552,6 @@
 
 
 
-																														\newpage
 																														\vorgehen{Vorgehen}{Leistung über einer Last Maximieren}
 																														\beginvor
 \textbf{Falls möglich}
@@ -574,7 +572,7 @@
 
 
 																														\iend
-
+\newpage
 \bsptask{Beispiel}{Leistungsanpassung}
 \beginbsp
 Berechnen sie für folgendes ESB den Wert für $R_L$ bei dem $R_L$ maximale Leistung aufnimmt.
@@ -615,7 +613,7 @@ Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
 					          \subsection{Analyse umfangreicher Netzwerke}
 
 					           Möchten wir in Netzwerken sehr viele Grössen berechnen, oder ist das Netzwerk sehr komplex, so können andere (meist Computer basierende) Verfahren verwendet. \\
-					           Sämtliche Verfahren bauen darauf auf, dass für ein beliebiges Netzwerk das Aufstellen sämtlicher Konten und Maschengleichungen genügt, um alle gesuchten Grössen zu berechnen. \\
+					           Sämtliche Verfahren bauen darauf auf, dass für ein beliebiges Netzwerk das Aufstellen sämtlicher Knoten und Maschengleichungen genügt, um alle gesuchten Grössen zu berechnen. \\
 
 					          \important{Unabhängige Gleichungen}{}
 					          \beginip
@@ -635,14 +633,14 @@ Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
 					                \item Entferne alle Widerstände und Quellen und zeichne das Schaltbild neu.
 					                \item Nummeriere alle Konten. Die Anzahl der Knoten wird mit k bezeichnet.
 					                \item Alle Verbindungslinien, welche zwei Knoten verbinden, werden als Zweige bezeichnet. \#Zweige = z
-					                \item Definiere Ströme für jeden Zweig und stelle (k-1) Knotengleichungen auf. Schreibe diese am Besten bereits in Matrix schreibweise: \\
+					                \item Definiere Ströme für jeden Zweig und stelle (k-1) Knotengleichungen auf. Schreibe diese am besten bereits in Matrix schreibweise: \\
 					                Bsp: $I_1 + I_2 = I_3, I_3 - I_4 = 2A $: \\
 					                $
 					 \left[ {\begin{array}{cccc}
 					    1 & 1 & -1 & 0 \\
 					    0 & 0 & 1 & -1 \\					\end{array} } \right] \left[ {\begin{array}{c} I_1 & I_2 & I_3 & I_4 \\ \end{array} } \right] =   \left[ {\begin{array}{c}  0 & 2A\\ \end{array} } \right] $ \\
 
-					                \item Finde z - (k-1) Unabhängige Maschengleichungen. (Mittels Vollständiger Baum / Auftrennen der Maschen)
+					                \item Finde z - (k-1) Unabhängige Maschengleichungen. (Mittels vollständiger Baum / Auftrennen der Maschen)
 					                \item Ersetze die Spannungen der Maschengleichung mit Strom mal Widerstand und ergänze das Gleichungssystem.
 					                \\ Bsp:
 					                $U_1 + U_2 = 5V, U_2 - U_3 = U_4$ \\ $ \rightarrow R_1 \cdot I_1 + R_2 \cdot I_2 = 5V, R_2 \cdot I_2 - R_3 \cdot I_3 - R_4 \cdot I_4 = 0$ \\
