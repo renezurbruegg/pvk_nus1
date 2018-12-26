@@ -35,20 +35,47 @@ Falls B Feld konstant auf Fläche und senkrecht: \\
 \newpage
 
 Bewegen wir einen Leiter mit Lädungstrager in einem Magnetfeld, so wirkt eine magnetische Kraft auf die Ladungsträger im Leiter. \\
-Die Ladungsträger werden sich desshalb in Richtung der Kraftwirkung bewegen. Diese Bewegung bezeichnen wir als \textbf{induzierter Strom}. \\
+Die Ladungsträger werden sich desshalb in Richtung der Kraftwirkung bewegen. \\
+Aufgrund dieser Bewegung, werden Ladungsträger \textbf{getrennnt}. Diese Trennung der Ladungsträger lösst ein elektrisches Feld aus, welches wir als Spannung messen können.
 
 \begin{center}
   \includegraphics[scale=0.4]{img/beweg-ind} \\
   \textbf{Induzierte Spannung} \\
     \includegraphics[scale=0.4]{img/beweg-ind-graph}
 \end{center}
-%todo
+
+
+
+Die Lenzsche Regel gibt uns Informationen darüber, in welche Richtung sich Ladungsträger bei der Induktion bewegen werden.
 \definition{Lenzsche Regel}
 \beginip
-%TODO
+\begin{center}
+  \texttt{"}Der induzierte Strom ist stets so gerichtet, dass er der Ursache seiner Entstehung entgegenwirkt.  \texttt{"}
+\end{center}
+\iend
+\newpage
+
+\bsp{Beispiel}{Lemzsche Regel}
+\beginbsp
+Gegeben sei folgende Leiterschleife, welche sich nach Rechts in ein Magnetfeld bewegt. \\
+Ziel dieser Aufgabe ist es, herauszufinden, in welche Richtung Spannung und Strom zeigen werden.
+\begin{center}
+  \includegraphics[scale=0.2]{img/ex-lenzsche-regel}
+\end{center}
+
+Bewegen wir unsere Leiterschleife nach Rechts weiter in unser Feld hinein, so schliessen wir \textbf{Magnetfeld} welche in unsere Richtung zeigt ein. \\
+Das System selbst, möchte jedoch im Gleichgewicht bleiben, wesshalb es versucht ein Magnetfeld aufzubauen, welches der Änderung entgegenwirkt. (Siehe rotes Magnetfeld) \\
+Um dieses Magnetfeld aufzubauen, ist ein Strom, der im Uhrzeigersinn fliesst, nötig. \\
+Dieser Strom bringt positive Ladungsträger auf die untere Seite, wesshalb eine Spannung in Richtung des eingezeichneten Pfeiles entsteht.
+
+
+\begin{center}
+
+  \includegraphics[scale=0.2]{img/ex-lenzsche-r-sol}
+\end{center}
 \iend
 
-
+\newpage
 
 \gl{Gleichung}{Bewegungsinduktion}
 \begingl
@@ -164,7 +191,7 @@ $u(t) = $ Spannung an der Leiterschleife $[u(t)] = V$
 \bsptask{Beispiel}{Selbstinduktion}
 \beginbsp
 Durch eine Spule mit Selbstinduktivität $L = 1 H$ fliesst der Strom $i(t)$ (Siehe Bild). \\
-Zeichnen sie graphisch die induzierte Spannung $u(t)$
+Zeichnen Sie graphisch die induzierte Spannung $u(t)$
 \begin{center}
   \includegraphics[scale=0.5]{img/selbstind-a1}
 \end{center}
@@ -231,7 +258,7 @@ $\displaystyle i_c(t) = c \cdot \frac{d}{d t} \big(u_c(t) \big)$ \\
 
 
 \textbf{Begründung} \\
-Mit dem Wissen, dass Strom definiert ist als die Ladung pro Zeit $ \displaystyle \frac{dQ}{dt} = i$ folgt folgendes: \\
+Mit dem Wissen, dass Strom definiert ist als die Ladung pro Zeit $ \displaystyle \frac{dQ}{dt} = i$ folgt: \\
 \begin{center}
 	$\displaystyle \frac{\partial}{\partial t} (C \cdot u) = \frac{\partial}{\partial t} (Q) $ \\
 	$ \displaystyle C  \cdot \frac{du}{dt} = i \rightarrow u(t) = \frac{1}{C} \cdot \int_0^t i \cdot dt$

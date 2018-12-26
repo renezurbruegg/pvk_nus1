@@ -1,16 +1,3 @@
-%----------------------------------------------------------------
-%
-%  File    :  thesis-style.tex
-%
-%  Author  :  Keith Andrews, IICM, TU Graz, Austria
-%
-%  Created :  27 May 93
-%
-%  Changed :  19 Feb 2004
-%
-% styling and technical implementation adopted 2011 by Karl Voit
-%----------------------------------------------------------------
-
 					\section{Netzwerke}
 					\label{chap:Style}
 
@@ -105,7 +92,7 @@
 							        \vspace{1em}
 
 										\textbf{Begründung} \\
-										Mehrere Widerstände in Serie können als ein langer Widerstand mit konstanter Fläche angesehen werden. Da die Längenabhängigkeit des Widerstandes im Zähler steht, addieren sich die Werte. \\
+										Mehrere Widerstände in Serie können als einen langen Widerstand mit konstanter Fläche angesehen werden. Da die Längenabhängigkeit des Widerstandes im Zähler steht, addieren sich die Werte. \\
 										$\displaystyle R_s = \rho \cdot \frac{l_1+l_2}{A} = \rho \cdot \frac{l_1}{A}  + \rho \cdot \frac{l_2}{A}  = R_1 + R_2 $
 										\fix
 										\begin{center}
@@ -127,7 +114,7 @@
 					          \vspace{1em}
 
 					          \textbf{Begründung} \\
-										Mehrere Widerstände parallel können als ein Widerstand mit größerer Fläche und konstanter Länge angesehen werden. Da die Flächenabhängigkeit des Widerstandes im Nenner steht, addieren sich die Leitwerte. \\
+										Mehrere Widerstände parallel können als einen Widerstand mit größerer Fläche und konstanter Länge angesehen werden. Da die Flächenabhängigkeit des Widerstandes im Nenner steht, addieren sich die Leitwerte. \\
 											$\displaystyle Y_p = \frac{1}{\rho} \cdot \frac{A_1 + A_2}{l} = \frac{1}{\rho} \cdot \frac{A_1}{l}  + \frac{1}{\rho} \cdot \frac{A_2}{l}  = Y_1 + Y_2 $
 
 
@@ -139,19 +126,32 @@
 
 
 										\subsection{Stern Dreieck Umformung}
+										Sind Widerstände weder seriell noch parallel geschaltet, sondern sind in einem Stern oder Dreieck angeordnet,
+										können folgende Zusammenhänge verwendet werden, um eine Dreieckschaltung in eine Sternschaltung und umgekehrt umzuwandeln.
 										\begin{center}
-											%todo fix
 		\includegraphics[scale=0.3]{img/Stern-Dreieck-Transformation.png}
 \end{center}
-	\begin{multicols*}{2}
-		$\underline{R}_{AB}=\frac{\underline{R}_{A}\underline{R}_{B}+\underline{R}_{B}\underline{R}_{C}+\underline{R}_{A}\underline{R}_{C}}{\underline{R}_{C}}$\\
-		$\underline{R}_{AC}=\frac{\underline{R}_{A}\underline{R}_{B}+\underline{R}_{B}\underline{R}_{C}+\underline{R}_{A}\underline{R}_{C}}{\underline{R}_{B}}$\\
-		$\underline{R}_{BC}=\frac{\underline{R}_{A}\underline{R}_{B}+\underline{R}_{B}\underline{R}_{C}+\underline{R}_{A}\underline{R}_{C}}{\underline{R}_{A}}$\\
-		$\underline{R}_A=\frac{\underline{R}_{AC}\underline{R}_{AB}}{\underline{R}_{AC}+\underline{R}_{AB}+\underline{R}_{BC}}$\\
-		$\underline{R}_B=\frac{\underline{R}_{AB}\underline{R}_{BC}}{\underline{R}_{AC}+\underline{R}_{AB}+\underline{R}_{BC}}$\\
-		$\underline{R}_C=\frac{\underline{R}_{AC}\underline{R}_{BC}}{\underline{R}_{AC}+\underline{R}_{AB}+\underline{R}_{BC}}$
-	\end{multicols*}
 
+\begin{minipage}{0.5\textwidth}
+	\begin{center}
+
+	${R}_{AB}=\frac{{R}_{A}{R}_{B}+{R}_{B}{R}_{C}+{R}_{A}{R}_{C}}{{R}_{C}}$\\
+	${R}_{AC}=\frac{{R}_{A}{R}_{B}+{R}_{B}{R}_{C}+{R}_{A}{R}_{C}}{{R}_{B}}$\\
+	${R}_{BC}=\frac{{R}_{A}{R}_{B}+{R}_{B}{R}_{C}+{R}_{A}{R}_{C}}{{R}_{A}}$\\
+
+	\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+
+		${R}_A=\frac{{R}_{AC}{R}_{AB}}{{R}_{AC}+{R}_{AB}+{R}_{BC}}$\\
+		${R}_B=\frac{{R}_{AB}{R}_{BC}}{{R}_{AC}+{R}_{AB}+{R}_{BC}}$\\
+		${R}_C=\frac{{R}_{AC}{R}_{BC}}{{R}_{AC}+{R}_{AB}+{R}_{BC}}$
+
+	\end{center}
+\end{minipage}
+
+\newpage
 
 
 
@@ -194,7 +194,7 @@
 											Der Widerstand, dessen Strom uns \textbf{nicht} interessiert, steht hierbei im Zähler!
 										\iend
 
-										\subsubsection{Grundregeln bei Netzwerkumformungen}
+										\subsection{Grundregeln bei Netzwerkumformungen}
 					\fix \fix
 										\important{Regel 1}{Expandieren von Knoten}
 										\beginip
@@ -254,7 +254,8 @@
 										\beginbsp
 											Fassen sie alle Widerstände zu einem zusammen unter verwendung der Symmetrieeigenschaften
 											\begin{center}
-												\ibox{ \includegraphics[scale=1.3]{img/sym.png}}
+												%TODO add ppoints
+												\ibox{ \includegraphics[scale=1.5]{img/sym.png}}
 											\end{center}
 										\iend
 
@@ -291,7 +292,7 @@
 
 										\bsptask{Beispiel}{}
 										\beginbsp
-										1) Berechnen sie $U_x$ in Abhängigkeit des Quellstromes $I$
+										1) Berechnen Sie $U_x$ in Abhängigkeit des Quellstromes $I$
 										\begin{center}
 											\fix
 										 \ibox{\includegraphics[scale=0.55]{img/aufg1-aufg.png}}
@@ -345,6 +346,7 @@
 										Bei einer \textbf{Stromquelle} ist der Widerstand \textbf{parallel}, bei einer \textbf{Spannungsquelle} ist der Widerstand in \textbf{Serie}.
 											\begin{center}
 												\fix
+												%TODO add label in picture
 													\ibox{\includegraphics[scale=0.7]{img/realeQuellen.png}}
 											\end{center}
 										\iend
@@ -356,7 +358,7 @@
 
 																				 Das Superpositionsprinzip besagt, dass wir bei einem Netzwerk mit mehreren Quellen einzelne Teillösungen in Abhängigkeit von nur einer Quelle berechnen und aufsummieren können. \\
 																				 Dies gilt jedoch nicht für die Leistung, da diese nicht linear ist! \\
-																				 Um das Superpositionsprinzip anzuwenden, müssen wir alle ausser eine Quelle auf \texttt{"}0\texttt{"} setzen. \\
+																				 Um das Superpositionsprinzip anzuwenden, müssen wir alle ausser einer Quelle auf \texttt{"}0\texttt{"} setzen. \\
 																				 Spannungsquellen werden also mit \textbf{Kurzschlüssen} ersetzt und Stromquellen mit \textbf{Leerläufen}. \\
 																				 \begin{center}
 																				 	\fix
@@ -364,7 +366,7 @@
 																				 \end{center}
 
 
-																				 \textbf{Wieso} \\
+																				 \textbf{Wieso ?} \\
 																				 Eine Spannungsquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass über diesem Bauteil keine Spannung abfallen darf. Über einem Kurzschluss wird nie eine Spannung abfallen, da dieser als Widerstand mit Wert 0 modelliert werden kann. \\
 																				 Eine Stromquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass durch dieses Bauteil kein Strom fliessen darf. Dies entspricht gerade einem Leerlauf, da dieser als Widerstand mit Wert $\displaystyle \rightarrow \infty$ modelliert werden kann. \\
 
@@ -373,7 +375,7 @@
 
 																				 \bsptask{Beispiel}{}
 																				 \beginbsp
-																					\textbf{Aufgabe} Berechnen sie die Spannung $U_x$ und die Leistung $P_x$ im folgenden Netzwerk, wenn alle Widerstände $ R = 100 \Omega$ betragen. \\
+																				Berechnen Sie die Spannung $U_x$ und die Leistung $P_x$ im folgenden Netzwerk, wenn alle Widerstände $ R = 100 \Omega$ betragen. \\
 																					\begin{center}
 																						\fix
 																					\ibox{\includegraphics[scale=0.6 ]{img/ex2-1.png}}
@@ -402,12 +404,14 @@
 																					Die Spannung $U_{x_2}$ berechnet sich als Spannungsteiler: \\
 																					$U_{x_2} = 20V \cdot \frac{100\Omega}{400\Omega} = 5V$ , $ I_{x_2} = \frac{5V}{100\Omega} = 50mA $\\
 																					\\
+																					\\
+																					\textbf{Superposition:} \\
 																					Schlussendlich berechnet sich die Spannung als Summe der Teilspannungen:
-																					$U_x = U_{x_1} + U_{x_2} = 5V -6V = -1V $ \\
+																					$\displaystyle U_x = U_{x_1} + U_{x_2} = 5V -6V = -1V $ \\
 																					Und die Leistung: \\
-																					$P_x = \frac{{U_x}^2}{R_x} = 10mW$ \\
+																					$\displaystyle P_x = \frac{{U_x}^2}{R_x} = 10mW$ \\
 																					Welche \textbf{nicht} der Summe der Teilleistungen entspricht: \\
-																					$P_{sum} = P_1 + P_2 = U_{x_1} \cdot I_{x_1} + U_{x_2} \cdot I_{x_2} = 360mW + 250mW = 610mW$
+																					$\displaystyle P_{sum} = P_1 + P_2 = U_{x_1} \cdot I_{x_1} + U_{x_2} \cdot I_{x_2} = 360mW + 250mW = 610mW$
 
 
 																				 \iend
@@ -446,12 +450,13 @@
 																				  \item[4.a)] \textbf{Kurzschlussstrom}
 																				  \begin{enumerate}
 																				  \item Schliesse die Klemmen kurz und bezeichne den Strom, welcher durch diese Klemmen fliesst als $I_{ks}^{(i)}$.
+																					%TODO ADD BILDER
 																				  \item Versuche mittels Stromteilern den gesuchten Strom zu berechnen. Falls eine direkte Verbindung von Stromquelle über den Kurzschluss zur Quelle zurückfürt, ist der Kurzschlussstrom gleich dem Strom der Quelle (=0 bei Spannungsquelle). \\
 																				  Ist die Quelle keine Stromquelle, so kann evt. ein serieller Widerstand verwendet werden, um die Quelle umzuformen.
 																				  \end{enumerate}
 																				  \item[4.b)] \textbf{Leerlaufspannung}
 																				  \begin{enumerate}
-																				  \item Zeichnen einen Spannungspfeil zwischen den Klemmen und bezeichne die Spannung als $U_{LL}^{(i)}$.
+																				  \item Zeichne einen Spannungspfeil zwischen den Klemmen und bezeichne die Spannung als $U_{LL}^{(i)}$.
 																				  \item Versuche mittels Spannungsteiler die gesuchte Spannung zu berechnen. Falls kein Strom von der Spannungsquelle fliessen kann (Leerlauf unterbricht die komplette Schaltung), so ist die Leerlaufspannung gleich der Spannung der Spannungsquelle (=0 bei Stromquelle). \\
 																				  Ist die Quelle keine Spannungsquelle, so kann evt. ein paralleler Widerstand verwendet werden, um die Quelle umzuformen.
 																				  \end{enumerate}
@@ -468,7 +473,7 @@
 																				  \item[6.a)] \textbf{Thévenin Äquivalent} Spannungsquelle mit seriellem Innenwiderstand. \\
 																				  Werte: $\displaystyle   R= R_i$, $U_q = \sum_i U_{LL}^{(i)} = (\sum_i I_{ks}^{(i)})\cdot R_i$
 
-																				  \item[6.b)] \textbf{Norton Äquivalent} Spannungsquelle mit parallelem Innenwiderstand. \\
+																				  \item[6.b)] \textbf{Norton Äquivalent} Stromquelle mit parallelem Innenwiderstand. \\
 																				  Werte: $\displaystyle  R= R_i$, $I_q = \sum_i I_{ks}^{(i)}) = \frac{\sum_i U_{LL}^{(i)}}{R_i}$
 
 																				  \end{itemize}
@@ -482,8 +487,7 @@
 																				\newpage
 																				\bsptask{Beispiel}{Thévenin Äquivalente Schaltung}
 																				\beginbsp
-																				\textbf{Aufgabe}
-																				\\Geben sie eine Thévenin Äquivalente Schaltung (Innenwiderstand $R_i$, $U_{Th}$) für folgende Klemmen an. Alle Widerstände haben Wert $100\Omega$ \\
+																				Geben Sie eine Thévenin Äquivalente Schaltung (Innenwiderstand $R_i$, $U_{Th}$) für folgende Klemmen an. Alle Widerstände haben Wert $100\Omega$ \\
 
 																				\begin{center}
 																					\fix
@@ -506,7 +510,7 @@
 																									$\doubleunderline{R_i} = 100\Omega + 100\Omega  + 100\Omega  = \doubleunderline{300 \Omega} $
 																				\iend
 
-
+																				\newpage
 										\subsection{Leistungsanpassung}
 										\definition{Leistung}
 										\beginip
@@ -625,7 +629,6 @@ Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
 					           \iend
 
 
-
 					           \vorgehen{Vorgehen}{Analyse von Umfangreichen Netzwerke}{}
 					           \beginip
 					            \begin{center}
@@ -655,3 +658,5 @@ Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
 					              \end{itemize}
 					            \end{center}
 					            \iend
+
+											%TODO BSP

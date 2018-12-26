@@ -25,7 +25,7 @@ Das elektrische Feld einer Punktladung Q ist gegeben als:
 $\displaystyle \vec{E} = \frac{1}{4 \pi \epsilon} \cdot \frac{Q}{r^2}\cdot \vec{e}_r$
 \formulaEnd
 \begin{center}
-	\ibox{\includegraphics[scale=0.2]{img/e-feld-pkt.png}}
+	\ibox{\includegraphics[scale=0.3]{img/e-feld-pkt.png}}
 \end{center}
 \iend
 
@@ -36,6 +36,7 @@ $\displaystyle \vec{E} = \frac{1}{4 \pi \epsilon} \cdot \frac{Q}{r^2}\cdot \vec{
 \beginbsp
 Das elektrische Feld einer Platte mit Ladung Q ist gegeben als:
 \formulaBegin
+%Todo add Koordinatensystem
 $\displaystyle \vec{E} = \begin{cases}
 \frac{Q}{2\cdot A \varepsilon} \cdot \vec{e}_n & , y > y_0 \\
 \frac{-Q}{2\cdot A \varepsilon} \cdot \vec{e}_n & , y \leq y_0 \\
@@ -44,7 +45,7 @@ $\displaystyle \vec{E} = \begin{cases}
 $
 \formulaEnd
 \begin{center}
-	\ibox{\includegraphics[scale=0.2]{img/e-feld-platte.png}}
+	\ibox{\includegraphics[scale=0.3]{img/e-feld-platte.png}}
 \end{center}
 \iend
 
@@ -57,7 +58,7 @@ Das elektrische Feld in einem Kondensator mit der Ladung Q oder Spannung U ist g
 $\displaystyle \vec{E} = \frac{Q}{A\varepsilon} \cdot \vec{e}_d = \frac{U}{d	} \vec{e}_d$
 \formulaEnd
 \begin{center}
-	\ibox{\includegraphics[scale=0.2]{img/e-feld-kond.png}}
+	\ibox{\includegraphics[scale=0.3]{img/e-feld-kond.png}}
 \end{center}
 \iend
 
@@ -217,7 +218,7 @@ Die elektrische Flussdichte $\vec{D}$ beschreibt das Feld, welches existieren w�
 Quelle der elektrischen Flussdichte ist die elektrische Ladung Q.
 \iend
 
-Da die elektrische Flussdichte  $\vec{D}$ unabhängig vom Material ist und aussschliesslich von den Ladungsträger abhängig ist,
+Da die elektrische Flussdichte  $\vec{D}$ ausschliesslich von den Ladungsträger abhängt,
 gibt es eine Formel, die die beiden Grössen in Verbindung bringt:
 
 \gl{Gleichung}{Quellgleichung des elektrischen Flusses}
@@ -328,7 +329,7 @@ $ \varepsilon_r = $ rel. Permitivität. Unterschiedlich im Material $ [\varepsil
 
 \definition{Verhalten von Feldgrössen bei Materialübergängen}
 \beginip
-Trifft eine Eelektrische Flussdichte durch eine geladene Fläche, so verändert sich die Normalkomponente des D-Feldes. \\
+Fliesst eine elektrische Flussdichte durch eine geladene Fläche, so verändert sich die Normalkomponente des D-Feldes. \\
 Die Tangentialkomponente des Feldes bleibt jedoch konstant. \\
  \begin{center}
 	 \ibox{
@@ -356,7 +357,7 @@ $ U_{AB} :=  \int_A^B \vec{E} \cdot d\vec{s} $
 	\item	Da die Beziehung $\vec{F} =  q \cdot \vec{E} $ gilt und die Arbeit als $ W_{AB} = \int_A^B \vec{F} \cdot d\vec{s}$ definiert ist, können wir die Spannung zwischen zwei Punkten als \textbf{Maß der benötigten Arbeit} um ein Ladungsträger von A nach B zu bringen betrachten.  \\
 	\item Die Spannung ist unabhängig des Weges.  $U_{AC} = U_{AB} + U_{BC}$
 	      \\ $\Rightarrow$ Start- und Endwert sind ausreichend. \\
-	\item Die Spannung über einen Weg zurück zum Anfangsort entspricht \textbf{0V}: $U_{AB} + U_{BA} = 0$ \\
+	\item Die Spannung über einen geschlossenen Weg entspricht \textbf{0V}: $U_{AB} + U_{BA} = 0$ \\
 	\item Ist die Spannung auf dem gesamten Weg konstant und parallel zum Weg, vereinfacht sich das Integral zu einer Multiplikation: \\
 	      \begin{center}
 	      	$ U_{AB} = \int_{A}^{B} \vec{E}\cdot d\vec{s} = l_{AB} \cdot E$

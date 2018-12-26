@@ -1,15 +1,4 @@
-%----------------------------------------------------------------
-%
-%  File    :  thesis-style.tex
-%
-%  Author  :  Keith Andrews, IICM, TU Graz, Austria
-%
-%  Created :  27 May 93
-%
-%  Changed :  19 Feb 2004
-%
-% styling and technical implementation adopted 2011 by Karl Voit
-%----------------------------------------------------------------
+
 \newpage
 \section{Magnetostatik}
 \subsection{Das Magnetische Feld und die Lorentzkraft}
@@ -91,7 +80,7 @@
 	\begingl
 	Der Durchflutungssatz sagt etwas darüber aus, wie das magnetische Feld entsteht. \\
 	 Es bringt die \textbf{Magnetische Feldstärke H} (Feld) und den \textbf{Strom I} (Quelle) in Verbindung.
-	Die Aussage des Durchflutungssatz ist, dass das Wegintegral des H-Feldes über eine beliebige \textbf{geschlossene} Kurve gerade dem Wert des durch diese Fläche fließendes Stromes entspricht. \\
+	Die Aussage des Durchflutungssatz ist, dass das Wegintegral des H-Feldes über eine beliebige \textbf{geschlossene} Kurve gerade dem Wert des durch diese Fläche fließenden Stromes entspricht. \\
 	Diesen Wert definieren wir als Durchflutung $\Theta$ \\
 	\formulaBegin
 	$\displaystyle \Theta = \oint_{s} \vec{H} \cdot d\vec{s} = \iint_{A} \vec{j} \cdot d\vec{A} = I_{eff}$
@@ -109,12 +98,11 @@
 
 	\bsptask{Beispiel}{}
 	\beginbsp
-	\textbf{Aufgabe} \\
 	Berechnen Sie die Durchflutung $\Theta$ und das H-Feld $\vec{H}$ um einen unendlich langen, mit Strom I durchflossenen Leiter. Der Radius des Leiters sei $\rho$. \\
 	\iend
 	\bsp{Lösung}{}
 	\beginbsp
-	Wir wählen als Kurve einen Kreis mit Radius R um unseren Leiter. \\
+	Wir wählen als geschlossenen Weg einen Kreis mit Radius R um unseren Leiter. \\
 	Da wir von einem perfekten Leiter ausgehen, treffen wir die Annahme, dass das Magnetfeld achsensymmetrisch und somit konstant entlang des Kreises ist. \\
 	\\
 	Wir erhalten: für R $ > \rho$: \\
@@ -132,16 +120,24 @@
 	\iend
 
 	\bsptask{Beispiel}{Magnetfeld einer Spule}
-%TODO Fix
 	\beginbsp
 	Gegeben sei eine Spule mit N Wicklungen und der länge l. Berechnen Sie die magnetische Feldstärke $\vec{H}$ in Abhängigkeit des Stromes I, Länge l und Wicklungen N.
+\begin{center}
+
+		\ibox{\includegraphics[scale=1.3]{img/ex-spule}}
+\end{center}
+
+
+
+
+
 	\iend
 
 	\beginbsp
-	Es gilt für die Durchflutung bezüglich des Grünen Weges:
+	Es gilt für die Durchflutung bezüglich des roten Weges:
 
 		\begin{center}
-			\ibox{\includegraphics[scale=0.3]{img/spule_fluss.png}}
+			\ibox{\includegraphics[scale=1.3]{img/spule-sol.png}}
 		\end{center}
 
 
@@ -150,10 +146,10 @@
 
 \begin{center}
 
-	$\displaystyle \Theta_{Spule} = \oint_{\partial A} \vec{H} \cdot d\vec{s} = \iint_{A} \vec{j} \cdot d\vec{A} = N \cdot I \simeq \int_0^b \vec{H} \cdot d\vec{s}$
+	$\displaystyle \Theta_{Spule} = \oint_{s} \vec{H} \cdot d\vec{s} = \iint_{A_s} \vec{j} \cdot d\vec{A} = N \cdot I \simeq \int_0^b \vec{H} \cdot d\vec{s}$
 
 	\end{center}
-	Da die Anordnung \textbf{Symmetrisch zur X-Achse} ist, wird das H-Feld auf dem gesamten Weg konstant ist und in X-Richtung zeigen können wir das Integral mit einer Multiplikation ersetzen.
+	Da die Anordnung \textbf{Symmetrisch zur X-Achse} ist, wird das H-Feld auf dem gesamten Weg konstant sein und in X-Richtung zeigen,
 	\begin{center}
 
 	$ \displaystyle \Theta_{Spule} = N \cdot I = H \cdot l_{s}$
@@ -185,7 +181,7 @@ Fliesst ein B-Feld durch einen Materialübergang, so verändert sich die \textbf
 \begin{center}
 	\ibox{\includegraphics[scale=0.3]{img/brand}}
 \end{center}
-%todo add mu and alpha to image
+
 \formulaBegin
 $ \displaystyle B_{n1} = B_{n2}$
 \\ \fspace
@@ -200,11 +196,11 @@ Fliesst ein H-Feld durch einen Materialübergang, so verändert sich die \textbf
 	\ibox{\includegraphics[scale=0.3]{img/hrand}}
 \end{center}
 
-%todo add mu and alpha to image
 \formulaBegin
-$ \displaystyle H_{n1} = H_{n2}$
-\\ \fspace
-$\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\alpha_2)} $
+
+$\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\alpha_2)} $ \\
+\fspace
+$ \displaystyle H_{t1} = H_{t2}$
 \formulaEnd
 
 
@@ -285,7 +281,7 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 
 		\definition{Reluktanzmodell}
 		\beginip
-		Das Reluktanzmodell besagt, dass man ein magnetisches Ersatzschaltbild mit denselben Rechenregeln wie bei einem elektrischen Netzwerk berechnen kann. \\
+		Das Reluktanzmodel besagt, dass man eine magnetische Anordnung, als elektrisches Schaltbild beschreiben und berechnen kann.
 		\textbf{Vorgehen} \\
 		\begin{itemize}
 			\item Spulen werden mit Spannungsquellen ersetzt $V_m = N\cdot I$
@@ -298,7 +294,7 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 		\bsptask{Beispiel}{}
 		\beginbsp
  		\textbf{Aufgabe Hubmagnet} \\
-		Der mittlere Schenkel 2 eines E-Kernes aus Dynamoblech trägt eine Wicklung mit N Windungen. Über
+		Der mittlere Schenkel (2) eines E-Kernes aus Dynamoblech trägt eine Wicklung mit N Windungen. Über
 		die drei Luftspalten mit gleicher Länge $\delta$ wird ein Anker aus Grauguss mit der Kraft FA angezogen
 		E-Kern und Anker besitzen die gleiche Dicke d. \\
 		\begin{center}
@@ -317,9 +313,18 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 				\beginbsp
 		Zuerst zeichnen wir ein Reluktanzmodell des Magneten. \\
 		Wobei $R_L$ die Luftspälte, ${R_D}_i$ die Beine des Magneten und ${R_G}_i$ sowie $R_{BC}$ und $R_{CD}$ das Gusseinsenstück modellieren.
-	\begin{center}
+
+			%TODO MINIPAGE
+
+			\begin{minipage}[t]{0.6\textwidth}
+						\ibox{\includegraphics[scale=0.3]{img/ex5-1.png}}
+\end{minipage}
+
+
+\begin{minipage}[t]{0.34\textwidth}
 			\ibox{\includegraphics[scale=0.5]{img/ex5-2.png}}
-			\end{center}
+\end{minipage}
+
 
 
 		Für die Spannungsquelle erhalten wir:
@@ -377,7 +382,7 @@ $\displaystyle H_{n2} = H_{n1} \frac{\mu_1}{\mu_2} = \frac{tan(\alpha_1)}{tan(\a
 
 
 
-\bsptask{Beispiel}{Berechnen einer Gegeninduktivität}
+\bsptask{Beispiel}{Berechnen einer Induktivität}
 \beginbsp
 Auf einem Ringkern mit der Querschnittsfläche A und der Permeabilität $\mu_r \rightarrow \infty$ ist
 eine Wicklungen mit $N_1$ Windungen angebracht. Der Ringkern
@@ -420,7 +425,7 @@ Luftspalt als homogen angenommen werden.
 				$\displaystyle \phi_A = \iint_A \vec{B} \cdot d\vec{A} = B \cdot A =\doubleunderline{\frac{N_1 \cdot i_1(t) \mu_0}{l_g} \cdot A}$
 		\end{center}
 
-		\item 3) Da die Spule $N_1$ Wicklungen aufweist, muss der Fluss $\phi_A$ $N_1$ mal gezählt werden. Es gilt für die Induktivität:
+		\item 3) Da die Spule $N_1$ Wicklungen aufweist, muss der Fluss $\phi_A$ genau $N_1$ mal gezählt werden. Es gilt für die Induktivität:
 		\begin{center}
 				$ \displaystyle L:= {\phi}{i} = N_1 \cdot  \frac{N_1 \cdot i_1(t) \mu_0}{l_g} \cdot A \cdot \frac{1}{i_1(t)} =  \doubleunderline{\frac{N_1^2 \cdot \mu_0}{l_g} \cdot A}$
 		\end{center}
@@ -441,7 +446,7 @@ Luftspalt als homogen angenommen werden.
 
 		\textbf{Parallelschaltung}
 		\formulaBegin
-		$\displaystyle \frac{1}{L_{ges}} = \sum_{i=0}^n \frac{1}{L_i} \Bigg\rvert L_{ges} = (L_1 || L_2 )$
+		$\displaystyle \frac{1}{L_{par}} = \sum_{i=0}^n \frac{1}{L_i} \Bigg\rvert L_{par} = (L_1 || L_2 )$
 		\formulaEnd
 	 \iend
 \newpage

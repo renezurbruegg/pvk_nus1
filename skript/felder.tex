@@ -34,7 +34,7 @@ Um vom Ursprung den Punkt P mit den Basisvektoren $\vec{e}_1$ und $\vec{e}_2$ zu
 \end{center}
 Somit gilt für den Punkt P : \\
 \begin{center}
-
+% TODO FIX
 	$\vec{P} = 1\cdot \vec{e}_1 + 3 \cdot \vec{e}_2$ \\
 	$\rightarrow \doubleunderline{ P = \left ( \begin{array}{c} 1 \\ 3 \end{array}\right)}$
 \end{center}
@@ -45,7 +45,7 @@ Somit gilt für den Punkt P : \\
 
 \definition{Winkelabhängige Basisvektoren}
 \beginip
-In gewissen Koordinatensysteme werden Basisvektoren verwendet, dessen Richtung sich Abhängig  des Winkels ändern. \\
+In gewissen Koordinatensystemen werden Basisvektoren verwendet, dessen Richtung sich Abhängig  des Winkels ändern. \\
 Sie werden dazu verwendet, Punkte im Raum abhängig eines Winkels zu beschreiben. \\
 \textbf{Der Basisvektor zeigt dabei immer in die Richtung des Winkels}
 \iend
@@ -56,6 +56,7 @@ Geben sie die Koordinaten des folgenden Punktes P im 2 Dimensionalen an.
 \\
 Als Basisvektoren verwenden wir die Vektoren: $ \vec{e}_1, \vec{e}_2$, wobei $\vec{e}_2$ ein Winkelabhängiger Basisvektor ist.
 \begin{center}
+	%TODO FIX
 	\ibox{\includegraphics[scale=0.40]{img/ex2_coord.png}}
 
 \end{center}
@@ -88,7 +89,7 @@ Somit gilt für die Koordinaten des Punktes P in Abhängigkeit von $\vec{e}_1 , 
 	\iend
 
 	\newpage
-
+%TODO ggf. Zusammenfassung
 
 	\subsubsection{Zylinderkoordinaten}
 
@@ -368,7 +369,7 @@ Somit folgt für das Vektorfeld, das die Gravitationskraft beschreibt:
 
 \gl{Gleichung}{Wegintegral über ein Vektorfeld}
 \begingl
-Wegintegrale beschreiben die Auswirkungen eines Vektorfeld auf ein Teilchen, welches sich entlang eines Weges bewegt. \\
+Wegintegrale beschreiben die Auswirkungen eines Vektorfeldes auf ein Teilchen, welches sich entlang eines Weges bewegt. \\
 Sie können in unserem Fall, häufig als ein Mass der Arbeit welche aufgewendet werden muss, um ein Teilchen von A nach B zu bewegen, aufgefasst werden. \\
 
 Wir notieren das Wegintegral über einen Weg $\gamma$ folgendermassen: \\
@@ -412,9 +413,10 @@ $ \varphi  = $  Winkel zwischen Wegrichtung und Richtung des Feldes\\
 Wir betrachten ein Vektorfeld $\vec{H} = H \cdot \vec{e}_H$  (Grün) und ein Weg $\vec{s} = s \cdot \vec{e}_s$ (Blau). \\
 Wir interessieren uns dafür, wie viel Arbeit wir aufwenden müssen, um uns von Punkt A (unten Links) nach Punkt B (oben Rechts) zu bewegen. \\
 Wir gehen nun davon aus, dass auf einem sehr kleinem Wegstück $\Delta s$ sich die Richtung und Stärke des Feldes nicht ändert, sowie die Richtung des Weges gleich bleibt.
+%TODO add points an img
 \ibox{\includegraphics[scale=0.4]{img/wegintegral_beg.png}}
 Die Arbeit $W_i$ bezeichnen wir, als die Arbeit, welche wir aufwenden müssen, um uns auf dem Weg $\gamma$ um ein stück $\Delta s$ nach vorne zu bewegen. \\
-Diese Arbeit ist Abhängig davon, wie Weg und Feld geometrisch stehen. Möchten wir uns senkrecht zum Feld bewegen, so hindert das Feld uns nicht daran, uns in diese Richtung zu Bewegen, und die  Arbeit ist gerade 0. \\
+Diese Arbeit ist Abhängig davon, wie Weg und Feld geometrisch stehen. Möchten wir uns senkrecht zum Feld bewegen, so wirkt nichts dieser Bewegungsrichtung entgegen und die  Arbeit ist gleich 0. \\
 Möchten wir uns hingegen parallel zum E-Feld bewegen, so müssen wir maximale Arbeit verrichten, da das E-Feld uns maximal beeinflusst. \\
 \\
 Den Winkel, welcher das Feld mit dem Weg einschliesst ist gegeben als $ cos(\varphi) = \vec{e}_s \cdot \vec{e}_H$. \\
@@ -472,6 +474,8 @@ Gegeben sei das Vektorfeld in den Karthesischen Koordinaten $\vec{E}(x,y,z) =  \
 Berechnen sie das Wegintegral, über eine Gerade vom Punkt $\left(\begin{array}{c} 0 \\ 0\\ 0\\ \end{array}\right)$ zu $\left(\begin{array}{c} 5 \\ 2\\ 1\\ \end{array}\right)$
 \iend
 
+\vspace \fill
+
 \bsp{Lösung}{}
 \beginbsp
 Zuerst müssen wir die Gerade vom Punkt $(0,0,0)$ zu $(5,2,1)$ als Funktion Parameterisieren. \\
@@ -511,6 +515,8 @@ Berechnen sie das Wegintegral, über eine Gerade (in Kugelkoordinaten) vom Punkt
 
 \iend
 
+
+\vspace \vfill
 \bsp{Lösung}{}
 \beginbsp
 \textbf{Inuitive Lösung:} \\
