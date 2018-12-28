@@ -14,7 +14,7 @@ Zu diesem Zweck werden \textbf{Koordinatensysteme} eingeführt.
 Ein Koordinatensystem dient zur eindeutigen Bezeichnung der Position von Punkten in einem geometrischen Raum.  \\
 Befinden wir uns in einem 3-Dimensionalem Raum so werden 3 \textbf{Basisvektoren} benötigt, um jeden Punkt im Raum eindeutig zu definieren. \\
 Möchten wir nun einen Punkt im Raum beschreiben, so müssen wir zuerst einen Punkt im Raum als Bezugspunkt (Ursprung) definieren. \\
-Danach beschreiben wir den gesuchten Punkt als \textbf{linearkombination} der Basisvektoren. Die Koeffizienten der linearkombination bezeichnen wir dabei als Koordinaten.
+Danach beschreiben wir den gesuchten Punkt als \textbf{Linearkombination} der Basisvektoren. Die Koeffizienten der Linearkombination bezeichnen wir dabei als Koordinaten.
 \iend
 
 
@@ -42,11 +42,13 @@ Somit gilt für den Punkt P : \\
 \newpage
 
 
-\definition{Winkelabhängige Basisvektoren}
+\important{Konzept}{Winkelabhängige Basisvektoren *}
 \beginip
 In gewissen Koordinatensystemen werden Basisvektoren verwendet, dessen Richtung sich Abhängig  des Winkels ändern. \\
 Sie werden dazu verwendet, Punkte im Raum abhängig eines Winkels zu beschreiben. \\
-\textbf{Der Basisvektor zeigt dabei immer in die Richtung des Winkels}
+\textbf{Der Basisvektor zeigt dabei immer in die Richtung des Winkels} \\
+\\
+* Dies ist ein Konzept, welches Mathematisch nicht genau so existiert.
 \iend
 
 \bsptask{Beispiel}{Punkt im Koordinatensystem - Polarkoordinaten}
@@ -55,7 +57,6 @@ Geben sie die Koordinaten des folgenden Punktes P im 2 Dimensionalen an.
 \\
 Als Basisvektoren verwenden wir die Vektoren: $ \vec{e}_1, \vec{e}_2$, wobei $\vec{e}_2$ ein Winkelabhängiger Basisvektor ist.
 \begin{center}
-	%TODO FIX
 	\ibox{\includegraphics[scale=2.0]{img/ex2_coord.png}}
 
 \end{center}
@@ -76,12 +77,12 @@ Somit gilt für die Koordinaten des Punktes P in Abhängigkeit von $\vec{e}_1 , 
 
 
 
-	\subsubsection{Karthesische Koordinaten}
+	\subsubsection{Kartesische Koordinaten}
 
-	\important{Karthesische Koordinaten} {}
+	\important{Kartesische Koordinaten} {}
 	\beginip
-	Karthesische Koordinaten werden als bekannt vorousgesetzt. \\
-	Karthesische Koord. werden vor allem dann verwendet, wenn die geometrische Anordnung \textbf{Symmetrien bezüglich einer Ebene} besitzt.
+	Kartesische Koordinaten werden als bekannt vorausgesetzt. \\
+	Kartesische Koord. werden vor allem dann verwendet, wenn die geometrische Anordnung \textbf{Symmetrien bezüglich einer Ebene} besitzt.
 	\begin{center}
 		\includegraphics[scale=0.3]{img/cartesian.png}
 	\end{center}
@@ -94,8 +95,10 @@ Somit gilt für die Koordinaten des Punktes P in Abhängigkeit von $\vec{e}_1 , 
 
 \important{Zylinderkoordinaten} {}
 \beginip
-Zylinderkoordinaten werden meist dann Verwendet, wenn die geometrischen Anordnung Symmetrien bezüglich einer \textbf{Gerade} aufweist. \\
-Zylinderkoordinaten besitzen 3 Basisvektoren wovon 1 Winkelförmig ist. \\
+Zylinderkoordinaten werden meist dann
+verwendet, wenn die geometrischen Anordnung Symmetrien bezüglich einer \textbf{Gerade} aufweist. \\
+Zylinderkoordinaten besitzen 3 Basisvektoren wovon 1 winkelförmig ist. \\
+\\
 \textbf{Basisvektoren}
 \begin{enumerate}
 	\item $\vec{e}_\rho$ Beschreibt den Abstand zur Symmetrieachse
@@ -109,7 +112,7 @@ Zylinderkoordinaten besitzen 3 Basisvektoren wovon 1 Winkelförmig ist. \\
 
 \iend
 \newpage
-\important{Richtung der einzelnen Besisvektoren für beliebige Punkte im Raum: }{}
+\important{Richtung der einzelnen Basisvektoren für beliebige Punkte im Raum: }{}
 
 
 \beginip
@@ -170,10 +173,11 @@ Zylinderkoordinaten besitzen 3 Basisvektoren wovon 1 Winkelförmig ist. \\
 
 	\subsubsection{Kugelkoordinaten}
 
-\important{Kugel Koordinaten} {}
+\important{Kugelkoordinaten} {}
 \beginip
 Kugelkoordinaten werden meist dann verwendet, wenn die geometrischen Anordnung \textbf{Punktsymmetrien} aufweist. \\
-Kugelkoordinaten besitzen 3 Basisvektoren wovon 2 Winkelabhängig sind. \\
+Kugelkoordinaten besitzen 3 Basisvektoren wovon 2 winkelabhängig sind. \\
+\\
 \textbf{Basisvektoren}
 \begin{enumerate}
 	\item $\vec{e}_r$ Beschreibt den Abstand zum Ursprung
@@ -187,7 +191,7 @@ Kugelkoordinaten besitzen 3 Basisvektoren wovon 2 Winkelabhängig sind. \\
 
 \iend
 \newpage
-\important{Richtung der einzelnen Besisvektoren für beliebige Punkte im Raum: }{}
+\important{Richtung der einzelnen Basisvektoren für beliebige Punkte im Raum: }{}
 
 
 \beginip
@@ -262,6 +266,46 @@ Kugelkoordinaten besitzen 3 Basisvektoren wovon 2 Winkelabhängig sind. \\
 
 
 \iend
+
+\newpage
+\subsubsection{Zusammenfassung}
+\bgroup
+
+\begin{tabular}{ c | c | c }
+  Kartesische Koordinaten & Zylinderkoordinaten & Kugelkoordinaten \\
+	\hline
+		\includegraphics[width = 0.25\columnwidth]{img/cartesian.png} &
+	\includegraphics[width = 0.25\columnwidth]{zylinderkoord.png} &  \includegraphics[width = 0.25\columnwidth]{kugelkoord.png} \\
+	\hline
+ \textbf{Anwenden bei:}& \textbf{Anwenden bei:} &  \textbf{Anwenden bei:}\\
+ Symmetrie zu Ebene & Symmetrie zu Achse & Symmetrie zu Punkt \\
+ \hline
+   $\displaystyle \left ( \begin{array}{c} x \\ y \\ z  \end{array}\right)} = x \cdot \vec{e}_x + y \cdot \vec{e}_y + z \cdot \vec{e}_z$ &
+
+	$\displaystyle \left ( \begin{array}{c} \rho \\ \varphi \\ z  \end{array}\right)} = \rho \cdot \vec{e}_\rho + \varphi \cdot \vec{e}_\varphi + z \cdot \vec{e}_z$ &
+
+
+
+		$\displaystyle \left ( \begin{array}{c} r \\ \theta \\ \varphi  \end{array}\right)} = r \cdot \vec{e}_r + \theta \cdot \vec{e}_\theta + \varphi \cdot \vec{e}_\varphi $  \\
+		\hline
+			 $\vec{e}_x$  &  $\vec{e}_\rho$  &  $\vec{e}_r$ \\
+			\includegraphics[width=0.25\columnwidth]{img/kart_x.png}
+
+			&
+
+			\includegraphics[width=0.25\columnwidth]{zylindric_rho.png}  & \includegraphics[width=0.25\columnwidth]{spherical_r.png} \\
+
+			\hline
+				 $\vec{e}_y$  &  $\vec{e}_\varphi$  &  $\vec{e}_\theta$ \\
+
+			\includegraphics[width=0.25\columnwidth]{img/kart_y.png} & \includegraphics[width=0.25\columnwidth]{zylindric_phi.png}  &  \includegraphics[width=0.25\columnwidth]{spherical_theta.png} \\
+			\hline
+				 $\vec{e}_z$  &  $\vec{e}_z$  &  $\vec{e}_\varphi$ \\
+			\includegraphics[width=0.25\columnwidth]{img/kart_z.png} & \includegraphics[width=0.25\columnwidth]{zylindric_z.png}  &  \includegraphics[width=0.25\columnwidth]{spherical_phi.png} \\
+			\hline
+
+\end{tabular}
+\egroup
 
 \newpage
 
@@ -344,9 +388,9 @@ Häufig ist ein Vektorfeld nicht nur von einer Variable (x) abhängig, sondern b
 \bsp{Beispiel} {Vektorfeld - Gravitation}
 
 \beginbsp
-Möchten wir Beispielsweise das Gravitationsfeld der Erde mathematisch beschreiben, würden wir dies in Form eines Vektorfeldes tun. \\
-Dieses Vektorfeld soll jedem Punkt einen Kraftvektor zuweisen, welche in richtung Erdmittelpunkt zeigt. \\
-Da die Erde Punktsymmetrisch ist, ist es sinnvoll Kugelkoordinaten zu verwenden. \\
+Möchten wir beispielsweise das Gravitationsfeld der Erde mathematisch beschreiben, würden wir dies in Form eines Vektorfeldes tun. \\
+Dieses Vektorfeld soll jedem Punkt einen Kraftvektor zuweisen, welcher in Richtung Erdmittelpunkt zeigt. \\
+Da die Erde punktsymmetrisch ist, ist es sinnvoll Kugelkoordinaten zu verwenden. \\
 Die Stärke der Gravitationskraft auf ein Massepunkt der Masse m ist definiert als:
 \begin{center}
 	$F_M = \frac{M \cdot G}{r^2}$
@@ -364,19 +408,19 @@ Somit folgt für das Vektorfeld, das die Gravitationskraft beschreibt:
 \iend
 
 \newpage
-\subsection{Weg und Oberflächenintegrale}
+\subsection{Weg- und Oberflächenintegrale}
 
 \gl{Gleichung}{Wegintegral über ein Vektorfeld}
 \begingl
 Wegintegrale beschreiben die Auswirkungen eines Vektorfeldes auf ein Teilchen, welches sich entlang eines Weges bewegt. \\
-Sie können in unserem Fall, häufig als ein Mass der Arbeit welche aufgewendet werden muss, um ein Teilchen von A nach B zu bewegen, aufgefasst werden. \\
+Sie können in unserem Fall, häufig als ein Mass der Arbeit, welche aufgewendet werden muss, um ein Teilchen von A nach B zu bewegen, aufgefasst werden. \\
 
 Wir notieren das Wegintegral über einen Weg $\gamma$ folgendermassen: \\
 \formulaBegin
 $ \displaystyle \int_\gamma \vec{E} \cdot d\vec{s}$
 \formulaEnd
 
-Können wir den Weg $\gamma$ als mathematische Funktion von t ausdrücken, so lässt sich das Integral folgdendermassen darstellen:
+Können wir den Weg $\gamma$ als mathematische Funktion von t ausdrücken, so lässt sich das Integral folgendermassen darstellen:
 \formulaBegin
 $\displaystyle \int_{t_0}^{t_e} \vec{E}(\gamma(t)) \cdot \dot{\vec{\gamma}}(t) \cdot dt$
 \formulaEnd
@@ -413,11 +457,11 @@ Wir betrachten ein Vektorfeld $\vec{H} = H \cdot \vec{e}_H$  (Grün) und ein Weg
 Wir interessieren uns dafür, wie viel Arbeit wir aufwenden müssen, um uns von Punkt A (unten Links) nach Punkt B (oben Rechts) zu bewegen. \\
 Wir gehen nun davon aus, dass auf einem sehr kleinem Wegstück $\Delta s$ sich die Richtung und Stärke des Feldes nicht ändert, sowie die Richtung des Weges gleich bleibt.
 \ibox{\includegraphics[scale=1.5]{img/wegintegral_beg.png}}
-Die Arbeit $W_i$ bezeichnen wir, als die Arbeit, welche wir aufwenden müssen, um uns auf dem Weg $\gamma$ um ein stück $\Delta s$ nach vorne zu bewegen. \\
+Die Arbeit $W_i$ bezeichnen wir als die Arbeit, welche wir aufwenden müssen, um uns auf dem Weg $\gamma$ um ein Stück $\Delta s$ nach Vorne zu bewegen. \\
 Diese Arbeit ist Abhängig davon, wie Weg und Feld geometrisch stehen. Möchten wir uns senkrecht zum Feld bewegen, so wirkt nichts dieser Bewegungsrichtung entgegen und die  Arbeit ist gleich 0. \\
 Möchten wir uns hingegen parallel zum E-Feld bewegen, so müssen wir maximale Arbeit verrichten, da das E-Feld uns maximal beeinflusst. \\
 \\
-Den Winkel, welcher das Feld mit dem Weg einschliesst ist gegeben als $ cos(\varphi) = \vec{e}_s \cdot \vec{e}_H$. \\
+Den Winkel, welcher das Feld mit dem Weg einschliesst, ist gegeben als $ cos(\varphi) = \vec{e}_s \cdot \vec{e}_H$. \\
 Somit gilt für die Arbeit, welche auf dem Weg $\Delta s$ aufgewendet wird: $W_i = |H(P_i)| \cdot \Delta s \cdot  \vec{e}_s \cdot \vec{e}_H = \vec{H}(P_i) \cdot \Delta \vec{s}(P_i)$ \\
 Für den gesamten Weg gilt somit:
 $\displaystyle W_{ges} = \sum_i W_i = \sum_i \vec{e}_H = \vec{H}(P_i) \cdot \Delta \vec{s}(P_i) \Rightarrow i\rightarrow \infty $
@@ -459,7 +503,7 @@ $\displaystyle  \big |\ \  \cdot dt$ \\
 
 
 
-Und somit für das Gesamte Integral: \\
+Und somit für das gesamte Integral: \\
 \begin{center}
 	$ \displaystyle \int_A^B \vec{H}(\vec{P})\cdot d\vec{s} = \int_{t_0}^{t_e} \vec{H}(\vec{s(t)})\cdot \dot{\vec{s}}(t) \cdot dt $
 \end{center}
@@ -468,7 +512,7 @@ Und somit für das Gesamte Integral: \\
 
 \bsptask{Beispiel}{Wegintegral über ein Vektorfeld}
 \beginbsp
-Gegeben sei das Vektorfeld in den Karthesischen Koordinaten $\vec{E}(x,y,z) =  \left(\begin{array}{c} x + 2y \\ 5z\\ x\\ \end{array}\right) $ \\
+Gegeben sei das Vektorfeld in den Kartesischen Koordinaten $\vec{E}(x,y,z) =  \left(\begin{array}{c} x + 2y \\ 5z\\ x\\ \end{array}\right) $ \\
 Berechnen sie das Wegintegral, über eine Gerade vom Punkt $\left(\begin{array}{c} 0 \\ 0\\ 0\\ \end{array}\right)$ zu $\left(\begin{array}{c} 5 \\ 2\\ 1\\ \end{array}\right)$
 \iend
 
@@ -476,7 +520,7 @@ Berechnen sie das Wegintegral, über eine Gerade vom Punkt $\left(\begin{array}{
 
 \bsp{Lösung}{}
 \beginbsp
-Zuerst müssen wir die Gerade vom Punkt $(0,0,0)$ zu $(5,2,1)$ als Funktion Parameterisieren. \\
+Zuerst müssen wir die Gerade vom Punkt $(0,0,0)$ zu $(5,2,1)$ als Funktion parameterisieren. \\
 Aus der Vektorrechnung folgt für die Geradengleichung:
 \begin{center}
 	$\gamma(t) = \left(\begin{array}{c} 0 \\ 0\\ 0\\ \end{array}\right)  +  \left(\begin{array}{c} 5 \\ 2\\ 1\\ \end{array}\right) \cdot t = \left(\begin{array}{c} x \\ y\\ z\\ \end{array}\right)$
@@ -517,7 +561,7 @@ Berechnen sie das Wegintegral, über eine Gerade (in Kugelkoordinaten) vom Punkt
 \vspace \vfill
 \bsp{Lösung}{}
 \beginbsp
-\textbf{Inuitive Lösung:} \\
+\textbf{Intuitive Lösung:} \\
 Da der Weg parallel zum Feld ist ($\vec{e}_\gamma = \vec{e}_E$) vereinfacht sich das Wegintegral zu einem Skalaren Integral:
 \begin{center}
 	$\displaystyle \int_\gamma \vec{E}\cdot d\vec{\gamma} = \int_0^5 5 \cdot r^2 dr = \frac{1}{3} \cdot 5 \cdot 125 = \frac{625}{3}$
@@ -542,7 +586,7 @@ Und für das Integral:
 
 \gl{Gleichung}{Fluss eines Vektorfeldes}
 \begingl
-Die Folgende Gleichung bezeichnen wir als Oberflächenintegral des Vektorfeldes $\vec{E}$. \\
+Die folgende Gleichung bezeichnen wir als Oberflächenintegral des Vektorfeldes $\vec{E}$. \\
  Der Wert des Integrales gibt uns eine Information darüber, wieviel Feld durch eine gegebene Hüllfäche "fliesst" \\
 
 \formulaBegin
@@ -555,7 +599,7 @@ $\vec{A} =$ Normalenvektor der Fläche \\
 \\
 
 Das Integral selbst ist relativ schwer zu rechnen. Häufig lässt es sich jedoch vereinfachen:
-Steht das Vektorfeld \textbf{senkrecht} zur Hüllfläche und ist es auf der gesamten Fläche \textbf{Konstant}, so gilt für das Integral: \\
+Steht das Vektorfeld \textbf{senkrecht} zur Hüllfläche und ist es auf der gesamten Fläche \textbf{konstant}, so gilt für das Integral: \\
 
 \formulaBegin
 $ \displaystyle \oiint_A \vec{E} \cdot d\vec{A} = \pm A_{eff} \cdot |\vec{E}|$
@@ -564,7 +608,7 @@ $ \displaystyle \oiint_A \vec{E} \cdot d\vec{A} = \pm A_{eff} \cdot |\vec{E}|$
 $A_{eff} =$ Die Fläche auf der das Feld ungleich 0 ist\\
 
 
-Ist das Feld zwar Konstant auf der gesamten Fläche, fliesst jedoch \textbf{nicht senkrecht} hindurch, so lässt sich das Integral auch zu einer Multiplikation vereinfachen:
+Ist das Feld zwar konstant auf der gesamten Fläche, fliesst jedoch \textbf{nicht senkrecht} hindurch, so lässt sich das Integral auch zu einer Multiplikation vereinfachen:
 \begin{center}
 	\ibox{\includegraphics[scale=0.4]{img/vektorfIeld_oi.png}}
 \end{center}
@@ -598,7 +642,7 @@ Die Flussdichte des Wassers, ist durch folgendes Vektorfeld gegeben: \\
 
 \begin{enumerate}
 	\item  Zeichne das Vektorfeld in einem 3-Dimensionalen Koordinatensystem. \\
-	\item Berechne sie das Oberflächenintegral $ \oiint_A \vec{J} \cdot d\vec{A}$ nach Aussen, wobei A die Oberfläche des Rohres mit den beiden Kreisen am Ende bezeichne.
+	\item Berechne sie das Oberflächenintegral $ \oiint_A \vec{J} \cdot d\vec{A}$ nach aussen, wobei A die Oberfläche des Rohres mit den beiden Kreisen am Ende bezeichne.
 \end{enumerate}
 \iend
 
@@ -616,7 +660,7 @@ Die Flussdichte des Wassers, ist durch folgendes Vektorfeld gegeben: \\
 			\end{center}
 	\item \textbf{Intuitiver Weg} \\
 	Da das Vektorfeld nur auf den Kreisflächen ungleich Null ist, müssen wir nur das Oberflächenintegral über diese Kreisflächen berechnen. \\
-	Da das Vektorfeld auf den Kreisflächen senkrecht steht und Konstant ist, vereinfacht sich dieses Integral zu einer Multiplikation mit der Fläche: \\
+	Da das Vektorfeld auf den Kreisflächen senkrecht steht und konstant ist, vereinfacht sich dieses Integral zu einer Multiplikation mit der Fläche: \\
 	\begin{center}
 			$\oiint_A \vec{J} \cdot d\vec{A} = A_{eff} \cdot |\vec{J}| = 2 \cdot (\pi R^2) \cdot 1 =  \doubleunderline{2\pi R^2}$
 	\end{center}

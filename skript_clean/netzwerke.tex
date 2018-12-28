@@ -10,7 +10,7 @@
 						\includegraphics[scale=0.25]{img/widerstand.png}
 					\end{center}
 					\formulaBegin
-					$ R :=  \frac{U}{I} =  \rho  \frac{l}{A},   {[R]} = \Omega, Ohm $
+					$ R :=  \frac{U}{I} =  \rho  \frac{l}{A}, \ \ \ \ \ \ \  {[R]} = \Omega, Ohm $
 					\formulaEnd
 					Als \textbf{Leitwert} bezeichnen wir die Inverse des Widerstandes. Er gibt an, wie groß die Spannung ist, wenn ein gewisser Strom fließt. \\
 					\formulaBegin
@@ -85,7 +85,7 @@
 										\beginip
 										Werden mehrere Widerstände seriell miteinander verbunden, so addieren sich die Widerstandswerte \\
 										\formulaBegin
-										$\displaystyle R_{serie} = \sum_{i=0}^n R_i $
+										$\displaystyle R_{serie} = \sum_{i=0}^n R_i = R_1 + R_2 + ...$
 										\formulaEnd
 										\iend
 
@@ -107,7 +107,7 @@
 										Werden mehrere Widerstände parallel miteinander verbunden, so addieren sich die Leitwerte \\
 										\formulaBegin
 										$\displaystyle Y_{parallel} = \sum_{i=0}^n Y_i \Bigg\rvert$
-										$\displaystyle R_{parallel} = \left(\sum_{i=0}^n \frac{1}{R_i}\right)^{-1}$
+										$\displaystyle R_{parallel} = \left(\sum_{i=0}^n \frac{1}{R_i}\right)^{-1} = \frac{(R_1 \cdot R_2)}{R_1 + R_2}$
 										\formulaEnd
 										\iend
 
@@ -159,7 +159,10 @@
 										\begingl
 										Die Spannungsteilerregel gibt an, wie sich eine Spannung über verschiedene Widerstände aufteilt, wenn diese in \textbf{Serie} geschaltet sind. \\
 											\formulaBegin
-											$\displaystyle U_{R_x} = U_{ges} \cdot \frac{R_X}{\sum R_i} $
+											$\displaystyle U_{R_x} = U_{ges} \cdot \frac{R_X}{\sum R_i}$
+											\\
+											2 Widerstände: $
+											U_{R_1}  = U_{ges} \cdot \frac{R_1}{R_1 + R_2}$
 											\formulaEnd
 
 											\begin{center}
@@ -252,7 +255,7 @@
 
 										\bsptask{Beispiel}{Vereinfachung eines Netzwerkes mit Symmetrie}
 										\beginbsp
-											Fassen sie alle Widerstände zu einem zusammen unter verwendung der Symmetrieeigenschaften
+											Fassen sie alle Widerstände zu einem zusammen unter Verwendung der Symmetrieeigenschaften
 											\begin{center}
 												%TODO add ppoints
 												\ibox{ \includegraphics[scale=1.5]{img/sym.png}}
@@ -346,7 +349,7 @@
 										Bei einer \textbf{Stromquelle} ist der Widerstand \textbf{parallel}, bei einer \textbf{Spannungsquelle} ist der Widerstand in \textbf{Serie}.
 											\begin{center}
 												\fix
-													\ibox{\includegraphics[scale=0.7]{img/realeQuellen.png}}
+													\ibox{\includegraphics[scale=0.6]{img/realeQuellen.png}}
 											\end{center}
 										\iend
 
@@ -365,7 +368,7 @@
 																				 \end{center}
 
 
-																				 \textbf{Wieso ?} \\
+																				 \textbf{Wieso?} \\
 																				 Eine Spannungsquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass über diesem Bauteil keine Spannung abfallen darf. Über einem Kurzschluss wird nie eine Spannung abfallen, da dieser als Widerstand mit Wert 0 modelliert werden kann. \\
 																				 Eine Stromquelle zu \texttt{"}0\texttt{"} zu setzen bedeutet, dass durch dieses Bauteil kein Strom fliessen darf. Dies entspricht gerade einem Leerlauf, da dieser als Widerstand mit Wert $\displaystyle \rightarrow \infty$ modelliert werden kann. \\
 
@@ -405,7 +408,7 @@
 																					\\
 																					\\
 																					\textbf{Superposition:} \\
-																					Schlussendlich berechnet sich die Spannung als Summe der Teilspannungen:
+																					Schlussendlich berechnet sich die Spannung als Summe der Teilspannungen: \\
 																					$\displaystyle U_x = U_{x_1} + U_{x_2} = 5V -6V = -1V $ \\
 																					Und die Leistung: \\
 																					$\displaystyle P_x = \frac{{U_x}^2}{R_x} = 10mW$ \\
@@ -464,7 +467,7 @@
 																				  \iend
 																				\begin{itemize}
 
-																				  \item[5] \textbf{Innenwiderstand}
+																				  \item[5.] \textbf{Innenwiderstand}
 																				  \begin{enumerate}
 																				    \item Setze \textbf{alle} Quellen auf 0. Versuche nun die Widerstände solange umzuformen, bis nur noch ein Ersatzwiderstand vorhanden ist. (Ggf. \texttt{"}Flussverfahren\texttt{"} mit offener Klemme anwenden)
 																				    \item Bezeichne den Wert des Widerstandes als $R_i$
@@ -555,7 +558,7 @@
 
 
 
-																														\vorgehen{Vorgehen}{Leistung über einer Last Maximieren}
+																														\vorgehen{Vorgehen}{Leistung über einer Last maximieren}
 																														\beginvor
 \textbf{Falls möglich}
 \begin{itemize}
@@ -591,7 +594,7 @@ Für die Berechnung des Innenwiderstandes, werden alle Spannungsquellen kurzgesc
 \begin{center}
 	\ibox{\includegraphics[scale=0.6]{img/leistungsanp_lsg.png}}
 \end{center}
-Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
+Nun müssen nur noch alle Widerstände zu einem zusammengefügt werden:
 \begin{center}
 	$R_i = (R_1 || R_2 + (R_3 || R_4 )) = 2 \Omega$ \\
 	$\doubleunderline{ R_L = R_i = 2 \Omega}$
@@ -642,7 +645,7 @@ Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
 					    1 & 1 & -1 & 0 \\
 					    0 & 0 & 1 & -1 \\					\end{array} } \right] \left[ {\begin{array}{c} I_1 & I_2 & I_3 & I_4 \\ \end{array} } \right] =   \left[ {\begin{array}{c}  0 & 2A\\ \end{array} } \right] $ \\
 
-					                \item Finde z - (k-1) Unabhängige Maschengleichungen. (Mittels vollständiger Baum / Auftrennen der Maschen)
+					                \item Finde z - (k-1) unabhängige Maschengleichungen. (Mittels vollständiger Baum / Auftrennen der Maschen)
 					                \item Ersetze die Spannungen der Maschengleichung mit Strom mal Widerstand und ergänze das Gleichungssystem.
 					                \\ Bsp:
 					                $U_1 + U_2 = 5V, U_2 - U_3 = U_4$ \\ $ \rightarrow R_1 \cdot I_1 + R_2 \cdot I_2 = 5V, R_2 \cdot I_2 - R_3 \cdot I_3 - R_4 \cdot I_4 = 0$ \\
@@ -657,5 +660,3 @@ Nun müssen nur noch alle Widerstände zu einem Zusammengefügt werden:
 					              \end{itemize}
 					            \end{center}
 					            \iend
-
-											%TODO BSP
