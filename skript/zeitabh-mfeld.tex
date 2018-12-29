@@ -238,7 +238,7 @@ Der Zusammenhang zwischen Strom und Spannung an der Induktivität ist wie folgt 
 \formulaBegin
 $\displaystyle u_L(t) = L \cdot \frac{d}{dt}\big( i(t) \big)$
 
-$\displaystyle  i_L(t) = i_l(0) + \frac{1}{L} \cdot \int_0^t u_L{\tau} d\tau$
+$\displaystyle  i_L(t) = i_l(0) + \frac{1}{L} \cdot \int_0^t u_L(\tau) d\tau$
 
 \formulaEnd
 %TODO IMAGE
@@ -251,7 +251,7 @@ Der Zusammenhang zwischen Strom und Spannung am Kondensator ist wie folgt gegebe
 \formulaBegin
 $\displaystyle u_c(t) = u_c(0) + \frac{1}{C} \int_0^t i_c(\tau) d\tau$ \\
 
-$\displaystyle i_c(t) = c \cdot \frac{d}{d t} \big(u_c(t) \big)$ \\
+$\displaystyle i_c(t) = C \cdot \frac{d}{d t} \big(u_c(t) \big)$ \\
 \formulaEnd
 %TODO IMAGE
 \iend
@@ -261,5 +261,5 @@ $\displaystyle i_c(t) = c \cdot \frac{d}{d t} \big(u_c(t) \big)$ \\
 Mit dem Wissen, dass Strom definiert ist als die Ladung pro Zeit $ \displaystyle \frac{dQ}{dt} = i$ folgt: \\
 \begin{center}
 	$\displaystyle \frac{\partial}{\partial t} (C \cdot u) = \frac{\partial}{\partial t} (Q) $ \\
-	$ \displaystyle C  \cdot \frac{du}{dt} = i \rightarrow u(t) = \frac{1}{C} \cdot \int_0^t i \cdot dt$
+	$ \displaystyle C \cdot \frac{du}{dt} = i \rightarrow u(t) = \frac{1}{C} \cdot \int_0^t i \cdot dt$
 \end{center}
