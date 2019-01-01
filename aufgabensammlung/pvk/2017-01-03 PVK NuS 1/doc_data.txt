@@ -1,0 +1,67 @@
+InfoBegin
+InfoKey: ModDate
+InfoValue: D:20101019101301+02'00'
+InfoBegin
+InfoKey: SourceModified
+InfoValue: D:20101019081254
+InfoBegin
+InfoKey: CreationDate
+InfoValue: D:20101019101300+02'00'
+InfoBegin
+InfoKey: Author
+InfoValue: biela
+InfoBegin
+InfoKey: Title
+InfoValue: Beispielsammlung &#8211; DC/DC Konverter &#8211; Grundstrukturen
+InfoBegin
+InfoKey: Creator
+InfoValue: Acrobat PDFMaker 9.1 f&#252;r Word
+InfoBegin
+InfoKey: Company
+InfoValue: ETHZ
+InfoBegin
+InfoKey: Producer
+InfoValue: Adobe PDF Library 9.0
+PdfID0: fe266e4ea68b0e4184e51b6fdc581ea9
+PdfID1: bfdc01c425dbd34d85cfeea0dfd4fcc6
+NumberOfPages: 4
+BookmarkBegin
+BookmarkTitle: Aufgabe 1: Entwurf eines Hochspannungskondensator
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkBegin
+BookmarkTitle: Aufgabe 2: Blitzeinschlag
+BookmarkLevel: 1
+BookmarkPageNumber: 2
+BookmarkBegin
+BookmarkTitle: Aufgabe 3: Kupferdraht mit Silber&#252;berzug
+BookmarkLevel: 1
+BookmarkPageNumber: 3
+BookmarkBegin
+BookmarkTitle: Aufgabe 4: Teilkapazit&#228;ten dreier koaxialer Rohre
+BookmarkLevel: 1
+BookmarkPageNumber: 4
+BookmarkBegin
+BookmarkTitle: (Nicht testatpflichtig!)
+BookmarkLevel: 1
+BookmarkPageNumber: 4
+PageMediaBegin
+PageMediaNumber: 1
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
+PageMediaBegin
+PageMediaNumber: 2
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
+PageMediaBegin
+PageMediaNumber: 3
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
+PageMediaBegin
+PageMediaNumber: 4
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
