@@ -104,7 +104,7 @@
 \newcommand{\hmwkClass}{Netzwerk und Schaltungen 1} % Course/class
 \newcommand{\hmwkClassTime}{} % Class/lecture time
 \newcommand{\hmwkClassInstructor}{} % Teacher/lecturer
-\newcommand{\hmwkAuthorName}{Daniel Biek / Ren\'e Zurbr\"ugg} % Your name
+\newcommand{\hmwkAuthorName}{Ren\'e Zurbr\"ugg} % Your name
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -193,34 +193,34 @@
   \end{center}
 
 
-  \item c) Wir bezeichnen mit $U_{ideal}$ die Spannung bei idealer Messung und mit $U_{err}$ die Spannung mit ungenauen Widerständen.
-  \begin{center}
-    $U_{ideal} = 12V \big( \frac{R_\vartheta}{R_\vartheta + R_1} - \frac{R_3}{R_3 + R_2}\big)$ \\
-    $U_{err} = 12V \big( \frac{R_\vartheta}{R_\vartheta + R_1' } - \frac{R_3'}{R_3'+R_2'}\big)$
-  \end{center}
-  Die Differenz ist:
-  \begin{center}
-    $F(R_\vartheta)) = U_{ideal} - U_{err} = U_e \big (\frac{R_\vartheta}{R_\vartheta + R_1 } -\frac{R_\vartheta}{R_\vartheta + R_1'} - \frac{R_3}{R_3 + R_2} + \frac{R_3'}{R_3'+R_2'})$
-  \end{center}
-  Der Fehler wird maximal, wenn die Differenz stark negativ wird. Dies ist der Fall, falls $\frac{R_3'}{R_3'+R_2'} < \frac{R_3}{R_3+R_2}$ und $  \frac{R_\vartheta}{R_\vartheta + R_1'} > \frac{R_\vartheta}{R_\vartheta + R_1}$  gilt. Somt gilt für die Widerstände:
-
-   \begin{center}
-     $R_3' < R_3 \rightarrow R_3' = 0.9 \cdot R_3$ \\
-      $R_2' > R_2 \rightarrow R_2' = 1.1 \cdot R_2$ \\
-      $R_1' < R_1 \rightarrow R_1' = 0.9 \cdot R_1$
-   \end{center}
-  Um die Temperatur herauszufinden, leiten wir die Differenz nach $R_\vartheta$ ab:
-  \begin{center}
-    $\frac{d}{d R_\vartheta} (F(R_\vartheta)) \stackrel{TR}{=} U_e \cdot \big( \frac{R_1}{(R_1 + R_\vartheta)^2} - \frac{R_1'}{(R_1' + R_\vartheta)^2}\big)\stackrel{!}{=} 0$ \\
-    $\stackrel{TR}{\rightarrow} R_\vartheta = \sqrt{R_1 \cdot R_1'} = 0.949 \cdot R_1 = 949 \Omega$ \\
-    $\rightarrow (1 + \alpha (\vartheta - \vartheta_0)) = 0.949  $ \\
-    $\rightarrow \vartheta = 9.8$\textdegree
-  \end{center}
-  Der Betrag des Fehler berechnet sich zu:
-  \begin{center}
-      $ U_{err} = 12V \big( \frac{R_\vartheta}{R_\vartheta + R_1'} - \frac{R_3'}{R_3' + R_2'} \big) = 1.07V$ \\
-      $ U_{ideal} \stackrel{!}{=} 1.07V \rightarrow R_\vartheta = $
-  \end{center}
+  % \item c) Wir bezeichnen mit $U_{ideal}$ die Spannung bei idealer Messung und mit $U_{err}$ die Spannung mit ungenauen Widerständen.
+  % \begin{center}
+  %   $U_{ideal} = 12V \big( \frac{R_\vartheta}{R_\vartheta + R_1} - \frac{R_3}{R_3 + R_2}\big)$ \\
+  %   $U_{err} = 12V \big( \frac{R_\vartheta}{R_\vartheta + R_1' } - \frac{R_3'}{R_3'+R_2'}\big)$
+  % \end{center}
+  % Die Differenz ist:
+  % \begin{center}
+  %   $F(R_\vartheta)) = U_{ideal} - U_{err} = U_e \big (\frac{R_\vartheta}{R_\vartheta + R_1 } -\frac{R_\vartheta}{R_\vartheta + R_1'} - \frac{R_3}{R_3 + R_2} + \frac{R_3'}{R_3'+R_2'})$
+  % \end{center}
+  % Der Fehler wird maximal, wenn die Differenz stark negativ wird. Dies ist der Fall, falls $\frac{R_3'}{R_3'+R_2'} < \frac{R_3}{R_3+R_2}$ und $  \frac{R_\vartheta}{R_\vartheta + R_1'} > \frac{R_\vartheta}{R_\vartheta + R_1}$  gilt. Somt gilt für die Widerstände:
+  %
+  %  \begin{center}
+  %    $R_3' < R_3 \rightarrow R_3' = 0.9 \cdot R_3$ \\
+  %     $R_2' > R_2 \rightarrow R_2' = 1.1 \cdot R_2$ \\
+  %     $R_1' < R_1 \rightarrow R_1' = 0.9 \cdot R_1$
+  %  \end{center}
+  % Um die Temperatur herauszufinden, leiten wir die Differenz nach $R_\vartheta$ ab:
+  % \begin{center}
+  %   $\frac{d}{d R_\vartheta} (F(R_\vartheta)) \stackrel{TR}{=} U_e \cdot \big( \frac{R_1}{(R_1 + R_\vartheta)^2} - \frac{R_1'}{(R_1' + R_\vartheta)^2}\big)\stackrel{!}{=} 0$ \\
+  %   $\stackrel{TR}{\rightarrow} R_\vartheta = \sqrt{R_1 \cdot R_1'} = 0.949 \cdot R_1 = 949 \Omega$ \\
+  %   $\rightarrow (1 + \alpha (\vartheta - \vartheta_0)) = 0.949  $ \\
+  %   $\rightarrow \vartheta = 9.8$\textdegree
+  % \end{center}
+  % Der Betrag des Fehler berechnet sich zu:
+  % \begin{center}
+  %     $ U_{err} = 12V \big( \frac{R_\vartheta}{R_\vartheta + R_1'} - \frac{R_3'}{R_3' + R_2'} \big) = 1.07V$ \\
+  %     $ U_{ideal} \stackrel{!}{=} 1.07V \rightarrow R_\vartheta = $
+  %\end{center}
 \end{itemize}
 \end{homeworkProblem}
 

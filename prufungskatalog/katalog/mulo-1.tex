@@ -72,7 +72,7 @@
 \newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
 
 \newcommand{\homeworkProblemName}{}
-\newenvironment{homeworkProblem}[1][Serie 4 - Tipps]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\newenvironment{homeworkProblem}[1][Netzwerke und Schaltungen 1]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
 \stepcounter{homeworkProblemCounter} % Increase counter for number of problems
 \renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
 \section{\homeworkProblemName} % Make a section in the document with the custom problem count
@@ -98,12 +98,12 @@
 %	NAME AND CLASS SECTION
 %----------------------------------------------------------------------------------------
 
-\newcommand{\hmwkTitle}{Netzwerk und Schaltungen 1 - \"Ubung 4} % Assignment title
+\newcommand{\hmwkTitle}{Netzwerk und Schaltungen 1 - Prüfungskatalog} % Assignment title
 \newcommand{\hmwkDueDate}{Monday,\ January\ 1,\ 2012} % Due date
 \newcommand{\hmwkClass}{NuS 1} % Course/class
 \newcommand{\hmwkClassTime}{} % Class/lecture time
 \newcommand{\hmwkClassInstructor}{} % Teacher/lecturer
-\newcommand{\hmwkAuthorName}{Daniel Biek / Ren\'e Zurbr\"ugg} % Your name
+\newcommand{\hmwkAuthorName}{Ren\'e Zurbr\"ugg} % Your name
 \usepackage{amsmath}
 \usepackage{esint}
 %----------------------------------------------------------------------------------------
@@ -125,7 +125,6 @@
 
 
 
-
 a) Es gilt:
  \begin{center}
   $\iint _A \vec{J}(\vec{r}) \cdot d\vec{A} = I$.
@@ -135,7 +134,6 @@ Falls das J-Feld und die Fläche \textbf{senkrecht} sind und das J-Feld überall
   $ A_{eff}(\vec{r}) \cdot J(\vec{r})  = I \Rightarrow J(\vec{r}) = \frac{I}{A_{eff}(\vec{r})}$ \\
 \end{center}
 Wobei $A_{eff}$ die effektiv vom Strom durchflossene Fläche bezeichnet.
-\end{itemize}
 Somit gilt für die Stromdichte im Messwiderstand:
 \begin{center}
   $ J(r) = \frac{I}{d \cdot 2 \pi r}$ \\
@@ -146,7 +144,7 @@ und somit in Vektorform (Zylinderkoordinaten):
   $ \vec{J}(r) = \frac{I}{d \cdot 2 \pi r} \cdot \vec{e}_{r}$ \\
 \end{center}
 
-\item b) Der Zusammenhang zwischen E-Feld un J-Feld ist gegeben als:
+ b) Der Zusammenhang zwischen E-Feld un J-Feld ist gegeben als:
 \begin{center}
   $\vec{E} = \frac{1}{\kappa} \cdot \vec{J}$
 \end{center}
@@ -167,21 +165,22 @@ Mit den Werten: $D_{aussen} = 2cm$, $D_{innen} = 5mm$ , $d = 3mm$ und $\kappa = 
 \begin{center}
   $R_{AB} = \frac{1}{12 \cdot 10^3 \frac{S}{m} \cdot 3\cdot 10^{-3} m \cdot 2 \pi} \cdot ln(\frac{2 \cdot 10^{-2}}{3 \cdot 10^{-3}}) = 8.387m\Omega$
 \end{center}
-\item c) Wir betrachten beide Fälle (-3mm und +3mm):  \\
+ c) Wir betrachten beide Fälle (-3mm und +3mm):  \\
+ \begin{center}
  +3mm: $\rightarrow R' = \frac{1}{12 \cdot 10^3 \frac{S}{m} \cdot 3\cdot 10^{-3} m \cdot 2 \pi} \cdot ln(\frac{2 \cdot 10^{-2} + 3 \cdot 10^{-3}}{3 \cdot 10^{-3}}) = 9.005m\Omega \rightarrow \Delta R =  |R-R'| = 0.618 m\Omega$\\
  -3mm: $\rightarrow R' = \frac{1}{12 \cdot 10^3 \frac{S}{m} \cdot 3\cdot 10^{-3} m \cdot 2 \pi} \cdot ln(\frac{2 \cdot 10^{-2} - 3 \cdot 10^{-3}}{3 \cdot 10^{-3}}) = 7.669m\Omega \rightarrow \Delta R =  |R-R'| = 1.336 m\Omega$\\
  Daraus Folgt: Maximaler Fehler bei $-3mm$. $R'$ ist dann $7.669m\Omega$ und für den Fehler gilt: $ \Delta R = 1.336 m\Omega$
 \end{center}
 
 
-\item d) Beim Messen gilt:
+ d) Beim Messen gilt:
 \begin{center}
  $\frac{U_{AB}}{R_{AB}} = I \rightarrow \Delta I =  |\frac{U_{AB}}{R_{AB}} - \frac{U_{AB}}{R'_{AB}} | $ \\
  $ F = \frac {\Delta I}{I} = \frac{\Delta I}{U_{AB}/R_{AB}} = |1 - \frac{R_{AB}}{R'_{AB}}| = |1 - \frac{8.387m\Omega}{ 7.669}| = 9.28\% $
 \end{center}
 
 
-\item e) es gilt: $ U_{AC} = \int_{r_a}^{r_c} E \cdot dr$ und  $ U_{CB} = \int_{r_c}^{r_b} E \cdot dr$.  \\
+ e) es gilt: $ U_{AC} = \int_{r_a}^{r_c} E \cdot dr$ und  $ U_{CB} = \int_{r_c}^{r_b} E \cdot dr$.  \\
 Das Integral $\int_{r_a}^{r_b} E \cdot dr$ haben wir bereits ausgerechnet. Es ergibt:
 $ \frac{I}{\kappa \cdot d \cdot 2 \pi} \cdot ln(\frac{r_b}{r_a}) $ \\
 Somit lautet die Gleichung:
@@ -189,6 +188,10 @@ Somit lautet die Gleichung:
   $ \frac{I}{\kappa \cdot d \cdot 2 \pi} \cdot ln(\frac{r_c}{\frac{D_{innen}}{2} }) = \frac{I}{\kappa \cdot d \cdot 2 \pi} \cdot ln(\frac{\frac{D_{aussen}}{2}}{r_c })$ \\
   $ \Rightarrow \frac{2 r_c}{D_{innen}} = \frac{D_{aussen}}{2 r_c} \rightarrow r_c = \frac{\sqrt{D_{aussen} \cdot D_{innen}}}{2} = 5mm$
 \end{center}
+
+
+
+
 \end{homeworkProblem}
 
 
