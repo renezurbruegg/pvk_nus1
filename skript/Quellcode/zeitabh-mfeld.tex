@@ -24,7 +24,7 @@ Wie magnetischer Fluss und elektrisches Feld zusammenhängen beschreibt das \tex
 $B = $ Magnetische Flussdichte $[B] = T$\\
 $A_s = $ Vom Weg S aufgespannte Fläche. $[A_s] = m^2$ \\
 
-Falls B Feld konstant auf Fläche und senkrecht: \\
+Falls B Feld senkrecht auf Fläche und konstant: \\
 
 \formulaBegin
   $\displaystyle  \oint_s \vec{E}\cdot d\vec{s} = -\frac{d}{dt} \big ( B_{eff} \cdot A_s \big ) $
@@ -63,7 +63,7 @@ Ziel dieser Aufgabe ist es, herauszufinden, in welche Richtung Spannung und Stro
   \includegraphics[scale=0.2]{img/ex-lenzsche-regel}
 \end{center}
 
-Bewegen wir unsere Leiterschleife nach Rechts weiter in unser Feld hinein, so schliessen wir \textbf{Magnetfeld} welche in unsere Richtung zeigt ein. \\
+Bewegen wir unsere Leiterschleife nach Rechts weiter in unser Feld hinein, so schliessen wir \textbf{mehr Magnetfeld}, welches in unsere Richtung zeigt, ein. \\
 Das System selbst, möchte jedoch im Gleichgewicht bleiben, weswhalb es versucht ein Magnetfeld aufzubauen, welches der Änderung entgegenwirkt. (Siehe rotes Magnetfeld) \\
 Um dieses Magnetfeld aufzubauen, ist ein Strom, der im Uhrzeigersinn fliesst, nötig. \\
 Dieser Strom bringt positive Ladungsträger auf die untere Seite, weshalb eine Spannung in Richtung des eingezeichneten Pfeiles entsteht.
@@ -90,9 +90,9 @@ $ d\vec{E}_i =$ Induzierstes E-Feld auf dem kleinen Wegstück $dl$ \\
 $ \vec{v} = $Geschwindigkeit des Leiterstückes $ dl $ \\
 $ \vec{B} = $B-Feld \\
 
-Um die induizierte Spannung zu berechnen, muss $d\vec{E}_i$ über die wirksame Leiterlänge im Magnetfeld $l$ integriert werden: \\
+Um die induizierte Spannung zu berechnen, muss $d\vec{E}_i$ über die wirksame Leiterlänge $l$ im Magnetfeld  integriert werden: \\
 \formulaBegin
-$\displaystyle U_{i} = \int_l  d\vec{E}_i = \int_l \vec{v} \times \vec{B}  \cdot d\vec{l} \underbrace{\simeq}_{B \perp V} B \cdot V \cdot l_{eff}$
+$\displaystyle U_{i} = \int_l  \vec{E}_i d\vec{l}= \int_l \vec{v} \times \vec{B}  \cdot d\vec{l} \underbrace{\simeq}_{B \perp V} B \cdot V \cdot l_{eff}$
 \formulaEnd
 
 \iend

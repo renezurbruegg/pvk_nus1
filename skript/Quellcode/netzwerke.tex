@@ -306,7 +306,7 @@
 										\beginbsp
 									 \begin{enumerate}
 					  				 \item Gemäss Regel 2 können wir $R_1$ und die Stromquelle vertauschen.
-										 \item Die Widerstände $R_4 , R_5$ und $ R_x $ können zu $ R_S = R_3 + R_4 + R_5 $ zusammengefasst werden.
+										 \item Die Widerstände $R_4 , R_5$ und $ R_x $ können zu $ R_S = R_X + R_4 + R_5 $ zusammengefasst werden.
 										 \item Mithilfe der Stromteilerregel erhalten wir $ I_s = I \cdot \frac{(R_1 || R_2 || R_s)}{R_s} $ und somit $U_s = I \cdot (R_1 || R_2 || R_S) $
 										 \item Die Spannung $U_s$ liegt also über dem Widerstand $R_s$ an. Wenn wir diesen wieder in die ursprünglichen 3 Widerstände aufteilen, erhalten wir mithilfe der Spannungsteilerregel $U_x = U_s \cdot \frac{R_x}{R_4 + R_5 + R_x} $
 									 \end{enumerate}
@@ -616,7 +616,7 @@ Für die Berechnung des Innenwiderstandes, werden alle Spannungsquellen kurzgesc
 \end{center}
 Nun müssen nur noch alle Widerstände zu einem zusammengefügt werden:
 \begin{center}
-	$R_i = (R_1 || R_2 + (R_3 || R_4 )) = 2 \Omega$ \\
+	$R_i = (R_1 || (R_2 + (R_3 || R_4 ) )) = 2 \Omega$ \\
 	$\doubleunderline{ R_L = R_i = 2 \Omega}$
 \end{center}
 \iend

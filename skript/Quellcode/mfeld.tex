@@ -98,20 +98,20 @@
 
 	\bsptask{Beispiel}{}
 	\beginbsp
-	Berechnen Sie die Durchflutung $\Theta$ und das H-Feld $\vec{H}$ um einen unendlich langen, mit Strom I durchflossenen Leiter. Der Radius des Leiters sei $\rho$. \\
+	Berechnen Sie die Durchflutung $\Theta$ und das H-Feld $\vec{H}$ um einen unendlich langen, mit Strom I durchflossenen Leiter. Der Radius des Leiters sei R. \\
 	\iend
 	\bsp{Lösung}{}
 	\beginbsp
-	Wir wählen als geschlossenen Weg einen Kreis mit Radius R um unseren Leiter. \\
+	Wir wählen als geschlossenen Weg einen Kreis mit Radius $\rho$ um unseren Leiter. \\
 	Da wir von einem perfekten Leiter ausgehen, treffen wir die Annahme, dass das Magnetfeld achsensymmetrisch und somit konstant entlang des Kreises ist. \\
 	\\
-	Wir erhalten: für R $ > \rho$: \\
-	$\displaystyle  \doubleunderline{\Theta} =  \oint_{2\pi R} \vec{H} \cdot d\vec{S} = \doubleunderline{I} $ \\
-	$ \displaystyle \rightarrow |H| \cdot 2 \pi R = I \rightarrow \doubleunderline{\vec{H}(R) = \frac{I}{2 \pi R} \cdot \vec{e_{\varphi}}} $\\
+	Wir erhalten: für  $ \rho > R$: \\
+	$\displaystyle  \doubleunderline{\Theta} =  \oint_{2\pi \rho} \vec{H} \cdot d\vec{S} = \doubleunderline{I} $ \\
+	$ \displaystyle \rightarrow |H| \cdot 2 \pi \rho = I \rightarrow \doubleunderline{\vec{H}(\rho) = \frac{I}{2 \pi \rho} \cdot \vec{e_{\varphi}}} $\\
 
-	Für R $ < \rho $ : \\
-	$\displaystyle  \doubleunderline{\Theta(R)} =  \oint_{2\pi R} \vec{H} \cdot d\vec{S} =\int_{0}^{R} \int_{0}^{2\pi} \frac{I}{\pi{\rho}^2} \cdot r \cdot d\varphi  \cdot dr  = \frac{2 \cdot I}{\rho^2} \cdot \frac{1}{2} R^2 =  \doubleunderline{\frac{R^2\cdot I}{\rho^2}} 		  $ \\
-	$ \displaystyle \rightarrow |H| \cdot 2 \pi R = \frac{I \cdot R^2}{\rho^2} \rightarrow \doubleunderline{\vec{H}(R) = \frac{I}{2\pi \rho^2} \cdot R \cdot \vec{e_{\varphi}}} $
+	Für  $ \rho < R $ : \\
+	$\displaystyle  \doubleunderline{\Theta(\rho)} =  \oint_{2\pi \rho} \vec{H} \cdot d\vec{S} =   \doubleunderline{\frac{\rho^2\cdot I}{R^2}} 		  $ \\
+	$ \displaystyle \rightarrow |H| \cdot 2 \pi \rho = \frac{I \cdot \rho^2}{R^2} \rightarrow \doubleunderline{\vec{H}(\rho) = \frac{I}{2\pi R^2} \cdot \rho \cdot \vec{e_{\varphi}}} $
 
 	\textbf{Skizze}
 	\begin{center}
@@ -132,7 +132,7 @@
 
 
 	\iend
-
+	\bsp{Lösung}{}
 	\beginbsp
 	Es gilt für die Durchflutung bezüglich des roten Weges:
 
@@ -146,9 +146,9 @@
 
 \begin{center}
 
-	$\displaystyle \Theta_{Spule} = \oint_{s} \vec{H} \cdot d\vec{s} = \iint_{A_s} \vec{j} \cdot d\vec{A} = N \cdot I \simeq \int_0^b \vec{H} \cdot d\vec{s}$
-
+	$\displaystyle \Theta_{Spule} = \oint_{s} \vec{H} \cdot d\vec{s} = \iint_{A_s} \vec{j} \cdot d\vec{A} = N \cdot I \simeq \int_0^l \vec{H} \cdot d\vec{s}$
 	\end{center}
+
 	Da die Anordnung \textbf{symmetrisch zur X-Achse} ist, wird das H-Feld auf dem gesamten Weg konstant sein und in X-Richtung zeigen,
 	\begin{center}
 
@@ -316,7 +316,7 @@ $ \displaystyle H_{t1} = H_{t2}$
 
 
 			\begin{minipage}[t]{0.55\textwidth}
-						\ibox{\includegraphics[scale=0.3]{img/ex5-1.png}}
+						\ibox{\includegraphics[width=0.9\columnwidth]{img/ex5-1-sol.png}}
 \end{minipage}
 			\begin{minipage}[t]{0.05\textwidth}
 				\begin{center}
@@ -328,7 +328,7 @@ $ \displaystyle H_{t1} = H_{t2}$
 				\end{center}
 			\end{minipage}
 \begin{minipage}[t]{0.29\textwidth}
-			\ibox{\includegraphics[scale=0.5]{img/ex5-2.png}}
+			\ibox{\includegraphics[width=1\columnwidth]{img/ex5-2.png}}
 \end{minipage}
 
 
@@ -488,14 +488,11 @@ Beim Ringkern aus dem vorherigen Beispiel wird nun eine 2. Spule mit $N_2$ Wickl
 \beginbsp
 
 Die Gegeninduktivität beschreibt, wieviel magnetischer Fluss durch die 2. Spule fliesst abhängig des Stromes der ersten Spule:
-\begin{center}
-$\displaystyle L_{21} := \frac{\Phi_{21}}{i_1}$
-\end{center}
 
-Da der Fluss im Magneten selbst gerade $\Phi_A$ beträgt und dieser durch $N_2$ Leiterschleifen fliesst, gilt:
+Da der Fluss im Magneten selbst gerade $\Phi_{21}$ beträgt und dieser durch $N_2$ Leiterschleifen fliesst, gilt:
 \begin{center}
 
-	$\displaystyle  L_{21} := \frac{\Phi_{21}}{i_1} = \frac{\Phi_A \cdot N_2}{i_1} = \doubleunderline{\frac{N_1\cdot N_2 \cdot \mu_0}{l_g} \cdot A}$
+	$\displaystyle  L_{21} := \frac{\Phi_{21}}{i_1} \cdot N_1 =  \doubleunderline{\frac{N_1\cdot N_2 \cdot \mu_0}{l_g} \cdot A}$
 \end{center}
 \iend
 
