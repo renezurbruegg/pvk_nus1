@@ -1,80 +1,79 @@
-
-					\subsection{Strom}
-					\label{chap:Style}
-					Legen wir ein elektrisches Feld an einem Material mit beweglichen Ladungsträgern an,
-					so beginnen sich die Ladungsträger entlang dem angelegten Feld zu bewegen. \\
-					Je mehr freie Ladungsträger pro Volumen vorhanden sind ($:= \rho$), desto mehr Ladungsträger werden sich zu bewegen beginnen. \\
-					Die Geschwindigkeit ($:= v,$ Driftgeschwindigkeit), mit der sich die Ladungsträger bewegen, ist abhängig von der Stärke des elektrischen Feldes und
-					dem Material selbst. Wie gut sich ein Ladungsträger in einem Material bewegen kann, beschreiben wir mit der Beweglichkeit ($:= \mu$)
-
-
-					\important{Definition} {Strom und Stromdichte}
-					\beginip
-					Der Strom I bezeichnet, wie viele Teilchen sich pro Zeit durch eine Fläche bewegen. \\
-					Die Stromdichte J sagt etwas darüber aus, wie viel Strom pro Fläche fliesst \textbf{(= Dichte)}
-					\formulaBegin
-						$\displaystyle I := \frac{dQ}{dt} = \iint_A \vec{J} \cdot d\vec{A}$
-					\formulaEnd
-					\textbf{Variabeln}: \\
-					$ I = $ Strom $ [I] = A = \frac{C}{s}$ \\
-
-					\formulaBegin
-					$\displaystyle \vec{J} = \underbrace{n\cdot q}_{\rho} \vec{v} = \kappa \cdot \vec{E}$
-					\formulaEnd
-
-					\textbf{Variabeln}: \\
-					$ \vec{J} = $ Stromdichte $ [J] = \frac{A}{m^2}$ \\
-					$ n =$ Teilchendichte $ [n] = \frac{1}{m^3}$ \\
-					$ q =$ Ladungen der Teilchen$ [q] = C = As$ \\
-					$ \vec{v} = $ Driftgeschwindigkeit $ [v] = \frac{m}{s}$ \\
-					$ \rho = $ Raumladungsdichte $ [\rho] = \frac{As}{m^3}$ \\
-					$ \kappa = $ Elektrische Leitfähigkeit $ [\kappa] = \frac{A}{V\cdot m}$
-					\iend
-
-					Grundlage für den Strom sind bewegte Ladungsträger. \\
-					Im Falle eines Kupferkabel sind dies zum Beispiel Elektronen, die sich \textbf{gegen} das
-					elektrische Feld bewegen. Da Elektronen jedoch eine negative Ladung besitzen und der Strom als Ladung pro Zeit die durch eine Fläche hindurchfliesst definiert ist, zählen negative Ladungen, die entgegen dem Strom fliessen, zum Strom hinzu.
-
-					\begin{center}
-						$\displaystyle J := n \cdot q \cdot \vec{v_I} = n \cdot (-e) \cdot (-\vec{v_I}) $
-					\end{center}
-
-					In anderen Baustoffen (wie zum Beispiel Halbleitern), bewegen sich \textbf{positive Ladungsträger} (=Löcher) mit dem Elektrischen Feld. \\
-					Diese führen zu einem positiven Strom in dessen Bewegungsrichtung. \\
-					Je nach Material, ist es auch möglich, dass beide Ladungsträger zum Stromfluss beitragen, sich jedoch nicht gleich gut im Material bewegen können. \\
-					Aus diesem Grund, gibt es für positive wie negative Ladungen verschiedene Beweglichkeiten.
-
-					\definition{Elektrische Leitfähigkeit}
-					\beginip
-					Die elektrische Leitfähigkeit ($\kappa$) beschreibt, wie gross die Stromdichte in einem Material, bei einem gegebenen E-Feld wird. \\
-					\formulaBegin
-					$\displaystyle \vec{J} = \kappa \cdot \vec{E} = \vec{J_{-}} + \vec{J_{+}} = \underbrace{(n_{-} \cdot q_{-} \cdot \mu_- + n_+ \cdot q_+ \cdot \mu_{+})}_{\kappa} \cdot \vec{E}$
-					\formulaEnd
-					Dabei bezeichnen die Variabeln $\mu_{x}$ die \textbf{Beweglichkeit} der einzelnen Ladungsträger und sind ein Mass dafür, wie schnell sich die Teilchen bei einem gegebenem E-Feld bewegen werden.
-					\iend
+\subsection{Strom}
+\label{chap:Style}
+Legen wir ein elektrisches Feld an einem Material mit beweglichen Ladungsträgern an,
+so beginnen sich die Ladungsträger entlang dem angelegten Feld zu bewegen. \\
+Je mehr freie Ladungsträger pro Volumen vorhanden sind ($:= \rho$), desto mehr Ladungsträger werden sich zu bewegen beginnen. \\
+Die Geschwindigkeit ($:= v,$ Driftgeschwindigkeit), mit der sich die Ladungsträger bewegen, ist abhängig von der Stärke des elektrischen Feldes und
+dem Material selbst. Wie gut sich ein Ladungsträger in einem Material bewegen kann, beschreiben wir mit der Beweglichkeit ($:= \mu$)
 
 
-					\subsection{Verhalten des J- und E-Feldes an Materialübergängen}
-					Triftt eine Stromdichte auf einen Materialübergang, so ändert sich der Betrag der Tangentialkomponente. Die \textbf{Normalkomponente bleibt gleich}.
-					\begingl
-					Es gilt bei Materialübergängen: \\
-					Für das J-Feld:
-					\fspace
-					\formulaBegin
+\important{Definition} {Strom und Stromdichte}
+\beginip
+Der Strom I bezeichnet, wie viele Teilchen sich pro Zeit durch eine Fläche bewegen. \\
+Die Stromdichte J sagt etwas darüber aus, wie viel Strom pro Fläche fliesst \textbf{(= Dichte)}
+\formulaBegin
+$\displaystyle I := \frac{dQ}{dt} = \iint_A \vec{J} \cdot d\vec{A}$
+\formulaEnd
+\textbf{Variabeln}: \\
+$ I = $ Strom $ [I] = A = \frac{C}{s}$ \\
 
-					$\displaystyle \frac{tan(\alpha_1)}{tan(\alpha_2)} = \frac{J_{t1}}{J_{t2}}  $ \\
-					\fspace
-					$\displaystyle J_{n1} = J_{n2}$
+\formulaBegin
+$\displaystyle \vec{J} = \underbrace{n\cdot q}_{\rho} \vec{v} = \kappa \cdot \vec{E}$
+\formulaEnd
 
-					\formulaEnd
+\textbf{Variabeln}: \\
+$ \vec{J} = $ Stromdichte $ [J] = \frac{A}{m^2}$ \\
+$ n =$ Teilchendichte $ [n] = \frac{1}{m^3}$ \\
+$ q =$ Ladungen der Teilchen$ [q] = C = As$ \\
+$ \vec{v} = $ Driftgeschwindigkeit $ [v] = \frac{m}{s}$ \\
+$ \rho = $ Raumladungsdichte $ [\rho] = \frac{As}{m^3}$ \\
+$ \kappa = $ Elektrische Leitfähigkeit $ [\kappa] = \frac{A}{V\cdot m}$
+\iend
 
-					Für das E-Feld:
-					\fspace
-					\formulaBegin
+Grundlage für den Strom sind bewegte Ladungsträger. \\
+Im Falle eines Kupferkabel sind dies zum Beispiel Elektronen, die sich \textbf{gegen} das
+elektrische Feld bewegen. Da Elektronen jedoch eine negative Ladung besitzen und der Strom als Ladung pro Zeit die durch eine Fläche hindurchfliesst definiert ist, zählen negative Ladungen, die entgegen dem Strom fliessen, zum Strom hinzu.
 
-					$\displaystyle E_{t1} = E_{t2}$
-										$\displaystyle \frac{tan(\alpha_1)}{tan(\alpha_2)} = \frac{E_{n2}}{E_{n1}}  $ \\
-										\fspace
+\begin{center}
+	$\displaystyle J := n \cdot q \cdot \vec{v_I} = n \cdot (-e) \cdot (-\vec{v_I}) $
+\end{center}
 
-					\formulaEnd
-					\iend
+In anderen Baustoffen (wie zum Beispiel Halbleitern), bewegen sich \textbf{positive Ladungsträger} (=Löcher) mit dem Elektrischen Feld. \\
+Diese führen zu einem positiven Strom in dessen Bewegungsrichtung. \\
+Je nach Material, ist es auch möglich, dass beide Ladungsträger zum Stromfluss beitragen, sich jedoch nicht gleich gut im Material bewegen können. \\
+Aus diesem Grund, gibt es für positive wie negative Ladungen verschiedene Beweglichkeiten.
+
+\definition{Elektrische Leitfähigkeit}
+\beginip
+Die elektrische Leitfähigkeit ($\kappa$) beschreibt, wie gross die Stromdichte in einem Material, bei einem gegebenen E-Feld wird. \\
+\formulaBegin
+$\displaystyle \vec{J} = \kappa \cdot \vec{E} = \vec{J_{-}} + \vec{J_{+}} = \underbrace{(n_{-} \cdot q_{-} \cdot \mu_- + n_+ \cdot q_+ \cdot \mu_{+})}_{\kappa} \cdot \vec{E}$
+\formulaEnd
+Dabei bezeichnen die Variabeln $\mu_{x}$ die \textbf{Beweglichkeit} der einzelnen Ladungsträger und sind ein Mass dafür, wie schnell sich die Teilchen bei einem gegebenem E-Feld bewegen werden.
+\iend
+
+
+\subsection{Verhalten des J- und E-Feldes an Materialübergängen}
+Triftt eine Stromdichte auf einen Materialübergang, so ändert sich der Betrag der Tangentialkomponente. Die \textbf{Normalkomponente bleibt gleich}.
+\begingl
+Es gilt bei Materialübergängen: \\
+Für das J-Feld:
+\fspace
+\formulaBegin
+
+$\displaystyle \frac{tan(\alpha_1)}{tan(\alpha_2)} = \frac{J_{t1}}{J_{t2}}  $ \\
+\fspace
+$\displaystyle J_{n1} = J_{n2}$
+
+\formulaEnd
+
+Für das E-Feld:
+\fspace
+\formulaBegin
+
+$\displaystyle E_{t1} = E_{t2}$
+$\displaystyle \frac{tan(\alpha_1)}{tan(\alpha_2)} = \frac{E_{n2}}{E_{n1}}  $ \\
+\fspace
+
+\formulaEnd
+\iend
